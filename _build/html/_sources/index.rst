@@ -3,14 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to GBCourses's documentation!
-=====================================
+Welcome to CS515: Intro to Computer Science!
+============================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :caption: Courses:
 
-
+   content/courses/cs515/index
 
 Indices and tables
 ==================
@@ -18,3 +18,4 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+   
