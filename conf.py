@@ -23,6 +23,13 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = "sphinx_book_theme"
 html_static_path = ['_static']
+html_js_files = [
+    'js/quiz.js',
+]
 html_theme_options = {
     "home_page_in_toc": True,
 }
+
+extensions = [
+    'sphinxcontrib.quizdown',
+]

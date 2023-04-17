@@ -40,10 +40,13 @@
     <script src="../../../../../_static/doctools.js"></script>
     <script src="../../../../../_static/sphinx_highlight.js"></script>
     <script src="../../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../../_static/js/quiz.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"></script>
+    <script>quizdown.init({"quizdown_js": "https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/courses/cs515/Week 1 Basics/slides/part_1_basic_numbers_variables';</script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
-    <link rel="next" title="Week 2: Data structures and loops" href="../../Week%202%20DSL/index.html" />
+    <link rel="next" title="Mystery Operator" href="mystery_operator.html" />
     <link rel="prev" title="Welcome!" href="welcome.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -135,6 +138,8 @@
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Week 1: Basic</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="welcome.html">Welcome!</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Part 1: The Basics of Numbers and Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mystery_operator.html">Mystery Operator</a></li>
+
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Week%202%20DSL/index.html">Week 2: Data structures and loops</a></li>
@@ -297,7 +302,8 @@ document.write(`
 <h1>Part 1: The Basics of Numbers and Variables<a class="headerlink" href="#part-1-the-basics-of-numbers-and-variables" title="Permalink to this heading">#</a></h1>
 <p>Programs do their work with data. Some of the data is text (like a person’s name), some is pretty sophisticated (like a file containing audio or video), some of it is yes/no (like whether a box is checked) and quite a bit of it is <em>numbers</em>.</p>
 <p>Numbers are a convenient place to start studying programs, because we have some familiarity with them already, and at least at first, Python won’t violate our understanding of how numbers work and some our experience will help us.</p>
-<p>At a Python prompt (at a terminal running <cite>python</cite> in a Workspace), try typing a number and pressing enter. Here’s what you should expect to see:</p>
+<p>At a Python prompt (at a terminal running <code class="docutils literal notranslate"><span class="pre">python</span></code> in a Workspace), try typing a number and pressing enter. Here’s what you should expect to see:
+HELLO</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[user@sahara ~]$ python
 Python 3.9.6 (default, Jun 30 2021, 10:22:16)
 [GCC 11.1.0] on linux
@@ -306,7 +312,27 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 4
 </pre></div>
 </div>
-<p>(We’ll skip the noise and just show <cite>&gt;&gt;&gt;</cite> from now on.) We typed in a number, and Python printed it back out at us. Let’s try with arithmetic:</p>
+<p>(We’ll skip the noise and just show <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> from now on.) We typed in a number, and Python printed it back out at us. Let’s try with arithmetic:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="go">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">9</span>
+<span class="go">16</span>
+</pre></div>
+</div>
+<p>We’re showing one of the most familiar tasks we can accomplish with Python – we can use it as a calculator! Python is equipped with many familiar arithmetic operations, like *, /, +, and -. It also evaluates operations in parentheses first, like we may expect from math:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="go">30</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="mi">8</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">24</span>
+</pre></div>
+</div>
+<p>We can <em>nest</em> the parentheses and expressions as much as we like, and Python will calculate the answer for us:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="mi">8</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="mi">99</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+<span class="go">123</span>
+</pre></div>
+</div>
+<p>So Python is a pretty good calculator! Crucially, we’re seeing here a fundamental kind of behavior of how programming languages work. We write <em>programs</em>, which are text, and Python <em>evaluates</em> them, producing values (in this case, the values are numbers).</p>
+<p>Importantly, Python (and most programming languages) won’t give back an answer that’s an unevaluated or partially evaluated expression like <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">7</span></code>. Instead, each expression is fully evaluated to a value, and then the result is used.</p>
 </section>
 
 
@@ -328,11 +354,11 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
       </div>
     </a>
     <a class="right-next"
-       href="../../Week%202%20DSL/index.html"
+       href="mystery_operator.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Week 2: Data structures and loops</p>
+        <p class="prev-next-title">Mystery Operator</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

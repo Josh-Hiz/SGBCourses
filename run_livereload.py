@@ -7,4 +7,4 @@ if __name__ == '__main__':
     server.watch('*.py', shell('make html'), delay=1)
     server.watch('_static/*', shell('make html'), delay=1)
     server.watch('_templates/*', shell('make html'), delay=1)
-    server.serve(root='_build/html')
+    server.serve(root='_build/html') 

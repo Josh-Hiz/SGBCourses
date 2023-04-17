@@ -7,4 +7,4 @@ Week 1: Basic
 
     slides/welcome
     slides/part_1_basic_numbers_variables
-
+    slides/mystery_operator
