@@ -1,4 +1,4 @@
-# Sphinx-Greenburg-Courses
+# Sphinx-Greenberg-Courses
 
 ## Slide format:
 All documents/textbook slides are written in RST and NOT markdown, therefore if you want to add new documents in slides please update the `toctree` in the appropriate index
