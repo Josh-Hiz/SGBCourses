@@ -1,8 +1,10 @@
 # Sphinx-Greenburg-Courses
 
-## All documents/textbook slides are written in RST and NOT markdown, therefore if you want to add new documents in slides please update the `toctree` in the appropriate index
+## Slide format:
+All documents/textbook slides are written in RST and NOT markdown, therefore if you want to add new documents in slides please update the `toctree` in the appropriate index
 
-## Run the server script `run_livereload.py` to spin up the server
+## Spinning up a local server:
+Run the server script `run_livereload.py` to spin up the server
 
 ## Before running:
 Please run `sphinx-build -M html ./ _build/ -W -a -j auto -n --keep-going` so Sphinx can build the HTML and render RST

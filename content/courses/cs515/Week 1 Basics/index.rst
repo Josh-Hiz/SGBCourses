@@ -5,6 +5,8 @@ Week 1: Basic
     :maxdepth: 1
     :caption: Week-1-Basics
 
-    slides/welcome
-    slides/part_1_basic_numbers_variables
-    slides/mystery_operator
+    slides/1_welcome
+    slides/2_basic_numbers_variables
+    slides/3_mystery_operator
+    slides/4_variables
+    slides/5_variable_dec

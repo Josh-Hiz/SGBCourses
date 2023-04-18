@@ -16,7 +16,6 @@ Consider this interation:
         >>> 3 ** 3
         27
 
-
 .. quizdown::
 
     ---
@@ -31,4 +30,5 @@ Consider this interation:
    - [ ] Squaring
    - [ ] Cubing
    - [x] Exponentiation
-   - [ ] I don't know
+   - [ ] I don't know 
+        

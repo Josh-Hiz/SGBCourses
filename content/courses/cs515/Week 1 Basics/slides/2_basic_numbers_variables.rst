@@ -6,7 +6,6 @@ Programs do their work with data. Some of the data is text (like a person's name
 Numbers are a convenient place to start studying programs, because we have some familiarity with them already, and at least at first, Python won't violate our understanding of how numbers work and some our experience will help us.
 
 At a Python prompt (at a terminal running ``python`` in a Workspace), try typing a number and pressing enter. Here's what you should expect to see:
-HELLO
 
 .. code-block:: 
 
