@@ -11,11 +11,10 @@ Welcome to CS515: Intro to Computer Science!
    :caption: Courses:
 
    content/courses/cs515/index
-
-Indices and tables
-==================
+   
+Search Bar:
+===========
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
    

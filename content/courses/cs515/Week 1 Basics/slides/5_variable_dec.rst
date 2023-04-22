@@ -7,11 +7,28 @@ We're in a *workspace*. Below this text, a Python program in the file variable.p
 
 Add a new declaration for a variable named num_students, with value equal to 45. Click the **Run** button (top left) to check your work; you can do it as many times as you like.
 
-A few tips about using my website to run your program:
+How to use JupyterLite:
+=======================
 
-* This is currently in development and I am using jupyterlite rendered with web assembly to see how this works
+You will be using a simple but incredible tool called ``jupyterlite`` that can run Jupyter Notebook files in the browser and allow live file editing of the python files. In order to write and test your code, follow these steps:
 
-.. retrolite:: cs515_books/variable.ipynb
+*  Type up your python file according to the instructions
+*  Go to the ``.ipynb`` file that is also within the JupyterLite app and run the first cell (the first box usually) and click the run button on the top left (it looks like a play button)
+*  If your submission fails, then fix your python file and try again **BEFORE YOU RERUN THE CELL** please restart the kernel, and then run the cell again, to restart the kernel simple click the button that looks like a redo button near the top middle
+*  If your submission succeeds, this is a sample of what you should expect:
+
+.. code-block:: 
+
+         testOthers (__main__.SimpleTestCase.testOthers) ... ok
+         testStudents (__main__.SimpleTestCase.testStudents) ... ok
+
+         ----------------------------------------------------------------------
+         Ran 2 tests in 0.001s
+
+         OK 
+
+.. jupyterlite::
    :width: 100%
-   :height: 600px
-   :prompt: Try Retrolite!
+   :height: 800px
+   :prompt: Begin!
+   :prompt_color: #00aa42

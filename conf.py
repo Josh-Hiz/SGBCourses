@@ -5,10 +5,12 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+import sys
+sys.path.append('./')
 
 project = 'Course'
-copyright = '2023, Joshua Hizgiaev & Michael Greenburg'
-author = 'Joshua Hizgiaev & Michael Greenburg'
+copyright = '2023, Joshua Hizgiaev & Michael Greenberg'
+author = 'Joshua Hizgiaev & Michael Greenberg'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -30,7 +32,10 @@ html_theme_options = {
 
 extensions = [
     'jupyterlite_sphinx',
-    'sphinxcontrib.quizdown', 
+    'sphinxcontrib.quizdown',
+    'myst_parser',
+    # 'plugins.quiz', 
 ]
+jupyterlite_contents = ["./content/courses/cs515/Week 1 Basics/slides/cs515_books/"]
 
 jupyterlite_bind_ipynb_suffix = False

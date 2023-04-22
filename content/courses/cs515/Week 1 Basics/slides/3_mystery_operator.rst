@@ -24,11 +24,11 @@ Consider this interation:
     shuffle_questions: false
     ---
 
-   ## What does the ``**`` operator do?
-  
+   ## What does the ``**`` do?
+
 
    - [ ] Squaring
    - [ ] Cubing
    - [x] Exponentiation
-   - [ ] I don't know 
+   - [ ] I don't know
         

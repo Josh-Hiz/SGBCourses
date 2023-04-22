@@ -10,3 +10,4 @@ Week 1: Basic
     slides/3_mystery_operator
     slides/4_variables
     slides/5_variable_dec
+    slides/6_variable_dec_2
