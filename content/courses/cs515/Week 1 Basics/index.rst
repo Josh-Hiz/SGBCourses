@@ -2,7 +2,7 @@ Week 1: Basic
 =============
 
 .. toctree:: 
-    :maxdepth: 1
+    :maxdepth: 5
     :caption: Week-1-Basics
 
     slides/1_welcome
@@ -11,3 +11,5 @@ Week 1: Basic
     slides/4_variables
     slides/5_variable_dec
     slides/6_variable_dec_2
+    slides/7_operator_prec
+    slides/8_twitter

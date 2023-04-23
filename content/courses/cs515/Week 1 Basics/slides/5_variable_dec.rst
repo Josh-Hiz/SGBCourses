@@ -7,6 +7,8 @@ We're in a *workspace*. Below this text, a Python program in the file variable.p
 
 Add a new declaration for a variable named num_students, with value equal to 45. Click the **Run** button (top left) to check your work; you can do it as many times as you like.
 
+**Please access the challenge 1 folder and nothing else.**
+
 How to use JupyterLite:
 =======================
 

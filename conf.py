@@ -30,12 +30,18 @@ html_theme_options = {
     "home_page_in_toc": True,
 }
 
+#This breaks current javascript, dont really need it tbh
+# html_css_files = [    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',]
+# html_js_files = [    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',]
+
 extensions = [
     'jupyterlite_sphinx',
     'sphinxcontrib.quizdown',
-    'myst_parser',
-    # 'plugins.quiz', 
 ]
+
+html_sidebars = {
+    "**": ["sbt-sidebar-nav.html"]
+}
 jupyterlite_contents = ["./content/courses/cs515/Week 1 Basics/slides/cs515_books/"]
 
 jupyterlite_bind_ipynb_suffix = False
