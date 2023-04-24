@@ -12,7 +12,7 @@ Call Me, Maybe
     }
 
     input[type=radio] {
-        margin: 8px 0;
+        margin: 20px 15px;
         box-sizing: border-box;
         border: 2px solid #ccc;
         border-radius: 4px;

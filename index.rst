@@ -7,7 +7,7 @@ Welcome to CS515: Intro to Computer Science!
 ============================================
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 10
    :caption: Courses:
 
    content/courses/cs515/index

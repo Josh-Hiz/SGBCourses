@@ -4,7 +4,6 @@ sphinxcontrib-details-directive==0.1.0
 sphinxcontrib-htmlhelp==2.0.1
 sphinxcontrib-mermaid==0.8.1
 sphinxcontrib-packages==1.1.0
-sphinxcontrib-quizdown==0.3
 sphinxcontrib-serializinghtml==1.1.5
 jupyterlite-pyodide-kernel==0.0.6
 jupyterlite-sphinx==0.8.0
