@@ -13,3 +13,8 @@ Week 1: Basic
     slides/6_variable_dec_2
     slides/7_operator_prec
     slides/8_twitter
+    slides/9_temp_mixup
+    slides/10_using_funcs
+    slides/11_working_abs
+    slides/12_call_me_maybe
+    slides/13_nesting_funcs

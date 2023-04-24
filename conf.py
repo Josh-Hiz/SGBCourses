@@ -37,6 +37,7 @@ html_theme_options = {
 extensions = [
     'jupyterlite_sphinx',
     'sphinxcontrib.quizdown',
+    'plugins.free_response'
 ]
 
 html_sidebars = {
