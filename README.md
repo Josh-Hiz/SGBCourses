@@ -27,5 +27,5 @@ Current goals:
 - Perfect all functions and types of slides used in chapter 1 so it can be easily reproducible and allow copy and pasting into next chapters, in which effectivley the site will be done
 - The stuff that needs testing include:
   - JupyterLite challenges and seeing how much freedom we are willing to give users in viewing test scripts (we can just add instructions on how to use)
-  - Quizzes, so far multiple choice and single choice have been perfected as we can just use quizdown, maybe I can just fork quizdown and give it an update? More testing needed on that and will have to work in quizdown source code
+  - Quizzes, instead of quizzdown i am just writing the html and javascript myself, i need to figure out a more efficient way of doing it rather than copy and pasting, will make rst directives after finishing week 1
   - I think thats it really, all other features are more or less easy to do and I even added extra stuff like regex search

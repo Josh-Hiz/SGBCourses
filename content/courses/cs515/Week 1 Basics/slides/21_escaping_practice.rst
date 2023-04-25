@@ -120,8 +120,6 @@ Question 1
 Question 2
 ==========
 
-
-
 .. raw:: html
 
    <form onsubmit="return checkFreeResponseAnswer()">
@@ -161,3 +159,42 @@ Question 2
    }
    </script>
 
+Question 3
+==========
+
+.. raw:: html
+
+   <form onsubmit="return checkFreeResponseAnswer2()">
+   <p>How would you write the following as a string in Python?<br> 
+   <pre>
+   <code>
+    "It's a backslash," he said, "you write it like '\'."
+   </code>
+   </pre> <br>
+   Just write the string literal, as in <code>"this\tis not  the answer"</code>.
+   </p>
+   <input type="text" id="userAnswer_2">
+   <button type="submit">Submit Answer</button>
+   <p id="freeResponseResult_2"></p>
+   </form>
+
+.. raw:: html
+
+   <script>
+   function checkFreeResponseAnswer2() {
+       var userAnswer = document.getElementById("userAnswer_2").value;
+       var correctAnswer_1 = "1";
+       if (userAnswer.toLowerCase() === correctAnswer_1.toLowerCase()) {
+           document.getElementById("freeResponseResult_2").innerHTML = `
+           <div class="alert alert-success">
+               <strong>Correct!</strong>
+           </div>`;
+       } else {
+           document.getElementById("freeResponseResult_2").innerHTML = `
+           <div class="alert alert-danger">
+               <strong>Sorry, incorrect answer.</strong>
+           </div>`;
+       }
+       return false;
+   }
+   </script>

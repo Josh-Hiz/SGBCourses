@@ -2,7 +2,7 @@ Week 1: Basic
 =============
 
 .. toctree:: 
-    :maxdepth: 5
+    :maxdepth: 2
     :caption: Week-1-Basics
 
     slides/1_welcome
@@ -26,3 +26,4 @@ Week 1: Basic
     slides/19_longest_string
     slides/20_escaping
     slides/21_escaping_practice
+    slides/22_part_4_mixing_type

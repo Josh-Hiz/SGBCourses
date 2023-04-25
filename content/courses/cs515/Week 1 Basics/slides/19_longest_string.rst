@@ -19,3 +19,11 @@ short``
 **Sample Output:**
 
 ``6``
+
+**Please access the challenge 8 folder and nothing else**
+
+.. jupyterlite::
+   :width: 100%
+   :height: 800px
+   :prompt: Begin!
+   :prompt_color: #00aa42

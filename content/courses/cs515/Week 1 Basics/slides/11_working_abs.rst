@@ -71,7 +71,7 @@ We saw some examples for the ``abs`` function:
    <label><input type="radio" name="answer" value="incorrect"><code>abs(n)</code><br> abs takes a number n and produces -n</label>
    <label><input type="radio" name="answer" value="incorrect"><code>abs(n,m)</code><br> abs takes two numbers n and m, and produces m</label>
    <label><input type="radio" name="answer" value="incorrect"><code>abs(n,m)</code><br> abs takes two numbers n and m, and produces n</label>
-   <label><input type="radio" name="answer" value="correct"><code>abs(n,m)</code><br> abs takes a number n and produces the absolute value of n</label>
+   <label><input type="radio" name="answer" value="correct"><code>abs(n)</code><br> abs takes a number n and produces the absolute value of n</label>
 
    <button type="submit">Submit Answer</button>
    <p id="result"></p>
