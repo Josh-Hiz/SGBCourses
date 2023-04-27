@@ -19,8 +19,12 @@ Every chapter will have a `slides` folder in which will contain the following:
 - X_slide-title -> X is the slide number and it has the title, these are the basic text book slides and easy to make
 - Every course thats added should follow the format of having a `slides` folder that contains RST (or markdown) of the typed up text book slide, if you want to make a slide with a challenge or quiz, the good this is RST directives will cover that assuming that the site is finished
 
-# Current update notes and ideas:
-Looks like I figured out how to run test scripts for the challenges, interestngly enough it looks like basic quizzes seem to be the hardest thing, however, to run these challenges we might have to give a lot more freedom to the user which I don't mind as it allows users to learn and understand how python is used in practical applications however more tests still have to be done.
+# Current update notes, ideas and issues:
+
+### input() in python ide's
+Running python that requires the ``input()`` command seems to be causing alot of issues for a reason I don't know, must fix this asap as this halts progress on many other slides
+### Quiz answers
+Some of the quiz answers from edstem dont really make sense and I cant really just change the answer, will figure out another way
 
 Current goals:
 - Finish chapter 1 in whatever state it may be in
@@ -28,4 +32,3 @@ Current goals:
 - The stuff that needs testing include:
   - JupyterLite challenges and seeing how much freedom we are willing to give users in viewing test scripts (we can just add instructions on how to use)
   - Quizzes, instead of quizzdown i am just writing the html and javascript myself, i need to figure out a more efficient way of doing it rather than copy and pasting, will make rst directives after finishing week 1
-  - I think thats it really, all other features are more or less easy to do and I even added extra stuff like regex search
