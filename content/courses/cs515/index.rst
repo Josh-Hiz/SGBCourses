@@ -2,7 +2,7 @@ CS515
 =====
 
 .. toctree:: 
-    :maxdepth: 3
+    :maxdepth: 2
     :caption: Chapters:
 
     Week 1 Basics/index

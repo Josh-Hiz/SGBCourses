@@ -27,3 +27,6 @@ Week 1: Basic
     slides/20_escaping
     slides/21_escaping_practice
     slides/22_part_4_mixing_type
+    slides/23_which_throws_error
+    slides/24_sum_of_ints
+    slides/25_part_5_io

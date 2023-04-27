@@ -7,3 +7,4 @@ sphinxcontrib-packages==1.1.0
 sphinxcontrib-serializinghtml==1.1.5
 jupyterlite-pyodide-kernel==0.0.6
 sphinx_exec_code==0.10
+jupyterlab-widgets==3.0.0
