@@ -22,11 +22,15 @@ Every chapter will have a `slides` folder in which will contain the following:
 # Current update notes, ideas and issues:
 
 ### input() in python ide's
-Running python that requires the ``input()`` command seems to be causing alot of issues for a reason I don't know, must fix this asap as this halts progress on many other slides
-### Quiz answers
-Some of the quiz answers from edstem dont really make sense and I cant really just change the answer, will figure out another way
+Running python that requires the ``input()`` command seems to be causing alot of issues for a reason I don't know, must fix this asap as this halts progress on many other slides, the current slides that have input() issues is:
+- Slide 25
+- Slide 26
+- Slide 27
 
-Current goals:
+### Quiz answers
+- Must update slide 21 quiz answers as for some reason edstem literally wont recognize the answers
+
+### Current goals:
 - Finish chapter 1 in whatever state it may be in
 - Perfect all functions and types of slides used in chapter 1 so it can be easily reproducible and allow copy and pasting into next chapters, in which effectivley the site will be done
 - The stuff that needs testing include:

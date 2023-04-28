@@ -143,7 +143,8 @@ Question 2
    <script>
    function checkFreeResponseAnswer() {
        var userAnswer = document.getElementById("userAnswer").value;
-       var correctAnswer_1 = "1";
+       var correctAnswer_1 = "INSERT_VALUE_HERE";
+       console.log(correctAnswer_1)
        if (userAnswer.toLowerCase() === correctAnswer_1.toLowerCase()) {
            document.getElementById("freeResponseResult").innerHTML = `
            <div class="alert alert-success">
@@ -183,8 +184,9 @@ Question 3
    <script>
    function checkFreeResponseAnswer2() {
        var userAnswer = document.getElementById("userAnswer_2").value;
-       var correctAnswer_1 = "1";
-       if (userAnswer.toLowerCase() === correctAnswer_1.toLowerCase()) {
+       var correctAnswer_2 = '"It\'s a backslash," he said, "you write it like \'\\\'."';
+       console.log(correctAnswer_2)
+       if (userAnswer.toLowerCase() === correctAnswer_2.toLowerCase()) {
            document.getElementById("freeResponseResult_2").innerHTML = `
            <div class="alert alert-success">
                <strong>Correct!</strong>

@@ -30,3 +30,8 @@ Week 1: Basic
     slides/23_which_throws_error
     slides/24_sum_of_ints
     slides/25_part_5_io
+    slides/26_copypasta
+    slides/27_pleased_meet_you
+    slides/28_defining_functions
+    slides/29_cubes
+    slides/30_triangle_time
