@@ -32,6 +32,13 @@ Week 1: Basic
     slides/25_part_5_io
     slides/26_copypasta
     slides/27_pleased_meet_you
-    slides/28_defining_functions
-    slides/29_cubes
-    slides/30_triangle_time
+    slides/28_stretch_goals
+    slides/29_defining_functions
+    slides/30_cubes
+    slides/31_triangle_time
+    slides/32_very_excited
+    slides/33_floating_point
+    slides/34_which_are_floats
+    slides/35_which_are_integers
+    slides/36_there_and_back_converting_ints_and_floats
+    slides/37_converting_int_float
