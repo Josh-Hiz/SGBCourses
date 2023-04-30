@@ -2,7 +2,7 @@ Week 1: Basic
 =============
 
 .. toctree:: 
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: Week-1-Basics
 
     slides/1_welcome
@@ -42,3 +42,5 @@ Week 1: Basic
     slides/35_which_are_integers
     slides/36_there_and_back_converting_ints_and_floats
     slides/37_converting_int_float
+    slides/38_adding_subtracting
+    slides/39_does_it_float
