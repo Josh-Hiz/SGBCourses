@@ -3,6 +3,67 @@ It Dosen't Float!
 
 .. raw:: html
 
+   <style>
+    form {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type=checkbox] {
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: #fff;
+        color: #333333;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: #fff;
+        color: #333333;
+    }
+
+    button[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    #result {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333333;
+    }
+
+    </style>
+
+.. raw:: html
+
    <form onsubmit="return checkAnswer()">
    <p>Which of the following code segments will evaluate to a floating-point number?<br>(Hint: make the prediction on your own, and test in a Python interpreter if you're not sure.)</p>
    <label><input type="checkbox" name="answer" value="A"><code> int(5 * 5.0)</code> </label>
