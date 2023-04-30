@@ -44,3 +44,8 @@ Week 1: Basic
     slides/37_converting_int_float
     slides/38_adding_subtracting
     slides/39_does_it_float
+    slides/40_dosent_float
+    slides/41_division_versus
+    slides/42_does_it_float_again
+    slides/43_conversions_promotions
+    slides/44_into_booleans
