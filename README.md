@@ -23,9 +23,10 @@ Every chapter will have a `slides` folder in which will contain the following:
 
 ### input() in python ide's
 Running python that requires the ``input()`` command seems to be causing alot of issues for a reason I don't know, must fix this asap as this halts progress on many other slides, the current slides that have input() issues is:
-- Slide 25
 - Slide 26
 - Slide 27
+- Slide 48
+- Challenge 10, 11, and 15 is completely botched because of this, slide 25 seems like a simple fix
 
 ### Quiz answers
 - Must update slide 21 quiz answers as for some reason edstem literally wont recognize the answers

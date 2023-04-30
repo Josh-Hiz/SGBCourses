@@ -52,3 +52,8 @@ Week 1: Basic
     slides/45_expressions_true
     slides/46_expressions_false
     slides/47_boolean_variables
+    slides/48_writing_boolean_expressions
+    slides/49_functions_returning_booleans
+    slides/50_booleans_summary
+    slides/51_conditioning_booleans
+    slides/52_validating_values
