@@ -14,6 +14,7 @@ How to use JupyterLite:
 
 You will be using a simple but incredible tool called ``jupyterlite`` that can run Jupyter Notebook files in the browser and allow live file editing of the python files. In order to write and test your code, follow these steps:
 
+* **Go to the Week1 folder as we are in week 1, within this folder will have challenge folders that are numbered**
 *  Type up your python file according to the instructions
 *  Go to the ``.ipynb`` file that is also within the JupyterLite app and run the first cell (the first box usually) and click the run button on the top left (it looks like a play button)
 *  If your submission fails, then fix your python file and try again **BEFORE YOU RERUN THE CELL** please restart the kernel, and then run the cell again, to restart the kernel simple click the button that looks like a redo button near the top middle

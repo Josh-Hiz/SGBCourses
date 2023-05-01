@@ -79,4 +79,4 @@ class AddQuizzCSS(Directive):
         return [raw("", html, format='html')]
 
 def setup(app):
-    app.add_directive("add_css",AddQuizzCSS)
+    app.add_directive("add-css",AddQuizzCSS)
