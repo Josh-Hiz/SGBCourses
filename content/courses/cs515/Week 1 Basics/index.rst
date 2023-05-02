@@ -57,3 +57,25 @@ Week 1: Basic
     slides/50_booleans_summary
     slides/51_conditioning_booleans
     slides/52_validating_values
+    slides/53_more_conditionals
+    slides/54_room_assingments
+    slides/55_default_conditions
+    slides/56_passing_grades
+    slides/57_characterizing_nums
+    slides/58_computing_lengths
+    slides/59_name_length
+    slides/60_indexing
+    slides/61_safe_indexing
+    slides/62_slicing
+    slides/63_slicing_dicing
+    slides/64_string_comparison
+    slides/65_in_notin_ops
+    slides/66_comparing_strings
+    slides/67_string_membership
+    slides/68_passing_args
+    slides/69_whats_good_about_functions
+    slides/70_params_args
+    slides/71_params_args_names
+    slides/72_shared_names_shadowing
+    slides/73_guten_tag
+    slides/74_call_stack
