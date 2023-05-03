@@ -21,6 +21,7 @@ Every chapter will have a `slides` folder in which will contain the following:
 
 # Current update notes, ideas and issues:
 
+
 ### input() in python ide's
 Running python that requires the ``input()`` command seems to be causing alot of issues for a reason I don't know, must fix this asap as this halts progress on many other slides, the current slides that have input() issues is:
 - Slide 26

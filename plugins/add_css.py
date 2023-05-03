@@ -2,7 +2,7 @@ from docutils.parsers.rst import Directive
 from docutils.nodes import raw
 
 class AddQuizzCSS(Directive):
-    required_arguments = 0
+    optional_arguments = 1
     has_content = True
     
     def run(self):

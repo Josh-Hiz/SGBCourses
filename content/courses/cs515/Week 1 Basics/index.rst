@@ -79,3 +79,7 @@ Week 1: Basic
     slides/72_shared_names_shadowing
     slides/73_guten_tag
     slides/74_call_stack
+    slides/75_whats_on_stack
+    slides/76_scope_local_global
+    slides/77_local_variables_exist_function
+    slides/78_characteristics_local_global
