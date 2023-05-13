@@ -83,3 +83,4 @@ Week 1: Basic
     slides/76_scope_local_global
     slides/77_local_variables_exist_function
     slides/78_characteristics_local_global
+    slides/79_test_fr

@@ -36,6 +36,7 @@ extensions = [
     'jupyterlite_sphinx',
     'sphinx_exec_code',
     'plugins.add_css',
+    'plugins.free_response',
 ]
 
 html_sidebars = {
