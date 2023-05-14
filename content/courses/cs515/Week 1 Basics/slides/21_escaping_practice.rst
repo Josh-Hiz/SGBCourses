@@ -143,7 +143,7 @@ Question 2
    <script>
    function checkFreeResponseAnswer() {
        var userAnswer = document.getElementById("userAnswer").value;
-       var correctAnswer_1 = "INSERT_VALUE_HERE";
+       var correctAnswer_1 = '"hello\n world\n  how are you?"';
        console.log(correctAnswer_1)
        if (userAnswer.toLowerCase() === correctAnswer_1.toLowerCase()) {
            document.getElementById("freeResponseResult").innerHTML = `

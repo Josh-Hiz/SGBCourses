@@ -13,14 +13,13 @@ Please run `sphinx-build -M html ./ _build/ -W -a -j auto -n --keep-going` so Sp
 For some reason on google chrome you may need to clear your cache of the past hour as when new files are added there could be *times* where Sphinx caches the files and then google caches them leading to sometimes seeing files that shouldnt exist anymore. This is a very rare instance however, just a side note.
 
 ## How courses and chapters are organized (so far):
-Every chapter will have a `slides` folder in which will contain the following:
+Every course will have a `slides` folder in which will contain the following:
 - `books` -> folder that will hold all the folders containing the files for challenges
   - The books folder will contain `challenge` folders organized by number, and contain 1 jupyter notebook to run the test script and one python file so students can code in it
 - X_slide-title -> X is the slide number and it has the title, these are the basic text book slides and easy to make
-- Every course thats added should follow the format of having a `slides` folder that contains RST (or markdown) of the typed up text book slide, if you want to make a slide with a challenge or quiz, the good this is RST directives will cover that assuming that the site is finished
+- Every course thats added should follow the format of having a `slides` folder that contains RST (or markdown) of the typed up text book slide, if you want to make a slide with a challenge or quiz, the good thing is RST directives will cover that assuming that the site is finished.
 
 # Current update notes, ideas and issues:
-
 
 ### input() in python ide's
 Running python that requires the ``input()`` command seems to be causing alot of issues for a reason I don't know, must fix this asap as this halts progress on many other slides, the current slides that have input() issues is:
@@ -28,9 +27,6 @@ Running python that requires the ``input()`` command seems to be causing alot of
 - Slide 27
 - Slide 48
 - Challenge 10, 11, and 15 is completely botched because of this, slide 25 seems like a simple fix
-
-### Quiz answers
-- Must update slide 21 quiz answers as for some reason edstem literally wont recognize the answers
 
 ### Current goals:
 - Finish chapter 1 in whatever state it may be in

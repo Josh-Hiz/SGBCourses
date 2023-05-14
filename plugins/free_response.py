@@ -4,7 +4,7 @@ from docutils.nodes import raw
 
 class HtmlQuestionDirective(Directive):
     required_arguments = 0
-    optional_arguments = 3
+    optional_arguments = 4
     final_argument_whitespace = True
     option_spec = {
         'question': str,
@@ -51,4 +51,4 @@ class HtmlQuestionDirective(Directive):
         return [raw("", html, format="html")]
 
 def setup(app):
-    app.add_directive("free_response", HtmlQuestionDirective)
+    app.add_directive("free-response", HtmlQuestionDirective)

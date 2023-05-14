@@ -28,10 +28,6 @@ html_theme_options = {
     "home_page_in_toc": True,
 }
 
-#This breaks current javascript, dont really need it tbh
-# html_css_files = [    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',]
-# html_js_files = [    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',]
-
 extensions = [
     'jupyterlite_sphinx',
     'sphinx_exec_code',
@@ -42,6 +38,6 @@ extensions = [
 html_sidebars = {
     "**": ["sbt-sidebar-nav.html"]
 }
-jupyterlite_contents = ["./content/courses/cs515/books/"]
+jupyterlite_contents = ["./content/courses/cs515/books/","./content/snippets"]
 
 jupyterlite_bind_ipynb_suffix = False
