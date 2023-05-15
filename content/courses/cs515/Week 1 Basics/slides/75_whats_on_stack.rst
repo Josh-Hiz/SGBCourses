@@ -3,7 +3,7 @@ What's On Your Stack?
 
 Consider the following program (Please run it to see the output):
 
-.. retrolite:: /content/snippets/whats_on_your_stack.ipynb
+.. retrolite:: /content/snippets/Week_1_Snippets/whats_on_your_stack.ipynb
    :width: 100%
    :height: 500px
    :prompt: Begin!
