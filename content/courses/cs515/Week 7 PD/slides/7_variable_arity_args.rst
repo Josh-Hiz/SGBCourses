@@ -5,7 +5,7 @@ A function's **arity** is the number of arguments it expects. For example ``math
 
 Python lets you define variable arity by marking a special argument with a ``*``; conventionally, this argument is called ``args``. Here's an example:
 
-.. retrolite:: /content/snippets/Week_7_Snippets/variable_arity.ipynb
+.. retrolite:: /content/snippets/cs515_snippets/Week_7_Snippets/variable_arity.ipynb
    :width: 100%
    :height: 500px
    :prompt: Begin!
@@ -24,7 +24,7 @@ Supplying ``*args``
 
 It's also possible to call a function using explicit variable arity; mark the argument list with a ``*``. Here's an example:
 
-.. retrolite:: /content/snippets/Week_7_Snippets/supplying_args.ipynb
+.. retrolite:: /content/snippets/cs515_snippets/Week_7_Snippets/supplying_args.ipynb
    :width: 100%
    :height: 500px
    :prompt: Begin!
