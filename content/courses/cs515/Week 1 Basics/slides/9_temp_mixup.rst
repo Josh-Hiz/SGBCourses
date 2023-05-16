@@ -9,7 +9,7 @@ Identify why the following piece of code does not produce the correct output and
 
 The math formula for converting temperature from fahrenheit to celsius is shown below.
 
-.. image:: /assets/images/Week1/temp_conv.png
+.. image:: /assets/images/cs515/Week1/temp_conv.png
 
 **Please access the challenge 3 folder and nothing else.**
 

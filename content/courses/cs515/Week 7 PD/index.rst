@@ -17,3 +17,7 @@ Week 7: Python Details
     slides/10_sort_by_key
     slides/11_lambda_anon
     slides/12_anon_func_prac
+    slides/13_iters
+    slides/14_collatz
+    slides/15_making_gens_yield
+    slides/16_make_gens
