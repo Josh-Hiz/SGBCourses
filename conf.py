@@ -38,6 +38,6 @@ extensions = [
 html_sidebars = {
     "**": ["sbt-sidebar-nav.html"]
 }
-jupyterlite_contents = ["./content/courses/cs515/books/","./content/snippets/"]
+jupyterlite_contents = ["./content/courses/cs515/books/"]
 
 jupyterlite_bind_ipynb_suffix = False
