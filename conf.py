@@ -28,12 +28,27 @@ html_theme_options = {
     "home_page_in_toc": True,
 }
 
+# global options passed to the quizdown library
+quizdown_config = {
+    'quizdown_js': 'https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js', # quizdown javascript
+    'shuffle_answers': False,		# shuffle answers for each question
+    'shuffle_questions': False,     # shuffle questsions for each quiz
+    'primary_color': '#000000',     # primary CSS color
+    'secondary_color': '#F2F3F5',   # secondary CSS color
+    'text_color': 'black',          # text color of interactive elements
+    'locale': 'en'                  # language of text in user interface
+}
+
 extensions = [
     'jupyterlite_sphinx',
     'sphinx_exec_code',
     'plugins.add_css',
     'plugins.free_response',
+    'sphinxcontrib.quizdown',
+    'sphinx_pyscript',
 ]
+# html_css_files = ['//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css']
+# html_js_files = ['//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js']
 
 html_sidebars = {
     "**": ["sbt-sidebar-nav.html"]

@@ -5,6 +5,7 @@ Week 1: Basic
     :maxdepth: 1
     :caption: Week-1-Basics
 
+    slides/0_quiz_test
     slides/1_welcome
     slides/2_basic_numbers_variables
     slides/3_mystery_operator
@@ -83,3 +84,4 @@ Week 1: Basic
     slides/76_scope_local_global
     slides/77_local_variables_exist_function
     slides/78_characteristics_local_global
+

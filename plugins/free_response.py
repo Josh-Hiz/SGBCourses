@@ -34,9 +34,7 @@ class HtmlQuestionDirective(Directive):
                 document.getElementById("result_{question_num}").innerHTML = `
                 <div class="alert alert-success">
                     <strong>Explanation</strong><br>
-                    <pre>
-                    {explanation}
-                    </pre>
+                    <pre>{explanation}</pre>
                 </div>`;
             }} else {{
                 document.getElementById("result_{question_num}").innerHTML = `
