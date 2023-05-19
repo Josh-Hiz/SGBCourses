@@ -3,15 +3,46 @@ What's On Your Stack?
 
 Consider the following program (Please run it to see the output):
 
-.. retrolite:: /content/snippets/cs515_snippets/Week_1_Snippets/whats_on_your_stack.ipynb
-   :width: 100%
-   :height: 500px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+.. py-config::
+
+    splashscreen:
+        autoclose: true
+
+.. py-repl::
+    :output: replOutput
+
+    def func_a():
+        func_d()
+        func_b()
+        return
+
+    def func_b():
+        return
+
+    def func_c():
+        func_b()
+        func_e()
+        return
+
+    def func_d():
+        func_c()
+        return
+
+    def func_e():
+        print("HERE!")
+        return
+
+    func_a()
+
+.. raw:: html
+
+    <div id="replOutput"></div>
+
+.. py-terminal::
 
 Please answer the following two questions about the program. Note that the quiz checker wants *exact* answers! (Func1,Func2,Func3...etc, the last one should have no comma at the end).
 
-.. add-css:: 600
+.. add-css:: 
 
 
 .. raw:: html

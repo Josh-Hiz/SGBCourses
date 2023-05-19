@@ -8,6 +8,7 @@ TODO TMR: Work on Pyscript sphinx challenges or find a way to make my own or loo
     splashscreen:
         autoclose: true
 
+
 First: Standard Repl testing, this is when slides require a user to run a repl but also edit in it!
 
 This example is taken from Week 1 slide 25, using input output
@@ -27,8 +28,3 @@ This example is taken from Week 1 slide 25, using input output
 
 .. py-terminal::
 
-
-Second: Pyscript based challenges, this will open a file in a specific directory, and when you run it it will run a test script
-
-This example is taken from Week 1 slide 5, variable declarations:
-=================================================================
