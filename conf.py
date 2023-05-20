@@ -36,10 +36,11 @@ extensions = [
     'plugins.free_response',
     'sphinxcontrib.quizdown',
     'sphinx_pyscript',
+    'plugins.ace',
 ]
 
 html_sidebars = {
     "**": ["sbt-sidebar-nav.html"]
 }
-jupyterlite_contents = ["content/courses/cs515/cs515_challenges/"]
+jupyterlite_contents = ["content/cs515/cs515_challenges/"]
 jupyterlite_bind_ipynb_suffix = False

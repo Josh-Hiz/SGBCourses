@@ -1,1 +1,0 @@
-# define sum_of_ints below in terms of numstr1 and numstr2

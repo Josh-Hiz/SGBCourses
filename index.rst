@@ -10,7 +10,7 @@ Welcome to CS515: Intro to Computer Science!
    :maxdepth: 2
    :caption: Courses:
 
-   content/courses/cs515/index
+   content/cs515/index
    
 Search Bar:
 ===========
