@@ -29,9 +29,9 @@ A few more examples:
 
     ## Which of the programs below end in valid functuion calls? Try them out if you're not sure!
 
-    - [x] ```max(abs(1) 2)```
-    - [ ] ```min(max(1,2), 300)```
-    - [ ] ```x=100```<br>```abs(max(x,10))```
+    - [ ] ```max(abs(1) 2)```
+    - [x] ```min(max(1,2), 300)```
+    - [x] ```x=100```<br>```abs(max(x,10))```
     - [x] ```max(max(4,5),6)```
     - [ ] ```abs(abs(max(4,5))```
-    - [ ] ```x = abs(-3)<br>max(x,x+1)```
+    - [x] ```x = abs(-3)<br>max(x,x+1)```

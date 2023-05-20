@@ -16,6 +16,5 @@ Welcome to CS515: Intro to Computer Science!
 Search Bar:
 ===========
 
-* :ref:`genindex`
 * :ref:`search`
    

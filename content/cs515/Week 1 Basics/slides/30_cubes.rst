@@ -5,7 +5,7 @@ Write a function called ``cube`` that takes an integer and returns that integer 
 
 The code challenge will call your cube function with many inputs and check that it behaves correctly on all of them.
 
-(Hint: if a test fails with ``None != ...``, then you might be missing a return in your definition.)
+(Hint: if a test fails with ``None != ...``, then you might be missing a ``return`` in your definition.)
 
 **Sample Input 1:**
 

@@ -39,6 +39,17 @@ extensions = [
     'plugins.ace',
 ]
 
+quizdown_config = {
+    'quizdown_js': 'https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js', # quizdown javascript
+    'start_on_load': True,			# detect and convert all divs with class quizdown
+    'shuffle_answers': False,		# shuffle answers for each question
+    'shuffle_questions': False,     # shuffle questsions for each quiz
+    'primary_color': '#FF9700',     # primary CSS color
+    'secondary_color': '#FFFFFF',   # secondary CSS color
+    'text_color': 'black',          # text color of interactive elements
+    'locale': 'en'                  # language of text in user interface
+}
+
 html_favicon = 'favicon.ico'
 
 html_sidebars = {
