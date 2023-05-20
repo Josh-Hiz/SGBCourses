@@ -39,6 +39,8 @@ extensions = [
     'plugins.ace',
 ]
 
+html_favicon = 'favicon.ico'
+
 html_sidebars = {
     "**": ["sbt-sidebar-nav.html"]
 }
