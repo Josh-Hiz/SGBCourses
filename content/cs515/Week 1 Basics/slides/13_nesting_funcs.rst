@@ -34,4 +34,4 @@ A few more examples:
     - [x] ```x=100```<br>```abs(max(x,10))```
     - [x] ```max(max(4,5),6)```
     - [ ] ```abs(abs(max(4,5))```
-    - [x] ```x = abs(-3)<br>max(x,x+1)```
+    - [x] ```x = abs(-3)```<br>```max(x,x+1)```

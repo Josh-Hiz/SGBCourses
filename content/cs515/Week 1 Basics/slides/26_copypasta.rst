@@ -3,6 +3,8 @@ Copypasta
 
 Copy the program from the last step that reads two strings on two separate lines with input and prints the result separated by commas.
 
+**WORK IN PROGRESS** 
+
 **Please access the challenge 10 folder and nothing else**
 
 .. jupyterlite::

@@ -53,7 +53,8 @@ quizdown_config = {
 html_favicon = 'favicon.ico'
 
 html_sidebars = {
-    "**": ["sbt-sidebar-nav.html"]
+    "**": ["sbt-sidebar-nav.html"] 
 }
+
 jupyterlite_contents = ["content/cs515/cs515_challenges/"]
 jupyterlite_bind_ipynb_suffix = False

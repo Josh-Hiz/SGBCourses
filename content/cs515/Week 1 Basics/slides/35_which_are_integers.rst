@@ -3,7 +3,7 @@ Which Are Integers?
 
 .. quizdown::
 
-    ## Which among the following would throw an error when executed on a Python shell?
+    ## Which of the following numerical values are Python *integers*?
 
     > Numbers without decimal points are ```int```s.
 

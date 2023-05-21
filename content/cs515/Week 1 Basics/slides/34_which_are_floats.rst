@@ -3,7 +3,7 @@ Which Are Floats?
 
 .. quizdown::
 
-    ## Which among the following would throw an error when executed on a Python shell?
+    ## Which of the following numerical values are Python *floating point numbers*?
 
     > Numbers without decimal points are never ```float```s in Python.
 
