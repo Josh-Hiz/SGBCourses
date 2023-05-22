@@ -1,0 +1,33 @@
+#editor { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.container {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    padding: 10px;
+}
+.one {
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+.two {
+    margin-left: 50%;
+    height: 500px;
+}
+
+#run_code {
+    border-radius: 4px; /* Adjust the value to change the roundness of the corners */
+    padding: 10px 20px;
+    background-color: #408ddf;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
