@@ -3,7 +3,7 @@ Indexing
 
 When working with strings, it is very helpful to be able to extract a character from a specific position. We will refer to positions as **indexes**. The first position will be the 0th index and will increase by 1 for each next position. This concept is called **0th base indexing**.
 
- Given a string "CS 515-A!", the following table shows the corresponding index of each character. Notice that the first character 'C' is in index 0, the last character '!' is in index 8, and the length of the string is 9.
+Given a string "CS 515-A!", the following table shows the corresponding index of each character. Notice that the first character 'C' is in index 0, the last character '!' is in index 8, and the length of the string is 9.
 
 .. code-block::
 

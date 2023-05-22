@@ -3,43 +3,8 @@ Guten Tag!
 
 .. add-css::
 
-
-.. code-block:: python
-
-    def print_two(string1, string2):
-        print(string1 + " " + string2)
-        return
-
-    string1 = "Buenos"
-    string2 = "Dias"
-    print_two(string2, string1)
-
-.. raw:: html
-
-   <form onsubmit="return checkAnswer_1()">
-   <p>What will be printed when the following code above is run?</p>
-   <input type="text" id="userAnswer_1">
-   <button type="submit">Submit Answer</button>
-   <p id="result_1"></p>
-   </form>
-
-.. raw:: html
-
-   <script>
-   function checkAnswer_1() {
-       var userAnswer = document.getElementById("userAnswer_1").value;
-       var correctAnswer_1 = "Dias Buenos";
-       if (userAnswer.toLowerCase() === correctAnswer_1.toLowerCase()) {
-           document.getElementById("result_1").innerHTML = `
-           <div class="alert alert-success">
-               <strong>Correct!</strong>
-           </div>`;
-       } else {
-           document.getElementById("result_1").innerHTML = `
-           <div class="alert alert-danger">
-               <strong>Sorry, incorrect answer.</strong>
-           </div>`;
-       }
-       return false;
-   }
-   </script>
+.. free-response::
+    :question: What will be printed when the following code is run? <br> <code>def print_two(string1, string2): <br>&nbsp;&nbsp;&nbsp;&nbsp;print(string1 + " " + string2) <br>&nbsp;&nbsp;&nbsp;&nbsp;return <br> <br> string1 = "Buenos" <br>string2 = "Dias" <br>print_two(string2, string1)
+    :correct_answer: Dias Buenos
+    :explanation: Notice that <code>string2</code> is passed as the first actual argument, and will be the first parameter (formal argument)---confusingly, named <code>string1</code>.
+    :question_num: 1

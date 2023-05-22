@@ -18,6 +18,10 @@ class HtmlQuestionDirective(Directive):
         correct_answer = self.options.get('correct_answer', '')
         explanation = self.options.get('explanation', '')
         question_num = self.options.get('question_num','')
+
+        # Escape special characters in the correct answer
+        correct_answer_escaped = correct_answer.replace('"', '\\"')
+
         html = f"""
         <form onsubmit="return checkAnswer_{question_num}()">
         <p>{question}</p>
@@ -29,7 +33,7 @@ class HtmlQuestionDirective(Directive):
         <script>
         function checkAnswer_{question_num}() {{
             var userAnswer = document.getElementById("userAnswer_{question_num}").value;
-            var correctAnswer_{question_num} = "{correct_answer}";
+            var correctAnswer_{question_num} = "{correct_answer_escaped}";
             if (userAnswer.toLowerCase() === correctAnswer_{question_num}.toLowerCase()) {{
                 document.getElementById("result_{question_num}").innerHTML = `
                 <div class="alert alert-success">
