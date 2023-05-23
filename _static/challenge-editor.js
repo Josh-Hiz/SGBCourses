@@ -1,5 +1,8 @@
+const fileSaver = require('file-saver');
+
 var editor = ace.edit("editor");
 var output_pane;
+var filePath = '/_static/test_files/main.py';
 
 languagePluginLoader.then(() => {
     // pyodide is now ready to use...
@@ -15,12 +18,12 @@ function appendOutput(msg) {
 function configEditor(){
     // configure the ace editor to make it usable
     editor = ace.edit("editor");
-    editor.setTheme("ace/theme/monokai");
+    editor.setTheme("ace/theme/xcode");
     editor.session.setMode("ace/mode/python");
     editor.setShowPrintMargin(false);
     editor.setBehavioursEnabled(true);
     editor.setFontSize(13);
-    openCode('/_static/main.py');
+    openCode(filePath);
 }
 
 function openCode(filePath) {
@@ -29,6 +32,7 @@ function openCode(filePath) {
       .then(code => {
         var modelist = ace.require("ace/ext/modelist");
         var modeName = modelist.getModeForPath(filePath).mode;
+        console.log(modeName);
         editor.session.setMode(modeName);
         editor.session.setValue(code);
       })
@@ -45,11 +49,19 @@ async function runCode(code_to_run) {
         window.pyodide.runPython(code_to_run)
         resolve(true)
     }).catch(err => {
-        alert("Please type something to the editor for it to run!")
+        alert("Error: " + err)
     });
 
     let result = await promise;
-    if (result) { appendOutput(console.logs.join('\n')); }
+    if (result) { 
+        appendOutput(console.logs.join('\n')); 
+        save_code(code_to_run);
+    }
+}
+
+function save_code(code) {
+    var blob = new Blob([code], { type: "text/plain;charset=utf-8" });
+    window.saveAs(blob, filePath);
 }
 
 

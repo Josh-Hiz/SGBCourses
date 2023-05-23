@@ -36,7 +36,6 @@ extensions = [
     'plugins.free_response',
     'sphinxcontrib.quizdown',
     'sphinx_pyscript',
-    'plugins.ace',
 ]
 
 quizdown_config = {
