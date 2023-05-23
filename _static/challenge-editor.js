@@ -1,7 +1,10 @@
+//fileSaver is used to save the code to a file and download it 
 const fileSaver = require('file-saver');
 
 var editor = ace.edit("editor");
 var output_pane;
+// The following line will essentially be the "file path" input for the RST directive, or 
+// we can figure out how to pass arguments into an iframe if thats even possible
 var filePath = '/_static/test_files/main.py';
 
 languagePluginLoader.then(() => {
@@ -55,7 +58,6 @@ async function runCode(code_to_run) {
     let result = await promise;
     if (result) { 
         appendOutput(console.logs.join('\n')); 
-        save_code(code_to_run);
     }
 }
 
@@ -68,6 +70,10 @@ function save_code(code) {
 document.addEventListener('DOMContentLoaded', (event) => {
 
     output_pane = document.getElementById("output");
+
+    document.getElementById("downloadButton").addEventListener('click', function () {
+        save_code(editor.getValue());
+    });
 
     document.getElementById("run_code").addEventListener('click', function () {
         runCode(editor.getValue());

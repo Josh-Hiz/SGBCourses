@@ -33,3 +33,13 @@
     border: none;
     cursor: pointer;
 }
+
+#downloadButton {
+    border-radius: 4px; /* Same as the run_code button */
+    padding: 10px 20px;
+    background-color: #408ddf;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}

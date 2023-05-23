@@ -3,10 +3,12 @@
 <head>
     <title>Pyodide in Action</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lib/filetree/treejs.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ace.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ext-static_highlight.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ext-modelist.js"></script>
     <script src="https://unpkg.com/file-saver"></script>
+    <script scr="lib/filetree/tree.js"></script>  
     <script src="pyodide.js"></script>
     
 </head>
@@ -15,10 +17,11 @@
 
     <div class="container">
         <div class="one">
+
             <pre id="editor" style="width: 1225px;height:500px;"></pre>
         </div>
     </div>
-
+    <button id="downloadButton">Download</button>
     <button id="run_code">Mark</button><br>
 
     <br>
