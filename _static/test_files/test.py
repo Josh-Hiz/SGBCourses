@@ -1,29 +1,28 @@
 import unittest
-import main as task
 
-def defined(name):
-    assert name in dir(task), f"Couldn't find a definition for {name}"
+import main as cube
 
-class TaskTest(unittest.TestCase):
-    def test_defined(self):
-        print("good")
-        defined('counter')
+class CubeTest(unittest.TestCase):
+    def test_exists(self):
+        assert 'cube' in dir(cube), "Couldn't find a definition for 'cube'"
+    
+    def correct(self, v_n):
+        self.assertEqual(cube.cube(v_n), v_n ** 3)
 
-    def correct(self, expected_count):
-        self.assertEqual(task.count, expected_count)
-    def test_sample0(self):
-        self.correct(0)
     def test_sample1(self):
-        task.counter()
-        self.correct(1)
+        self.correct(8)
+
     def test_sample2(self):
-        task.counter()
-        self.correct(2)
+        self.correct(1)
+
     def test_sample3(self):
-        task.counter()
-        task.counter()
-        task.counter()
-        self.correct(5)
+        self.correct(-2)
+
+    def test_sample4(self):
+        self.correct(3)
+
+    def test_zero(self):
+        self.correct(0)
 
 
 unittest.main(exit=False)
