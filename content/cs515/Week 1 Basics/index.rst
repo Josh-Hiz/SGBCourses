@@ -85,5 +85,6 @@ Week 1: Basic
     slides/77_local_variables_exist_function
     slides/78_characteristics_local_global
     slides/79_reading_code
-    slides/80_count_on_me
+    slides/80_updating_globals
+    slides/81_count_on_me
 

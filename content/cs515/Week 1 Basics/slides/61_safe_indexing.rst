@@ -3,7 +3,7 @@ Safe Indexing
 
 .. quizdown::
 
-    ## Given the following if-statement below, which values of ```x``` will result in "The value of x is valid" being printed?
+    ## Choose all of the following that are valid and will **NOT** cause an index out of bounds error.
 
     ```python
     college = "Stevens"
