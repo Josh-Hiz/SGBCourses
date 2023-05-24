@@ -1,8 +1,13 @@
+/**
+ * TODO: UI
+ * Display a directory tree and then use the switchFiles() method to switch between files within said directory
+ */
+
 /** 
- * TODO:
+ * TODO: FUNCTIONALITY
  * Figure out how to run test files and append its output
- * 3 Methods to go about how to save files:
- * Backend with AJAX (Flask most likely)
+ * 3 Methods to go about how to save files so we run test scripts live:
+ * Backend with AJAX requests (Flask most likely)
  * Change how we originally wanted challenges: Have the student upload a file and then run the test script 
  * Use jupyter interface to handle it all
  */
@@ -17,8 +22,9 @@ var output_pane;
 var filePath = '/_static/test_files/main.py';
 var testFilePath = '/_static/test_files/test.py';
 
-languagePluginLoader.then(() => {
+loadPyodide().then((pyodide) => {
     // pyodide is now ready to use...
+    globalThis.pyodide = pyodide;
     appendOutput('Python ready.\n');
 });
 
@@ -36,14 +42,14 @@ function configEditor(){
     editor.setShowPrintMargin(false);
     editor.setBehavioursEnabled(true);
     editor.setFontSize(13);
-    openCode(testFilePath);
+    openCode(filePath);
 }
 
-function openCode(filePath) {
-    getCode(filePath)
+function openCode(filePathToUse) {
+    getCode(filePathToUse)
       .then(code => {
         var modelist = ace.require("ace/ext/modelist");
-        var modeName = modelist.getModeForPath(filePath).mode;
+        var modeName = modelist.getModeForPath(filePathToUse).mode;
         editor.session.setMode(modeName);
         editor.session.setValue(code);
       })
@@ -54,6 +60,7 @@ function openCode(filePath) {
 
 async function runCode(code_to_run) {
     // run the code from the editor and display the output in the textarea
+    
     console.logs = [];
 
     let promise = new Promise((resolve, reject) => {
@@ -112,11 +119,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Add event listeners for switching files
     document.getElementById("switchButton").addEventListener('click', function () {
-        switchFile(filePath);
+        switchFile(testFilePath);
     });
 
     // Add event listeners for running code
     document.getElementById("run_code").addEventListener('click', function () {
+        //Run the getcode function to get the code from the editor
         console.log(editor.getValue());
         runCode(editor.getValue());
     });
