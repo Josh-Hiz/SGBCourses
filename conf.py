@@ -34,6 +34,7 @@ extensions = [
     'sphinx_exec_code',
     'plugins.add_css',
     'plugins.free_response',
+    'plugins.runner',
     'sphinxcontrib.quizdown',
     'sphinx_pyscript',
 ]

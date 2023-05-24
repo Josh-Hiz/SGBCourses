@@ -24,7 +24,7 @@
     height: 500px;
 }
 
-#run_code, #downloadButton, #switchButton {
+#run_code, #downloadButton, #switchButton, #runButton {
     border-radius: 4px; /* Adjust the value to change the roundness of the corners */
     padding: 10px 20px;
     background-color: #408ddf;

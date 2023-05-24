@@ -1,17 +1,3 @@
-/**
- * TODO: UI
- * Display a directory tree and then use the switchFiles() method to switch between files within said directory
- */
-
-/** 
- * TODO: FUNCTIONALITY
- * Figure out how to run test files and append its output
- * 3 Methods to go about how to save files so we run test scripts live:
- * Backend with AJAX requests (Flask most likely)
- * Change how we originally wanted challenges: Have the student upload a file and then run the test script 
- * Use jupyter interface to handle it all
- */
-
 //fileSaver is used to save the code to a file and download it 
 const fileSaver = require('file-saver');
 // Setup ace variables and the output pane for pyodide
@@ -21,6 +7,7 @@ var output_pane;
 // we can figure out how to pass arguments into an iframe if thats even possible
 var filePath = '/_static/test_files/main.py';
 var testFilePath = '/_static/test_files/test.py';
+
 
 loadPyodide().then((pyodide) => {
     // pyodide is now ready to use...
@@ -60,13 +47,13 @@ function openCode(filePathToUse) {
 
 async function runCode(code_to_run) {
     // run the code from the editor and display the output in the textarea
-    
     console.logs = [];
 
     let promise = new Promise((resolve, reject) => {
         window.pyodide.runPython(code_to_run)
         resolve(true)
     }).catch(err => {
+        console.log(err);
         appendOutput(console.logs.join('\n')); 
     });
 
@@ -122,11 +109,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
         switchFile(testFilePath);
     });
 
+    document.getElementById("runButton").addEventListener('click', function () {
+        runCode(editor.getValue());
+    });
+    
     // Add event listeners for running code
     document.getElementById("run_code").addEventListener('click', function () {
         //Run the getcode function to get the code from the editor
-        console.log(editor.getValue());
-        runCode(editor.getValue());
+        getCode(testFilePath)
+        .then(code => {
+            runCode(code);
+        }) 
+        .catch(error => {
+            console.error('Error occurred while opening the code:', error);
+        });
     });
 
     // Capture the output from Pyodide and add it to an array

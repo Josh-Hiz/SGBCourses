@@ -1,7 +1,10 @@
-IDE Testing and Challenge Testing and Quiz Testing:
-===================================================
+IDE Testing and Challenge Testing
+=================================
 
-.. raw:: html
+.. runner::
 
-    <iframe src="/_static/ace_editor.html" height="800" width="800" title="Editor Example"></iframe>
-
+    print("Hello World")
+    l = []
+    for i in range(10):
+        l.append(i)
+    print(l)
