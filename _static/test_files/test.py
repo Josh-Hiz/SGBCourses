@@ -1,6 +1,6 @@
 import unittest
 
-import main as cube
+import challenge as cube
 
 class CubeTest(unittest.TestCase):
     def test_exists(self):
@@ -23,6 +23,8 @@ class CubeTest(unittest.TestCase):
 
     def test_zero(self):
         self.correct(0)
+    
+    print("All tests passed!")
 
 
 unittest.main(exit=False)

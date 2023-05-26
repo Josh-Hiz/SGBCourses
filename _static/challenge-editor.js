@@ -5,9 +5,7 @@ var editor = ace.edit("editor");
 var output_pane;
 // The following line will essentially be the "file path" input for the RST directive, or 
 // we can figure out how to pass arguments into an iframe if thats even possible
-var filePath = '/_static/test_files/main.py';
 var testFilePath = '/_static/test_files/test.py';
-
 
 loadPyodide().then((pyodide) => {
     // pyodide is now ready to use...
@@ -29,7 +27,28 @@ function configEditor(){
     editor.setShowPrintMargin(false);
     editor.setBehavioursEnabled(true);
     editor.setFontSize(13);
-    openCode(filePath);
+    //Fix indentation issue with ace editor, not really the best solution but it works
+    var code = editor.getValue();
+    var lines = code.split("\n");
+    var minIndent = null;
+    for (var i = 0; i < lines.length; i++) {
+        var line = lines[i];
+        if (line.trim().length > 0) {
+            var indent = line.search(/\S/);
+            if (minIndent === null || (indent !== -1 && indent < minIndent)) {
+                minIndent = indent;
+            }
+        }
+    }
+    if (minIndent !== null) {
+        for (var i = 0; i < lines.length; i++) {
+            if (lines[i].trim().length > 0) {
+                lines[i] = lines[i].slice(minIndent);
+            }
+        }
+        code = lines.join('\n');
+        editor.setValue(code);
+    }
 }
 
 function openCode(filePathToUse) {
@@ -46,26 +65,50 @@ function openCode(filePathToUse) {
   }
 
 async function runCode(code_to_run) {
-    // run the code from the editor and display the output in the textarea
-    console.logs = [];
+    // Run the code thats within the editor so students can test
+    if(code_to_run == editor.getValue()){
+        console.logs = [];
 
-    let promise = new Promise((resolve, reject) => {
-        window.pyodide.runPython(code_to_run)
-        resolve(true)
-    }).catch(err => {
-        console.log(err);
-        appendOutput(console.logs.join('\n')); 
-    });
+        let promise = new Promise((resolve, reject) => {
+            window.pyodide.runPython(code_to_run)
+            resolve(true)
+        }).catch(err => {
+            console.log(err);
+            appendOutput(console.logs.join('\n')); 
+        });
+    
+        let result = await promise;
+        if (result) { 
+            appendOutput(console.logs.join('\n')); 
+        }
+    } else {
+        // run the code from the editor and display the output in the textarea
 
-    let result = await promise;
-    if (result) { 
-        appendOutput(console.logs.join('\n')); 
+        let data = editor.getValue(); 
+        let testData = code_to_run;
+        window.pyodide.FS.writeFile("/challenge.py", data);
+        window.pyodide.FS.writeFile("/test.py", testData);
+        
+        console.logs = [];
+
+        let promise = new Promise((resolve, reject) => {
+            window.pyodide.runPython(`exec(open('/test.py').read())`)
+            resolve(true)
+        }).catch(err => {
+            console.log(err);
+            appendOutput(console.logs.join('\n')); 
+        });
+
+        let result = await promise;
+        if (result) { 
+            appendOutput(console.logs.join('\n')); 
+        }
     }
 }
 
 function saveCode(code) {
     var blob = new Blob([code], { type: "text/plain;charset=utf-8" });
-    window.saveAs(blob, filePath);
+    window.saveAs(blob, 'challenge.py');
 }
 
 //make a function getCode that takes in a file path and returns the code in that file as a string to use in ace
@@ -93,7 +136,6 @@ function switchFile(codeToSwitch) {
     .catch(error => {
       console.error('Error occurred while opening the code:', error);
     });
-
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {

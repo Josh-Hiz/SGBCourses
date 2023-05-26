@@ -1,10 +1,6 @@
 IDE Testing and Challenge Testing
 =================================
 
-.. runner::
+.. raw:: html
 
-    print("Hello World")
-    l = []
-    for i in range(10):
-        l.append(i)
-    print(l)
+    <iframe src="/_static/ace_editor.html" height="800" width="800" title="Editor Test"></iframe>

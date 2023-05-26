@@ -136,8 +136,8 @@ class HtmlQuestionDirective(Directive):
             </script>
         </body>
         """
-        iframe_html = f"""<iframe srcdoc="{html}" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>"""
-        return [raw("", html, format="html")]
+        iframe_html = f"""<iframe srcdoc={html} height="800" width="800" title="Code Runner"></iframe>"""
+        return [raw("", iframe_html, format="html")]
 
 def setup(app):
     app.add_directive("runner", HtmlQuestionDirective)
