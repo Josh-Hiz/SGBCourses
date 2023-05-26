@@ -82,16 +82,19 @@ async function runCode(code_to_run) {
             appendOutput(console.logs.join('\n')); 
         }
     } else {
-        // run the code from the editor and display the output in the textarea
-
+        // This solution involves changing the test file
         let data = editor.getValue(); 
         let testData = code_to_run;
+        let fileToRun = data + '\n' + testData
+        // This solution still in the works for files
         window.pyodide.FS.writeFile("/challenge.py", data);
         window.pyodide.FS.writeFile("/test.py", testData);
         
         console.logs = [];
 
         let promise = new Promise((resolve, reject) => {
+            //This will execute one python file, but how can I get other files imported so the test script can run?
+            //Either fileToRun or test.py will be the file to run
             window.pyodide.runPython(`exec(open('/test.py').read())`)
             resolve(true)
         }).catch(err => {
@@ -144,11 +147,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Add event listeners for downloading code
     document.getElementById("downloadButton").addEventListener('click', function () {
         saveCode(editor.getValue());
-    });
-
-    // Add event listeners for switching files
-    document.getElementById("switchButton").addEventListener('click', function () {
-        switchFile(testFilePath);
     });
 
     document.getElementById("runButton").addEventListener('click', function () {
