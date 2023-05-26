@@ -95,7 +95,7 @@ async function runCode(code_to_run) {
         let promise = new Promise((resolve, reject) => {
             //This will execute one python file, but how can I get other files imported so the test script can run?
             //Either fileToRun or test.py will be the file to run
-            window.pyodide.runPython(`exec(open('/test.py').read())`)
+            window.pyodide.runPython(fileToRun)
             resolve(true)
         }).catch(err => {
             console.log(err);
