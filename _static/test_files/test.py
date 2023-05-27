@@ -1,13 +1,12 @@
 import unittest
-
-defs = dir()
+import challenge as cube
 
 class CubeTest(unittest.TestCase):
     def test_exists(self):
-        assert 'cube' in defs, "Couldn't find a definition for 'cube'"
+        assert 'cube' in dir(cube), "Couldn't find a definition for 'cube'"
     
     def correct(self, v_n):
-        self.assertEqual(cube(v_n), v_n ** 3)
+        self.assertEqual(cube.cube(v_n), v_n ** 3)
 
     def test_sample1(self):
         self.correct(8)
@@ -23,6 +22,5 @@ class CubeTest(unittest.TestCase):
 
     def test_zero(self):
         self.correct(0)
-
-
+            
 unittest.main(exit=False)

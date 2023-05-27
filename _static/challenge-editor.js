@@ -64,6 +64,8 @@ function openCode(filePathToUse) {
       });
   }
 
+
+
 async function runCode(code_to_run) {
     // Run the code thats within the editor so students can test
     if(code_to_run == editor.getValue()){
@@ -82,26 +84,23 @@ async function runCode(code_to_run) {
             appendOutput(console.logs.join('\n')); 
         }
     } else {
-        // This solution involves changing the test file
-        let data = editor.getValue(); 
-        let testData = code_to_run;
-        let fileToRun = data + '\n' + testData
-        // This solution still in the works for files
-        window.pyodide.FS.writeFile("/challenge.py", data);
-        window.pyodide.FS.writeFile("/test.py", testData);
         
         console.logs = [];
 
+        var data = editor.getValue(); 
+        var testData = code_to_run;
+        window.pyodide.FS.writeFile("challenge.py", data);
+        window.pyodide.FS.writeFile("test.py", testData);
         let promise = new Promise((resolve, reject) => {
-            //This will execute one python file, but how can I get other files imported so the test script can run?
-            //Either fileToRun or test.py will be the file to run
-            window.pyodide.runPython(fileToRun)
+            window.pyodide.runPython(`
+                exec(open('test.py').read())
+            `)
             resolve(true)
         }).catch(err => {
             console.log(err);
             appendOutput(console.logs.join('\n')); 
         });
-
+        
         let result = await promise;
         if (result) { 
             appendOutput(console.logs.join('\n')); 
