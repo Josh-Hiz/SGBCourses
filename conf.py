@@ -34,9 +34,9 @@ extensions = [
     'sphinx_exec_code',
     'plugins.add_css',
     'plugins.free_response',
-    'plugins.runner',
     'sphinxcontrib.quizdown',
     'sphinx_pyscript',
+    'plugins.challenge',
 ]
 
 quizdown_config = {
@@ -56,5 +56,5 @@ html_sidebars = {
     "**": ["sbt-sidebar-nav.html"] 
 }
 
-jupyterlite_contents = ["content/cs515/cs515_challenges/"]
+jupyterlite_contents = ["_static/cs515_challenges/"]
 jupyterlite_bind_ipynb_suffix = False

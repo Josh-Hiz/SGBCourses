@@ -1,24 +1,22 @@
 from docutils.parsers.rst import Directive
+from docutils.parsers.rst import Directive
 from docutils.nodes import raw
-from docutils import nodes
-from docutils.statemachine import StringList
 
-class HtmlQuestionDirective(Directive):
-    has_content = True
+class ChallengeDirective(Directive):
+    required_arguments = 0
     optional_arguments = 1
-    option_spec = {
-        'tester': str,
-    }
-
-
+    has_content = True
+    option_spec = {'tester': str}
+    
     def run(self):
+        tester = self.options.get('tester', '')
         code = '\n'.join(self.content)
-        testFilePath = self.options.get('tester', '')
         
         html = f"""
-        <button>Not ready yet></button>
+        <iframe src="/_static/ace_editor.html" height="800" width="800" title="Challenge"></iframe>
         """
+        
         return [raw("", html, format="html")]
-
+        
 def setup(app):
-    app.add_directive("runner", HtmlQuestionDirective)
+    app.add_directive("challenge", ChallengeDirective)

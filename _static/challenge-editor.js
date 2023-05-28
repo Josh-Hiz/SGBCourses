@@ -5,7 +5,7 @@ var editor = ace.edit("editor");
 var output_pane;
 // The following line will essentially be the "file path" input for the RST directive, or 
 // we can figure out how to pass arguments into an iframe if thats even possible
-var testFilePath = '/_static/test_files/test.py';
+var testFilePath = '/_static/cs515_challenges/Week1/Challenge12/test_cube.py';
 
 loadPyodide().then((pyodide) => {
     // pyodide is now ready to use...
@@ -91,10 +91,14 @@ async function runCode(code_to_run) {
         var testData = code_to_run;
         window.pyodide.FS.writeFile("challenge.py", data);
         window.pyodide.FS.writeFile("test.py", testData);
+        let chalStr = new TextDecoder().decode(window.pyodide.FS.readFile("challenge.py"));
+        let testStr = new TextDecoder().decode(window.pyodide.FS.readFile("test.py"));
+        
+        console.log(chalStr);
+        console.log(testStr);
+
         let promise = new Promise((resolve, reject) => {
-            window.pyodide.runPython(`
-                exec(open('test.py').read())
-            `)
+            window.pyodide.runPython("exec(open('test.py').read())")
             resolve(true)
         }).catch(err => {
             console.log(err);
