@@ -13,7 +13,7 @@ class ChallengeDirective(Directive):
         code = '\n'.join(self.content)
         
         html = f"""
-        <iframe id="challenge-iframe" src="/_static/ace_editor.html?testFile='{tester}'&initCode='{code}'" height="800" width="800" title="Challenge"></iframe>
+        <iframe src="/_static/ace_editor.html?testFile={tester}&initCode={code}" height="800" width="800" title="Challenge"></iframe>
         """
         
         return [raw("", html, format="html")]
