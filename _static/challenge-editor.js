@@ -1,4 +1,23 @@
-var testFilePath = "/_static/cs515_challenges/Week1/Challenge12/test_cube.py";
+var testFilePath;
+
+function setParams() {
+    var params = location.href.split('?')[1];
+    var data = {};
+
+    if (params) {
+        params = params.split('&');
+
+        for (var i = 0; i < params.length; i++) {
+            var param = params[i].split('=');
+            var paramName = decodeURIComponent(param[0]);
+            var paramValue = decodeURIComponent(param[1]);
+            data[paramName] = paramValue;
+        }
+    }
+    testFilePath = data['testFile'];
+    document.getElementById("editor").innerHTML = data['initCode'];
+}
+setParams();
 
 //fileSaver is used to save the code to a file and download it 
 const fileSaver = require('file-saver');
@@ -92,14 +111,20 @@ async function runCode(code_to_run) {
         var testData = code_to_run;
         window.pyodide.FS.writeFile("challenge.py", data);
         window.pyodide.FS.writeFile("test.py", testData);
-        let chalStr = new TextDecoder().decode(window.pyodide.FS.readFile("challenge.py"));
-        let testStr = new TextDecoder().decode(window.pyodide.FS.readFile("test.py"));
         
-        console.log(chalStr);
-        console.log(testStr);
+        // The commented code below is used to check if the files were written correctly but logging whats in the files itself
+        // let chalStr = new TextDecoder().decode(window.pyodide.FS.readFile("challenge.py"));
+        // let testStr = new TextDecoder().decode(window.pyodide.FS.readFile("test.py"));
+        // console.log(chalStr);
+        // console.log(testStr);
 
         let promise = new Promise((resolve, reject) => {
-            window.pyodide.runPython("exec(open('test.py').read())")
+            window.pyodide.runPython(`
+                exec(open('test.py').read())
+                import sys
+                sys.modules.pop("challenge", None)
+                sys.modules.pop("test", None)
+                `)
             resolve(true)
         }).catch(err => {
             console.log(err);
@@ -146,19 +171,20 @@ function switchFile(codeToSwitch) {
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
-
     output_pane = document.getElementById("output");
     // Add event listeners for downloading code
     document.getElementById("downloadButton").addEventListener('click', function () {
         saveCode(editor.getValue());
     });
 
+    // Add event listeners for running the code the user types
     document.getElementById("runButton").addEventListener('click', function () {
         runCode(editor.getValue());
     });
     
-    // Add event listeners for running code
+    // Add event listeners for running the test script
     document.getElementById("run_code").addEventListener('click', function () {
+        
         //Run the getcode function to get the code from the editor
         getCode(testFilePath)
         .then(code => {
