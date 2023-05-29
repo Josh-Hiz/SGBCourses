@@ -6,6 +6,6 @@ IDE Testing and Challenge Testing
     <iframe src="/_static/ace_editor.html" height="800" width="800" title="Editor Test"></iframe>
 
 .. challenge::
-    :tester: tester
+    :tester: /_static/cs515_challenges/Week1/Challenge12/test_cube.py
 
-    random code
+    # define cube below:

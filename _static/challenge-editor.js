@@ -1,3 +1,22 @@
+var testFilePath = "/_static/cs515_challenges/Week1/Challenge12/test_cube.py";
+
+async function getParams() {
+    var params = location.href.split('?')[1];
+    var data = {};
+
+    if (params) {
+        params = params.split('&');
+
+        for (var i = 0; i < params.length; i++) {
+            var param = params[i].split('=');
+            var paramName = decodeURIComponent(param[0]);
+            var paramValue = decodeURIComponent(param[1]);
+            data[paramName] = paramValue;
+        }
+    }
+    return data['testFile'];
+}
+
 //fileSaver is used to save the code to a file and download it 
 const fileSaver = require('file-saver');
 // Setup ace variables and the output pane for pyodide
@@ -5,7 +24,6 @@ var editor = ace.edit("editor");
 var output_pane;
 // The following line will essentially be the "file path" input for the RST directive, or 
 // we can figure out how to pass arguments into an iframe if thats even possible
-var testFilePath = '/_static/cs515_challenges/Week1/Challenge12/test_cube.py';
 
 loadPyodide().then((pyodide) => {
     // pyodide is now ready to use...
