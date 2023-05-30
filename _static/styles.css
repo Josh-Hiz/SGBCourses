@@ -24,14 +24,20 @@
     height: 500px;
 }
 
+.buttonDiv {
+    width: 100%;
+    text-align: left;
+}
+
 #run_code, #downloadButton, #switchButton, #runButton, #clearButton {
     border-radius: 4px; /* Adjust the value to change the roundness of the corners */
     padding: 10px 20px;
-    background-color: #408ddf;
-    color: white;
-    font-size: 16px;
-    border: none;
+    background-color: #ffffff;
+    color: black;
+    font-size: 15px;
+    border: solid;
     cursor: pointer;
-    text-align: center;
     display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }

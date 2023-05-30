@@ -1,13 +1,39 @@
 IDE Testing and Challenge Testing
 =================================
 
-.. challenge::
-    :tester: /_static/cs515_challenges/Week1/Challenge12/test_cube.py
+Write a function ``triangle_area`` that takes the ``base`` and ``height`` sizes of a triangle and returns its area.
 
-    # define cube below:
-    num_students = 45
-    num_groups = 5
-    print(num_students // num_groups)
-    def cube(x):
-        return x ** 3
-    
+(Reminder, the area of a triangle is ``1/2 * base * height``).
+
+**Sample Input 1:**
+
+``base`` is 5
+``height`` is 6
+
+**Sample Output 1:**
+
+``15.0``
+
+**Sample Input 2:**
+
+``base`` is 3
+``height`` is 4
+
+**Sample Output 2:**
+
+``6.0``
+
+**Sample Input 3:**
+
+``base`` is 1
+``height`` is 2
+
+**Sample Output 3:**
+
+``1.0``
+
+
+.. challenge::
+    :tester: /_static/cs515_challenges/Week1/Challenge13/test_triangle.py
+
+    # define triangle_area below:

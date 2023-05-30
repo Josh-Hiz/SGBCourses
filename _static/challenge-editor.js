@@ -1,7 +1,4 @@
 var testFilePath;
-//fileSaver is used to save the code to a file and download it 
-const fileSaver = require('file-saver');
-// Setup ace variables and the output pane for pyodide
 var editor = ace.edit("editor");
 var output_pane;
 
@@ -54,8 +51,6 @@ function openCode(filePathToUse) {
         console.error('Error occurred while opening the code:', error);
       });
   }
-
-
 
 async function runCode(code_to_run) {
     // Run the code thats within the editor so students can test

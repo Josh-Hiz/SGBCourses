@@ -10,24 +10,23 @@
     <script src="https://cdn.jsdelivr.net/pyodide/v0.23.2/full/pyodide.js"></script>
 </head>
 
-
 <body>
-
     <div class="container">
         <div class="one">
             <div id="editor" style="width: 750px;height:500px;"></div>
         </div>
     </div>
 
-    <button id="runButton">Run</button>
-    <button id="downloadButton">Download</button>
-    <button id="run_code">Mark</button><br>
-    <button id="clearButton">Clear</button>
+    <div class="buttonDiv">
+        <button id="runButton">Run</button>
+        <button id="downloadButton">Download</button>
+        <button id="run_code">Mark</button><br>
+        <button id="clearButton">Clear</button>
+    </div>
 
     <br>
 
-    <textarea readonly rows=10 cols=30 id=output style="margin: 0px; width: 750px; height: 500px;">Loading and compiling...</textarea><br>
+    <textarea readonly rows=10 cols=30 id=output style="margin: 0px; width: 750px; height: 500px; font-size: 16px;">Loading and compiling...</textarea><br>
     <script type="text/javascript" src="challenge-editor.js"></script>
 </body>
-
 </html>
