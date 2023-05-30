@@ -1,5 +1,4 @@
 from docutils.parsers.rst import Directive
-from docutils.parsers.rst import Directive
 from docutils.nodes import raw
 
 class ChallengeDirective(Directive):
@@ -10,7 +9,7 @@ class ChallengeDirective(Directive):
     
     def run(self):
         tester = self.options.get('tester', '')
-        code = '\n'.join(self.content)
+        code = self.content
         
         html = f"""
         <iframe src="/_static/ace_editor.html?testFile={tester}&initCode={code}" height="800" width="800" title="Challenge"></iframe>

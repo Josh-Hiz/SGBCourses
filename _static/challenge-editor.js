@@ -1,31 +1,23 @@
 var testFilePath;
-
-function setParams() {
-    var params = location.href.split('?')[1];
-    var data = {};
-
-    if (params) {
-        params = params.split('&');
-
-        for (var i = 0; i < params.length; i++) {
-            var param = params[i].split('=');
-            var paramName = decodeURIComponent(param[0]);
-            var paramValue = decodeURIComponent(param[1]);
-            data[paramName] = paramValue;
-        }
-    }
-    testFilePath = data['testFile'];
-    document.getElementById("editor").innerHTML = data['initCode'];
-}
-setParams();
-
 //fileSaver is used to save the code to a file and download it 
 const fileSaver = require('file-saver');
 // Setup ace variables and the output pane for pyodide
 var editor = ace.edit("editor");
 var output_pane;
-// The following line will essentially be the "file path" input for the RST directive, or 
-// we can figure out how to pass arguments into an iframe if thats even possible
+
+function setParams() {
+    var params = location.href.split('?')[1];    
+    if (params) {
+        params = params.split('&');
+        params[0] = params[0].substring(params[0].indexOf('=') + 1);
+        params[1] = params[1].substring(params[1].indexOf('=') + 1).slice(1, -1);
+        params[1] = decodeURIComponent(params[1]).replace(/'/g, '').split(',');
+        let code = params[1]
+        let updatedCode = code.map(str => str.startsWith(' ') ? str.substring(1) : str);
+        testFilePath = params[0];
+        editor.setValue(updatedCode.join('\n'));
+    }
+}
 
 loadPyodide().then((pyodide) => {
     // pyodide is now ready to use...
@@ -47,28 +39,7 @@ function configEditor(){
     editor.setShowPrintMargin(false);
     editor.setBehavioursEnabled(true);
     editor.setFontSize(13);
-    //Fix indentation issue with ace editor, not really the best solution but it works
-    var code = editor.getValue();
-    var lines = code.split("\n");
-    var minIndent = null;
-    for (var i = 0; i < lines.length; i++) {
-        var line = lines[i];
-        if (line.trim().length > 0) {
-            var indent = line.search(/\S/);
-            if (minIndent === null || (indent !== -1 && indent < minIndent)) {
-                minIndent = indent;
-            }
-        }
-    }
-    if (minIndent !== null) {
-        for (var i = 0; i < lines.length; i++) {
-            if (lines[i].trim().length > 0) {
-                lines[i] = lines[i].slice(minIndent);
-            }
-        }
-        code = lines.join('\n');
-        editor.setValue(code);
-    }
+    setParams();
 }
 
 function openCode(filePathToUse) {
@@ -112,12 +83,6 @@ async function runCode(code_to_run) {
         window.pyodide.FS.writeFile("challenge.py", data);
         window.pyodide.FS.writeFile("test.py", testData);
         
-        // The commented code below is used to check if the files were written correctly but logging whats in the files itself
-        // let chalStr = new TextDecoder().decode(window.pyodide.FS.readFile("challenge.py"));
-        // let testStr = new TextDecoder().decode(window.pyodide.FS.readFile("test.py"));
-        // console.log(chalStr);
-        // console.log(testStr);
-
         let promise = new Promise((resolve, reject) => {
             window.pyodide.runPython(`
                 exec(open('test.py').read())
@@ -154,7 +119,6 @@ async function getCode(codeToGet) {
     }
   }
 
-
 //codeToSwitch will be a file path
 function switchFile(codeToSwitch) {
     getCode(codeToSwitch)
@@ -176,12 +140,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("downloadButton").addEventListener('click', function () {
         saveCode(editor.getValue());
     });
-
     // Add event listeners for running the code the user types
     document.getElementById("runButton").addEventListener('click', function () {
         runCode(editor.getValue());
     });
-    
+
+    // Add event listeners for the clear button
+    document.getElementById("clearButton").addEventListener('click', function () {
+        output_pane.value = '';
+    });
+
     // Add event listeners for running the test script
     document.getElementById("run_code").addEventListener('click', function () {
         
@@ -194,7 +162,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             console.error('Error occurred while opening the code:', error);
         });
     });
-
     // Capture the output from Pyodide and add it to an array
     console.stdlog = console.log.bind(console);
     console.logs = [];
@@ -202,6 +169,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.logs.push(Array.from(arguments));
         console.stdlog.apply(console, arguments);
     }
-    
-    configEditor();
+    configEditor(); 
 });
