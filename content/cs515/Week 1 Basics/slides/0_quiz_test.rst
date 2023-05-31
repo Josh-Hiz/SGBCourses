@@ -36,4 +36,6 @@ Write a function ``triangle_area`` that takes the ``base`` and ``height`` sizes 
 .. challenge::
     :tester: /_static/cs515_challenges/Week1/Challenge13/test_triangle.py
 
-    # define triangle_area below:
+    # define triangle_area below (fill in the function paramaters!):
+    def triangle_area():
+        pass

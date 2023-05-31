@@ -24,9 +24,10 @@
     height: 500px;
 }
 
-.buttonDiv {
+.buttonContainer {
     width: 100%;
     text-align: left;
+    display: inline
 }
 
 #run_code, #downloadButton, #switchButton, #runButton, #clearButton {

@@ -22,6 +22,10 @@ loadPyodide().then((pyodide) => {
     appendOutput('Python ready.\n');
 });
 
+console.warn = function(message) {
+    console.log(message);
+  };
+  
 function appendOutput(msg) {
     // used to add program output to the textarea
     output_pane.value = output_pane.value + '\n' + msg;
@@ -95,6 +99,7 @@ async function runCode(code_to_run) {
         if (result) { 
             appendOutput(console.logs.join('\n')); 
         }
+        console.warn("this is a warning");
     }
 }
 
