@@ -11,10 +11,8 @@ The math formula for converting temperature from fahrenheit to celsius is shown 
 
 .. image:: /assets/images/cs515/Week1/temp_conv.png
 
-**Please access the challenge 3 folder and nothing else.**
+.. challenge::
+    :tester: /_static/cs515_challenges/Week1/Challenge3/test_temperature.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+    # Correct the following expression so as convert fahrenheit to celsius appropriately
+    celsius = fahrenheit - 32 * 5 / 9

@@ -13,10 +13,9 @@ Write a variable declaration for ``larger_magnitude`` that contains the absolute
 
 ``9``
 
-**Please access the challenge 6 folder and nothing else**
+.. challenge::
+    :tester: /_static/cs515_challenges/Week1/Challenge6/magnitude_test.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+    # define a variable larger_magnitude
+    #   use input variables first and second
+    #   larger_magnitude holds the largest magnitude value

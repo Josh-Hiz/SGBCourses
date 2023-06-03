@@ -13,10 +13,8 @@ Your task is to write a variable declaration for a variable called ``smallest`` 
 
 ``smallest`` is 8
 
-**Please access the challenge 5 folder and nothing else**
+.. challenge::
+    :tester: /_static/cs515_challenges/Week1/Challenge5/smallest_test.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+    # define a variable smallest
+    #   to be the lowest value of input variables a, b, and c

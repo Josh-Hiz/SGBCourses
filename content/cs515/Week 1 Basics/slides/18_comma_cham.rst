@@ -35,10 +35,8 @@ joined_with_commas is 1,2,3
 
 ``joined_with_commas`` is red,green,blue
 
-**Please access the challenge 7 folder and nothing else**
+.. challenge::
+    :tester: /_static/cs515_challenges/Week1/Challenge7/comma_test.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+     # define joined_with_commas
+     #   inputs are strings s1, s2, and s3

@@ -3,35 +3,20 @@ Variable Declarations
 
 Let's use what we've learned so far to declare a variable according to a specification we give you.
 
-We're in a *workspace*. Below this text, a Python program in the file variable.py declares the two variables num_profs and num_tas.
+We're in a *workspace*. At the top right, a Python program in the file ``variable.py`` declares the two variables ``num_profs`` and ``num_tas``.
 
-Add a new declaration for a variable named num_students, with value equal to 45. Click the **Run** button (top left) to check your work; you can do it as many times as you like.
+Add a new declaration for a variable named ``num_students``, with value equal to 45. Click the **Mark** button to check your work; you can do it as many times as you like.
 
-**Please access the challenge 1 folder and nothing else.**
+A few tips about using Ed to run your program:
 
-How to use JupyterLite:
-=======================
+- For the first few programs we'll test out, you don't need to worry about providing input and output, or what stdin and stdout are. We're just testing out that the program you write follows the directions.
 
-You will be using a simple but incredible tool called ``jupyterlite`` that can run Jupyter Notebook files in the browser and allow live file editing of the python files. In order to write and test your code, follow these steps:
+- You can submit as many times as you want, and each time you submit, the system will give you some feedback on what you might have done wrong.
 
-* **Go to the Week1 folder as we are in week 1, within this folder will have challenge folders that are numbered**
-*  Type up your python file according to the instructions
-*  Go to the ``.ipynb`` file that is also within the JupyterLite app and run the first cell (the first box usually) and click the run button on the top left (it looks like a play button)
-*  If your submission fails, then fix your python file and try again **BEFORE YOU RERUN THE CELL** please restart the kernel, and then run the cell again, to restart the kernel simple click the button that looks like a redo button near the top middle
-*  If your submission succeeds, this is a sample of what you should expect:
+- You can run the program before submitting, and it will show you the output. In many cases, we (the course staff) have controlled how the output appears. In this case, there's no output at all---we'll just test that your values are correct.
 
-.. code-block:: 
+.. challenge::
+    :tester: /_static/cs515_challenges/Week1/Challenge1/variable_test.py
 
-         testOthers (__main__.SimpleTestCase.testOthers) ... ok
-         testStudents (__main__.SimpleTestCase.testStudents) ... ok
-
-         ----------------------------------------------------------------------
-         Ran 2 tests in 0.001s
-
-         OK 
-
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+    num_profs = 1
+    num_tas = 2

@@ -21,10 +21,7 @@ Your task is to write a variable declaration for a variable called ``smaller`` t
 
 ``smaller`` is 5
 
-**Please access the challenge 4 folder and nothing else**
+.. challenge::
+    :tester: /_static/cs515_challenges/Week1/Challenge4/smaller_test.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+    # declare the variable smaller to hold the minimum of input variables x and y

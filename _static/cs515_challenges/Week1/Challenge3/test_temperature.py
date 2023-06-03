@@ -28,3 +28,5 @@ class SimpleTestCase(unittest.TestCase):
         builtins.fahrenheit = 98.6
         importlib.reload(temperature)
         self.assertEqual(temperature.celsius, 37.0)
+
+unittest.main(exit=False)
