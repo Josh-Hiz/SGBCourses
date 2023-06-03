@@ -3,16 +3,18 @@ var editor = ace.edit("editor");
 var output_pane;
 
 function setParams() {
-    var params = location.href.split('?')[1];    
-    if (params) {
-        params = params.split('&');
-        params[0] = params[0].substring(params[0].indexOf('=') + 1);
-        params[1] = params[1].substring(params[1].indexOf('=') + 1).slice(1, -1);
-        params[1] = decodeURIComponent(params[1]).replace(/'/g, '').split(',');
-        let code = params[1]
-        let updatedCode = code.map(str => str.startsWith(' ') ? str.substring(1) : str);
-        testFilePath = params[0];
-        editor.setValue(updatedCode.join('\n'));
+    const queryString = new URLSearchParams(location.search);
+    const initCode = queryString.get('initCode');
+    const testFile = queryString.get('testFile');
+    if (initCode) {
+        const decodedCode = decodeURIComponent(initCode);
+        console.log(decodedCode)
+        editor.setValue(decodedCode);
+    }
+    if(testFile){
+        const decodedTest = decodeURIComponent(testFile);
+        testFilePath = decodedTest;
+        console.log(testFilePath);
     }
 }
 
@@ -24,7 +26,7 @@ loadPyodide().then((pyodide) => {
 
 console.warn = function(message) {
     console.log(message);
-  };
+};
   
 function appendOutput(msg) {
     // used to add program output to the textarea
@@ -50,11 +52,11 @@ function openCode(filePathToUse) {
         var modeName = modelist.getModeForPath(filePathToUse).mode;
         editor.session.setMode(modeName);
         editor.session.setValue(code);
-      })
+    })
       .catch(error => {
         console.error('Error occurred while opening the code:', error);
-      });
-  }
+    });
+}
 
 async function runCode(code_to_run) {
     // Run the code thats within the editor so students can test
@@ -99,7 +101,6 @@ async function runCode(code_to_run) {
         if (result) { 
             appendOutput(console.logs.join('\n')); 
         }
-        console.warn("this is a warning");
     }
 }
 
@@ -117,7 +118,7 @@ async function getCode(codeToGet) {
     } catch (error) {
       console.error('Error occurred while opening the code:', error);
     }
-  }
+}
 
 //codeToSwitch will be a file path
 function switchFile(codeToSwitch) {

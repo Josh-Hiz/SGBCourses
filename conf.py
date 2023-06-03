@@ -37,6 +37,7 @@ extensions = [
     'sphinxcontrib.quizdown',
     'sphinx_pyscript',
     'plugins.challenge',
+    'plugins.runner'
 ]
 
 quizdown_config = {

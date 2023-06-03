@@ -39,3 +39,12 @@ Write a function ``triangle_area`` that takes the ``base`` and ``height`` sizes 
     # define triangle_area below (fill in the function paramaters!):
     def triangle_area():
         pass
+
+Runner:
+=======
+
+.. runner::
+
+    # define triangle_area below (fill in the function paramaters!):
+    def triangle_area():
+        pass

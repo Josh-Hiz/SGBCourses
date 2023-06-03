@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pyodide in Action</title>
+    <link rel="stylesheet" href="runner_style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ext-static_highlight.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ext-modelist.js"></script>
+    <script src="https://unpkg.com/file-saver"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.2/full/pyodide.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="one">
+            <div id="editor" style="width: 750px;height:100px;"></div>
+        </div>
+    </div>
+    <textarea readonly rows=10 cols=30 id=output style="margin: 0px; width: 750px; height: 100px; font-size: 16px;">Loading and compiling...</textarea><br>
+    <div class="buttonContainer">
+        <button id="runButton">Run</button>
+        <button id="clearButton">Clear</button>
+    </div>
+    <script type="text/javascript" src="runner.js"></script>
+</body>
+</html>

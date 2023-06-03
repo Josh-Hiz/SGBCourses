@@ -1,18 +1,18 @@
 from docutils.parsers.rst import Directive
 from docutils.nodes import raw
+import urllib.parse
 
 class ChallengeDirective(Directive):
-    required_arguments = 0
     optional_arguments = 1
     has_content = True
     option_spec = {'tester': str}
     
     def run(self):
         tester = self.options.get('tester', '')
-        code = self.content
-        
+        code = "\n".join(self.content)
+        encoded_code = urllib.parse.quote(code)
         html = f"""
-        <iframe src="/_static/ace_editor.html?testFile={tester}&initCode={code}" height="800" width="800" title="Challenge"></iframe>
+        <iframe src="/_static/challenge-ide/ace_editor.html?testFile={tester}&initCode={encoded_code}" height="800" width="800" title="Challenge"></iframe>
         """
         
         return [raw("", html, format="html")]

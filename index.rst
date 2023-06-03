@@ -11,7 +11,6 @@ Welcome to CS515: Intro to Computer Science!
    :caption: Courses:
 
    content/cs515/index
-
    
 Search Bar:
 ===========

@@ -1,0 +1,44 @@
+#editor { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 1225px;
+    height: 200px;
+}
+
+.container {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    padding: 10px;
+}
+.one {
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+.two {
+    margin-left: 50%;
+    height: 500px;
+}
+
+.buttonContainer {
+    width: 100%;
+    text-align: left;
+    display: inline
+}
+
+#runButton, #clearButton {
+    border-radius: 4px; /* Adjust the value to change the roundness of the corners */
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: black;
+    font-size: 15px;
+    border: solid;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
