@@ -20,10 +20,9 @@ short``
 
 ``6``
 
-**Please access the challenge 8 folder and nothing else**
+.. challenge::
+    :tester: /_static/cs515_challenges/Week1/Challenge8/longest_test.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+    # define longer_length
+    #   it's the longer of the two lengths of the inputs
+    #     str1 and str2

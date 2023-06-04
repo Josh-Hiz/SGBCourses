@@ -157,6 +157,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         //Run the getcode function to get the code from the editor
         getCode(testFilePath)
         .then(code => {
+            console.log(code)
             runCode(code);
         }) 
         .catch(error => {

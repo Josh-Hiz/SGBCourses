@@ -10,13 +10,13 @@
 
 .container {
     width: 80%;
-    height: 200px;
+    height: 100px;
     margin: auto;
     padding: 10px;
 }
 .one {
     width: 50%;
-    height: 200px;
+    height: 100px;
     float: left;
 }
 .two {

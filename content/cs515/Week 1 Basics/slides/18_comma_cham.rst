@@ -38,5 +38,5 @@ joined_with_commas is 1,2,3
 .. challenge::
     :tester: /_static/cs515_challenges/Week1/Challenge7/comma_test.py
 
-     # define joined_with_commas
-     #   inputs are strings s1, s2, and s3
+    # define joined_with_commas
+    #   inputs are strings s1, s2, and s3
