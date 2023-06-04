@@ -44,10 +44,5 @@ Hint: An interesting trick with Python strings is that you can *multiply* a stri
 
 ``Ah!``
 
-**Please access the challenge 14 folder and nothing else**
-
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+.. challenge::
+    :tester: /_static/cs515_challenges/Week1/Challenge14/test_exclaim.py

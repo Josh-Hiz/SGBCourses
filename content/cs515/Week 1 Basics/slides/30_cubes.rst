@@ -39,10 +39,7 @@ The code challenge will call your cube function with many inputs and check that 
 
 ``27``
 
-**Please access the challenge 12 folder and nothing else**
+.. challenge::
+    :tester: /_static/cs515_challenges/Week1/Challenge12/test_cube.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+

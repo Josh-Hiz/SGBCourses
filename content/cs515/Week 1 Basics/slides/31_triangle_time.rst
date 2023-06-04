@@ -32,11 +32,5 @@ Write a function ``triangle_area`` that takes the ``base`` and ``height`` sizes 
 
 ``1.0``
 
-**Please access the challenge 13 folder and nothing else**
-
-
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+.. challenge::
+    :tester: /_static/cs515_challenges/Week1/Challenge13/test_triangle.py

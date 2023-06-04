@@ -17,24 +17,11 @@ Takes any value v and prints it out. If ``v`` is a string, it prints the string 
 
 Now that we have these functions, we can start running our code in earnest. Here's an example: we'll read in two strings on separate lines in the input and then print them out separated by a comma.
 
-.. py-config::
-
-    splashscreen:
-        autoclose: true
-
-.. py-repl::
-    :output: replOutput
+.. runner::
 
     str1 = input()
     str2 = input()
     combined = str1 + "," + str2
     print(combined)
-
-
-.. raw:: html
-
-    <div id="replOutput"></div>
-
-.. py-terminal::
 
 When you click the **Run** button, a cursor will appear in a box below the code. If you type ``a``, hit enter, then ``b``, and hit enter, the program will print out ``a,b``. Try it again with other inputs!

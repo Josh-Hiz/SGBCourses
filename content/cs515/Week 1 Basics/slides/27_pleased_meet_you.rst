@@ -19,12 +19,4 @@ Recall that ``input(s)`` will print the prompt s before reading---use it here!
     What's your name? [Sorin]
     Hello, Sorin!
 
-**WORK IN PROGRESS** 
-
-**Please access the challenge 11 folder and nothing else**
-
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+**CHALLENGE 11 WORK IN PROGRESS** 

@@ -5,7 +5,6 @@ In this code challenge, the input is two strings that are expected to be strings
 
 Your task is to define a variable called ``sum_of_ints`` that has the sum of the numbers (as an int) represented by those digits.
 
-**Please access the challenge 9 folder and nothing else**
 
 **Sample Input 1:**
 
@@ -35,8 +34,7 @@ Your task is to define a variable called ``sum_of_ints`` that has the sum of the
 
 ``sum_of_ints`` is 100009
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+.. challenge::
+    :tester: /_static/cs515_challenges/Week1/Challenge9/test_summer.py
+
+    # define sum_of_ints below in terms of numstr1 and numstr2
