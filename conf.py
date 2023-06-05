@@ -30,7 +30,6 @@ html_theme_options = {
 
 
 extensions = [
-    'jupyterlite_sphinx',
     'sphinx_exec_code',
     'plugins.add_css',
     'plugins.free_response',
@@ -56,6 +55,3 @@ html_favicon = 'favicon.ico'
 html_sidebars = {
     "**": ["sbt-sidebar-nav.html"] 
 }
-
-jupyterlite_contents = ["_static/cs515_challenges/"]
-jupyterlite_bind_ipynb_suffix = False

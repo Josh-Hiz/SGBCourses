@@ -1,21 +1,33 @@
 import subprocess
+import sys 
+def test_case(contents,expected_output):
+    process = subprocess.Popen([sys.executable, '_static/cs515_challenges/Week1/Challenge10/challenge.py'],
+                               stdin=subprocess.PIPE,
+                               stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE,
+                               universal_newlines=True)
+    output, error = process.communicate(input=contents)
 
-def test_main(input_file, output_file):
-    with open(input_file, 'r') as inFile, open(output_file, 'r') as outFile:
-        input_data = inFile.read()
-        expected_output_data = outFile.read().strip()
-
-        process = subprocess.Popen(['python', '_static/cs515_challenges/Week1/Challenge10/two_strings.py'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, universal_newlines=True)
-        output_data, _ = process.communicate(input_data)
-        output_data = output_data.strip()
-
-        if output_data == expected_output_data:
-            return "PASSED"
-        else:
-            return "FAILED"
+    if error:
+        print("Error:", error)
+        return False
+    
+    processed_output = str(output).strip().lower()
+    processed_expected_output = str(expected_output).strip().lower()
+    
+    if processed_output == processed_expected_output:
+        print(f"Test Case '{expected_output}': PASSED")
+        return True
+    else:
+        print("Test Case FAILED")
+        print("Expected Output:")
+        print(expected_output)
+        print("Actual Output:")
+        print(output)
+        return False
 
 if __name__ == "__main__":
-    for i in range(1, 3):
-        input_file = f"_static/cs515_challenges/Week1/Challenge10/test{i}.in"
-        output_file = f"_static/cs515_challenges/Week1/Challenge10/test{i}.out"
-        print(f"Test {i}: {test_main(input_file, output_file)}")
+    test_case("a\nb","a,b")
+    test_case("10\nsixty six","10,sixty six")
+    test_case("hello\nthere","hello,there")
+    test_case("once upon a time\nin fairy land","once upon a time,in fairy land")

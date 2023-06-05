@@ -37,10 +37,7 @@ The code challenge will call your ``is_less_than_10`` function with many inputs 
 
 ``False``
 
-**Please access the challenge 16 folder and nothing else**
+.. challenge::
+   :tester: /_static/cs515_challenges/Week1/Challenge16/test_fun.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+   # Define your is_less_than_10 function here:

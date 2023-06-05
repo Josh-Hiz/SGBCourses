@@ -21,10 +21,7 @@ Your task for this code challenge is to write a function called ``compare_string
 
 ``True``
 
-**Please access the challenge 20 folder and nothing else**
+.. challenge::
+   :tester: /_static/cs515_challenges/Week1/Challenge20/test_task.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+   # define compare_strings(first, second)

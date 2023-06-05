@@ -19,10 +19,7 @@ Write a function ``get_num_type(num)`` that returns the following output based o
 
 ``positive and odd``
 
-**Please access the challenge 18 folder and nothing else**
+.. challenge::
+   :tester: /_static/cs515_challenges/Week1/Challenge18/test_num.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+   # define get_num_type here

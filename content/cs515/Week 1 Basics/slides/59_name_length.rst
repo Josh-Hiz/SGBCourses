@@ -30,10 +30,7 @@ In this code challenge, your task is to define a function ``get_name_length(firs
 
 ``25``
 
-**Please access the challenge 19 folder and nothing else**
+.. challenge::
+   :tester: /_static/cs515_challenges/Week1/Challenge19/test_task.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+   # define get_name_length(first, last)

@@ -22,13 +22,7 @@ Although we could access a global variable from the local scope, we need an addi
 
 With the example above, you can indicate that ``x`` in ``increase_x`` function is the global variable ``x`` by including the global statement ``global x``. A ``global`` statement is typically used at the top of a function, by writing ``global`` followed with the name of the variable, as seen in the following. 
 
-.. py-config::
-
-    splashscreen:
-        autoclose: true
-
-.. py-repl::
-    :output: replOutput
+.. runner::
 
     def increase_x():
         global x
@@ -37,13 +31,6 @@ With the example above, you can indicate that ``x`` in ``increase_x`` function i
 
     x = 10
     increase_x()
-
-.. raw:: html
-
-    <div id="replOutput"></div>
-
-.. py-terminal::
-
 
 Once a ``global`` statement is declared, it holds for the entire current code block in the local scope. Now, we have the desired result as follows.
 

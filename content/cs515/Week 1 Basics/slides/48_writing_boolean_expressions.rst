@@ -40,10 +40,4 @@ At the end of your program, it should print ``is_enough_time``. (The code for pr
 
 ``False``
 
-**Please access the challenge 15 folder and nothing else**
-
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+**CHALLENGE 15 IS WORK IN PROGRESS**

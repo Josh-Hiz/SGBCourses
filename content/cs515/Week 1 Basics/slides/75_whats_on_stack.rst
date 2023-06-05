@@ -3,13 +3,7 @@ What's On Your Stack?
 
 Consider the following program (Please run it to see the output):
 
-.. py-config::
-
-    splashscreen:
-        autoclose: true
-
-.. py-repl::
-    :output: replOutput
+.. runner::
 
     def func_a():
         func_d()
@@ -34,11 +28,6 @@ Consider the following program (Please run it to see the output):
 
     func_a()
 
-.. raw:: html
-
-    <div id="replOutput"></div>
-
-.. py-terminal::
 
 Please answer the following two questions about the program. Note that the quiz checker wants *exact* answers! (Func1,Func2,Func3...etc, the last one should have no comma at the end).
 

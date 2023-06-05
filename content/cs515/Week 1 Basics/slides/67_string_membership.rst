@@ -21,10 +21,7 @@ Your task for this coding challenge is to write a function called ``char_in_stri
 
 ``False``
 
-**Please access the challenge 21 folder and nothing else**
+.. challenge::
+   :tester: /_static/cs515_challenges/Week1/Challenge21/test_task.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+   # define char_in_string(letter, message)

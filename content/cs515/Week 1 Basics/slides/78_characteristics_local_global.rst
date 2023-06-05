@@ -3,9 +3,9 @@ Characteristics of local and global variables
 
 Local and global scopes have different characteristics. Your code in the global scope cannot access any local variable. Actually, a local variable can be used only in the local scope that it belongs to, and the local variable cannot be accessed by other local scopes. However, your code inside functions can access global variables, because they are global. 😁 Further, as we've already seen, the same name can be used for variables from different scopes. Python can tell apart!
 
-The following cde shows that global variables can be used in a function
+The following code shows that global variables can be used in a function
 
-.. code-block:: python
+.. runner::
 
     def local():
         print('The value of x is:', x)
@@ -13,13 +13,17 @@ The following cde shows that global variables can be used in a function
     x = 10
     local()
 
-The output is shown above
+Here is the output:
+
+.. code-block::
+
+    The value of x is: 10
 
 Since ``x`` is a global variable, the ``local`` function can access ``x`` and prints out its value. Since the ``local`` function does not have a local variable named ``x``, so it automatically looks for a global variable ``x``.
 
 However, the following code does not work.
 
-.. code-block:: python
+.. runner::
 
     def local():
         x = 10
@@ -36,7 +40,7 @@ This is because ``x`` defined in the local scope of the ``local`` function canno
 
 Also, a local variable cannot be used in another local scope as seen in the following example.
 
-.. code-block:: python
+.. runner::
 
     def local():
         x = 10
@@ -51,7 +55,7 @@ This example has an error as well, because ``x`` was assigned in the ``local`` f
 
 Finally, function calls can't see locals beyond their stack frame---local variables really only live in the scope of their function call.
 
-.. code-block:: python
+.. runner::
 
     def local():
         x = 10

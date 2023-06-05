@@ -51,10 +51,7 @@ Write a function ``is_passing`` that takes in ``grade_percentage`` as an input p
 
 ``False``
 
-**Please access the challenge 17 folder and nothing else**
+.. challenge::
+   :tester: /_static/cs515_challenges/Week1/Challenge17/test_grade.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+   # define your is_passing function here

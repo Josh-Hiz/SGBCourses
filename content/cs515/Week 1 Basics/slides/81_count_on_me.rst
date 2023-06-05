@@ -5,10 +5,7 @@ Write a function called ``counter`` that prints out the number of times it's bee
 
 Hint: use a ``global`` variable and the global keyword!
 
-**Please access the challenge 22 folder and nothing else**
+.. challenge::
+   :tester: /_static/cs515_challenges/Week1/Challenge22/test_task.py
 
-.. jupyterlite::
-   :width: 100%
-   :height: 800px
-   :prompt: Begin!
-   :prompt_color: #00aa42
+   # define counter
