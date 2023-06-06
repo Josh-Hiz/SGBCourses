@@ -1,5 +1,5 @@
-CS515
-=====
+Weeks:
+======
 
 .. toctree:: 
     :maxdepth: 2

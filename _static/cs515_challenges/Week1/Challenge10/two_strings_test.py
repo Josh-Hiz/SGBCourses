@@ -28,7 +28,7 @@ def capture_stdout():
     
     return capture_output
 
-class TestChallenge(unittest.TestCase):
+class TestTwoStrings(unittest.TestCase):
 
     def correct(self, stdinput, output):
         self.assertEqual(stdinput, output)
