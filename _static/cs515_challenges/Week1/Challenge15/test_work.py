@@ -1,19 +1,41 @@
 import sys
+import io
 import unittest
-from unittest import TestCase
-from unittest.mock import patch
-import work
-sys.path.append('Challenge15/')
 
-class TestProgram(TestCase):
-    @patch('builtins.input', side_effect=['8 10'])
-    def test_is_enough_time(self, mock_input):
-        expected_output = "True\n"
-        self.assertEqual(work.main(), expected_output)
+def readCode(file):
+    with open(file,"r") as f:
+        source_code = f.read()
+    return source_code
 
-    @patch('builtins.input', side_effect=['10 8'])
-    def test_is_not_enough_time(self, mock_input):
-        expected_output = "False\n"
-        self.assertEqual(work.main(), expected_output)
+source_code = readCode("challenge.py")
 
-unittest.main()
+def capture_stdout():
+        
+    original_stdout = sys.stdout
+    buffer = io.StringIO()
+    sys.stdout = buffer
+
+    try:
+        exec(source_code)
+    except Exception as e:
+        print(f'An error occurred: {e}', file=sys.stderr)
+    
+    sys.stdout = original_stdout
+    capture_output = buffer.getvalue()
+    buffer.close()
+    
+    return capture_output
+
+class TestChallenge(unittest.TestCase):
+
+    def correct(self, stdinput, output):
+        self.assertEqual(stdinput, output)
+        
+    def test_challenge1(self):
+        self.correct(capture_stdout(), "True\n")
+    def test_challenge2(self):
+        self.correct(capture_stdout(), "True\n")
+    def test_challenge3(self):
+        self.correct(capture_stdout(), "False\n")
+
+unittest.main(exit=False)

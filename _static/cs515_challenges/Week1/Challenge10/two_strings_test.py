@@ -1,33 +1,45 @@
-import subprocess
-import sys 
-def test_case(contents,expected_output):
-    process = subprocess.Popen([sys.executable, '_static/cs515_challenges/Week1/Challenge10/challenge.py'],
-                               stdin=subprocess.PIPE,
-                               stdout=subprocess.PIPE,
-                               stderr=subprocess.PIPE,
-                               universal_newlines=True)
-    output, error = process.communicate(input=contents)
+import sys
+import io
+import unittest
 
-    if error:
-        print("Error:", error)
-        return False
-    
-    processed_output = str(output).strip().lower()
-    processed_expected_output = str(expected_output).strip().lower()
-    
-    if processed_output == processed_expected_output:
-        print(f"Test Case '{expected_output}': PASSED")
-        return True
-    else:
-        print("Test Case FAILED")
-        print("Expected Output:")
-        print(expected_output)
-        print("Actual Output:")
-        print(output)
-        return False
+print("Check the following inputs:\n'a,b'\n'10,sixty six'\n'hello,there'\n'once upon a time,in a fairyland'\n")
 
-if __name__ == "__main__":
-    test_case("a\nb","a,b")
-    test_case("10\nsixty six","10,sixty six")
-    test_case("hello\nthere","hello,there")
-    test_case("once upon a time\nin fairy land","once upon a time,in fairy land")
+def readCode(file):
+    with open(file,"r") as f:
+        source_code = f.read()
+    return source_code
+
+source_code = readCode("challenge.py")
+
+def capture_stdout():
+        
+    original_stdout = sys.stdout
+    buffer = io.StringIO()
+    sys.stdout = buffer
+
+    try:
+        exec(source_code)
+    except Exception as e:
+        print(f'An error occurred: {e}', file=sys.stderr)
+    
+    sys.stdout = original_stdout
+    capture_output = buffer.getvalue()
+    buffer.close()
+    
+    return capture_output
+
+class TestChallenge(unittest.TestCase):
+
+    def correct(self, stdinput, output):
+        self.assertEqual(stdinput, output)
+        
+    def test_challenge1(self):
+        self.correct(capture_stdout(), "a,b\n")
+    def test_challenge2(self):
+        self.correct(capture_stdout(), "10,sixty six\n")
+    def test_challenge3(self):
+        self.correct(capture_stdout(), "hello,there\n")
+    def test_challenge4(self):
+        self.correct(capture_stdout(), "once upon a time,in a fairyland\n")
+
+unittest.main(exit=False)

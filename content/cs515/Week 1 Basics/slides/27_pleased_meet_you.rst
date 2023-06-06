@@ -19,4 +19,5 @@ Recall that ``input(s)`` will print the prompt s before reading---use it here!
     What's your name? [Sorin]
     Hello, Sorin!
 
-**CHALLENGE 11 WORK IN PROGRESS** 
+.. challenge::
+    :tester: /_static/cs515_challenges/Week1/Challenge11/test_name.py
