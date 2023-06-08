@@ -1,7 +1,8 @@
 Conditioning on Booleans with If Statements
 ===========================================
 
-**if clause**
+if clause
+---------
 
 We can use booleans in *conditional statements*. A conditional statement allows us to evaluate code only if a certain condition is true. A basic *if statement* is one that is comprised of only an if clause. Every if statement must at least be comprised of an if clause (no more than one); we will introduce other types of clauses (elif and else) later. The structure of an *if clause* is as follows:
 

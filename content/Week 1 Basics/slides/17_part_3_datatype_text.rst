@@ -24,7 +24,7 @@ We call these **strings** and they are a datatype for storing text. So we've see
 Notice that just like with numbers, Python prints out string values when they are the answer to an expression we type in.
 
 Concatenation
-=============
+-------------
 
 Strings work with some operators. For example, they work with +:
 
@@ -36,7 +36,7 @@ Strings work with some operators. For example, they work with +:
 The result of this + expression is the combined string. We often refer to this operation as **concatenating** or **appending** strings.
 
 Replication
-===========
+-----------
 
 A string can be replicated multiple times using the * operator.
 
@@ -48,7 +48,7 @@ A string can be replicated multiple times using the * operator.
 The result of above expression is the string 'ha' repeated 10 times. We often refer to this operation as **replicating** strings.
 
 Escapes
-=======
+-------
 
 What if you want a quote in a string? If you're using double quotes for the string, then you can use single quotes freely:
 

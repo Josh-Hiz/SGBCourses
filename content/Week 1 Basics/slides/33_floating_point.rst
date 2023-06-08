@@ -23,7 +23,7 @@ Python has given us a wrong mathematical answer! 😭 Why? Python (along with ma
 * the order of operations on floats can matter (``0.3`` isn't the same as ``0.1 + 0.2``)
 
 Python Floating-Point Number versus Integers
-============================================
+--------------------------------------------
 
 So, what is the difference between a floating-point number and an integer? Both integers and floating-point numbers represent a type of numerical data. An **integer** is a type of data that does not have a decimal point. A **floating-point number** is a data type that is used to represent non-whole numbers.
 

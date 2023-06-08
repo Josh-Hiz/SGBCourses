@@ -1,7 +1,8 @@
 Default Conditions
 ==================
 
-**else clause**
+else clause
+-----------
 
 The last type of clause that can be used in an if statement is an else clause. Else clauses are different from if and elif clauses in that they do not have a boolean condition and act as a catch-all or default for remaining cases when the preceding if and elif clause conditions evaluate to ``False``. Additionally, if an else clause is included in an if statement, it must be the last clause and there is at most one such else clause. Here is a schematic if statement that includes an else clause:
 

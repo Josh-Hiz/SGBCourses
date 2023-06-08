@@ -29,7 +29,7 @@ Similarly, you cannot use the **string replication operator** with both the oper
 
 
 Functions with Numbers and Strings
-==================================
+----------------------------------
 
 There are also some useful functions that work with integers and strings. For example, the function ``int``:
 

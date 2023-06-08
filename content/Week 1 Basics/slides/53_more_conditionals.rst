@@ -1,7 +1,8 @@
 More Conditions
 ===============
 
-**elif clause**
+elif clause
+-----------
 
 Additionally, we can evaluate code based on more than one condition in an if statement by including *elif clauses*. (The keyword ``elif`` can be read as "else if".)
 

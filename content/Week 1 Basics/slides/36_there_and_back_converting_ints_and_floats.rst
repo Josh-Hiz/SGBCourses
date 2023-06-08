@@ -6,6 +6,7 @@ What happens if we want to convert a value represented as a floating-point numbe
 Here are some examples of both:
 
 **Examples using int()**
+------------------------
 
 .. code-block:: python
 
@@ -19,6 +20,7 @@ Here are some examples of both:
 Notice that ``int(2.7)`` does **NOT** return ``3``---it returns ``2``. This is because everything after the decimal place is simply cut off, or *truncated*. 
 
 **Examples using float()**
+--------------------------
 
 .. code-block:: python
 

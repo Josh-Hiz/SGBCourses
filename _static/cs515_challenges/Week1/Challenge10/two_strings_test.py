@@ -1,45 +1,38 @@
 import sys
-import io
+from io import StringIO
 import unittest
 
-print("Check the following inputs:\n'a,b'\n'10,sixty six'\n'hello,there'\n'once upon a time,in a fairyland'\n")
+challengeFile = 'challenge.py'
+fileRunner = open(challengeFile)
+code = fileRunner.read()
 
-def readCode(file):
-    with open(file,"r") as f:
-        source_code = f.read()
-    return source_code
-
-source_code = readCode("challenge.py")
-
-def capture_stdout():
-        
-    original_stdout = sys.stdout
-    buffer = io.StringIO()
-    sys.stdout = buffer
-
-    try:
-        exec(source_code)
-    except Exception as e:
-        print(f'An error occurred: {e}', file=sys.stderr)
+class TestName(unittest.TestCase):
+    def get_stdout(self, inputs):
+        original_stdin = sys.stdin
+        original_stdout = sys.stdout
+        test_inputs = inputs
+        sys.stdin = StringIO('\n'.join(test_inputs))
+        sys.stdout = StringIO()
+        exec(code)
+        script_output = sys.stdout.getvalue()
+        sys.stdin = original_stdin
+        sys.stdout = original_stdout
+        return script_output
     
-    sys.stdout = original_stdout
-    capture_output = buffer.getvalue()
-    buffer.close()
+    def correct(self, test_output, expected_output):
+        self.assertEqual(str(test_output).strip(), str(expected_output).strip())
     
-    return capture_output
+    def test_challenge_1(self):
+        self.correct(self.get_stdout(["a","b"]), "a,b")
 
-class TestTwoStrings(unittest.TestCase):
+    def test_challenge_2(self):
+        self.correct(self.get_stdout(["10","sixty six"]), "10,sixty six")
 
-    def correct(self, stdinput, output):
-        self.assertEqual(stdinput, output)
+    def test_challenge_3(self):
+        self.correct(self.get_stdout(["hello","there"]), "hello,there")
         
-    def test_challenge1(self):
-        self.correct(capture_stdout(), "a,b\n")
-    def test_challenge2(self):
-        self.correct(capture_stdout(), "10,sixty six\n")
-    def test_challenge3(self):
-        self.correct(capture_stdout(), "hello,there\n")
-    def test_challenge4(self):
-        self.correct(capture_stdout(), "once upon a time,in a fairyland\n")
-
+    def test_challenge_4(self):
+        self.correct(self.get_stdout(["once upon a time","in fairyland"]), "once upon a time,in fairyland")
+    fileRunner.close()
+    
 unittest.main(exit=False)

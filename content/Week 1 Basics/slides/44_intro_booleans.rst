@@ -2,7 +2,7 @@ Introduction to Booleans
 ========================
 
 Booleans
-========
+--------
 
 As we stated in *1.1 Basics of Numbers and Variables*, programs do their work with data. Here we will be introducing a new type of data: **Booleans**. Booleans are a type of data that is essentially yes/no (whether a box is checked). A boolean is either ``True`` or ``False``, there are only two possible values. They're named after `George Boole <https://en.wikipedia.org/wiki/George_Boole>`_.
 
@@ -20,7 +20,8 @@ Boolean Expressions
 
 **Boolean expressions** are expressions that evaluate to a boolean value, either ``True`` or ``False``. There are many operators that allow us to evaluate boolean expressions, in two broad categories: comparisons and logical operators.
 
-**Comparisons 1: Inequalities**
+Comparisons 1: Inequalities
+---------------------------
 
 The first relational operators we'll meet are the inequalities, written ``<`` (for less than), ``<=`` (for less-than-or-equal-to, i.e., ≤), ``>`` (for greater than) and ``>=`` (for greater-than-or-equal-to, i.e., ≥). These are all written in the conventional way and with the conventional numerical meaning. They return ``True`` when the inequality holds and ``False`` when it doesn't.
 
@@ -35,7 +36,8 @@ The first relational operators we'll meet are the inequalities, written ``<`` (f
     >>> 10 <= 17
     True
 
-**Comparisons 2: Equalities**
+Comparisons 2: Equalities
+-------------------------
 
 To test for equality, we use ``==``. We've already encountered the ``=`` sign elsewhere: it's used for variable assignment. Confusing the two is an *extremely* common mistake, even for experienced programmers.
 
@@ -65,7 +67,8 @@ To test for equality, we use ``==``. We've already encountered the ``=`` sign el
     >>> x == 10
     True
 
-**Comparisons 3: Anti-Equalities**
+Comparisons 3: Anti-Equalities
+------------------------------
 
 The ``!=`` operator means "not equal to", i.e., the ≠ operator from mathematics. It returns 
 
@@ -78,8 +81,8 @@ The ``!=`` operator means "not equal to", i.e., the ≠ operator from mathematic
     >>> 10 != 9
     True
 
-**Logical Operators**
-
+Logical Operators
+-----------------
 There are three common logical operators in programming: ``and`` a/k/a conjunction, ``or`` a/k/a disjunction, and ``not`` a/k/a negation.
 
 The ``and`` operator returns ``True`` if *both* of its arguments are ``True``.

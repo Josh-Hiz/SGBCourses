@@ -1,41 +1,35 @@
 import sys
-import io
+from io import StringIO
 import unittest
 
-def readCode(file):
-    with open(file,"r") as f:
-        source_code = f.read()
-    return source_code
+challengeFile = 'challenge.py'
+fileRunner = open(challengeFile)
+code = fileRunner.read()
 
-source_code = readCode("challenge.py")
-
-def capture_stdout():
-        
-    original_stdout = sys.stdout
-    buffer = io.StringIO()
-    sys.stdout = buffer
-
-    try:
-        exec(source_code)
-    except Exception as e:
-        print(f'An error occurred: {e}', file=sys.stderr)
+class TestName(unittest.TestCase):
+    def get_stdout(self, inputs):
+        original_stdin = sys.stdin
+        original_stdout = sys.stdout
+        test_inputs = inputs
+        sys.stdin = StringIO('\n'.join(test_inputs))
+        sys.stdout = StringIO()
+        exec(code)
+        script_output = sys.stdout.getvalue()
+        sys.stdin = original_stdin
+        sys.stdout = original_stdout
+        return script_output
     
-    sys.stdout = original_stdout
-    capture_output = buffer.getvalue()
-    buffer.close()
+    def correct(self, test_output, expected_output):
+        self.assertEqual(str(test_output).strip(), str(expected_output).strip())
     
-    return capture_output
+    def test_challenge_1(self):
+        self.correct(self.get_stdout(["8","10"]), "True")
 
-class TestWork(unittest.TestCase):
+    def test_challenge_2(self):
+        self.correct(self.get_stdout(["22","22"]), "True")
 
-    def correct(self, stdinput, output):
-        self.assertEqual(stdinput, output)
-        
-    def test_challenge1(self):
-        self.correct(capture_stdout(), "True\n")
-    def test_challenge2(self):
-        self.correct(capture_stdout(), "True\n")
-    def test_challenge3(self):
-        self.correct(capture_stdout(), "False\n")
-
+    def test_challenge_3(self):
+        self.correct(self.get_stdout(["10","9"]), "False")
+    fileRunner.close()
+    
 unittest.main(exit=False)

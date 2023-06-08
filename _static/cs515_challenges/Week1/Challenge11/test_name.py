@@ -1,41 +1,36 @@
 import sys
-import io
+from io import StringIO
 import unittest
 
-def readCode(file):
-    with open(file,"r") as f:
-        source_code = f.read()
-    return source_code
-
-source_code = readCode("challenge.py")
-
-def capture_stdout():
-        
-    original_stdout = sys.stdout
-    buffer = io.StringIO()
-    sys.stdout = buffer
-
-    try:
-        exec(source_code)
-    except Exception as e:
-        print(f'An error occurred: {e}', file=sys.stderr)
-    
-    sys.stdout = original_stdout
-    capture_output = buffer.getvalue()
-    buffer.close()
-    
-    return capture_output
+challengeFile = 'challenge.py'
+fileRunner = open(challengeFile)
+code = fileRunner.read()
 
 class TestName(unittest.TestCase):
+    def get_stdout(self, inputs):
+        original_stdin = sys.stdin
+        original_stdout = sys.stdout
+        test_inputs = inputs
+        sys.stdin = StringIO('\n'.join(test_inputs))
+        sys.stdout = StringIO()
+        exec(code)
+        script_output = sys.stdout.getvalue()
+        sys.stdin = original_stdin
+        sys.stdout = original_stdout
+        return script_output
+    
+    def correct(self, test_output, expected_output):
+        self.assertEqual(str(test_output).strip(), str(expected_output).strip())
+    
+    def test_challenge_1(self):
+        self.correct(self.get_stdout(["Gerald"]), "What's your name? Hello, Gerald!")
 
-    def correct(self, stdinput, output):
-        self.assertEqual(stdinput, output)
-        
-    def test_challenge1(self):
-        self.correct(capture_stdout(), "What's your name? Hello, Gerald!\n")
-    def test_challenge2(self):
-        self.correct(capture_stdout(), "What's your name? Hello, Prof. Greenberg!\n")
-    def test_challenge3(self):
-        self.correct(capture_stdout(), "What's your name? Hello, Sorin!\n")
+    def test_challenge_2(self):
+        self.correct(self.get_stdout(["Prof. Greenberg"]), "What's your name? Hello, Prof. Greenberg!")
 
+    def test_challenge_3(self):
+        self.correct(self.get_stdout(["Sorin"]), "What's your name? Hello, Sorin!")
+    fileRunner.close()
+    
 unittest.main(exit=False)
+        

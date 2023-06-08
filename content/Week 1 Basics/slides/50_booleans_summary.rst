@@ -1,13 +1,15 @@
 Booleans Summary
 ================
 
-**Booleans:**
+Booleans:
+---------
 
 * booleans represent answers to yes/no questions
 * using relational and logical operators produces boolean values
 * booleans can be combined with the logical operators: ``and``, ``or``, and ``not``
 
-**Relational Operators:**
+Relational Operators:
+---------------------
 
 * ``==``, equal
 * ``!=``, not equal
@@ -16,7 +18,8 @@ Booleans Summary
 * ``<=``, less than or equal to
 * ``>=``, greater than or equal t
 
-**Logical Operators:**
+Logical Operators:
+------------------
 
 * ``and``
 * ``or``

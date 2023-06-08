@@ -44,7 +44,7 @@ quizdown_config = {
     'start_on_load': True,			# detect and convert all divs with class quizdown
     'shuffle_answers': False,		# shuffle answers for each question
     'shuffle_questions': False,     # shuffle questsions for each quiz
-    'primary_color': '#F5F5ED',     # primary CSS color
+    'primary_color': '#000000',     # primary CSS color
     'secondary_color': '#FFFFFF',   # secondary CSS color
     'text_color': 'black',          # text color of interactive elements
     'locale': 'en'                  # language of text in user interface
