@@ -5,5 +5,3 @@ sphinxcontrib-htmlhelp==2.0.1
 sphinxcontrib-mermaid==0.8.1
 sphinxcontrib-packages==1.1.0
 sphinxcontrib-serializinghtml==1.1.5
-sphinx_exec_code==0.10
-Pygments == 2.13.0 

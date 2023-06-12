@@ -9,7 +9,7 @@ import sys
 sys.path.append('./')
 
 project = 'Course'
-copyright = '2023, Joshua Hizgiaev & Michael Greenberg'
+copyright = '2023, Michael Greenberg'
 author = 'Joshua Hizgiaev & Michael Greenberg'
 
 # -- General configuration ---------------------------------------------------

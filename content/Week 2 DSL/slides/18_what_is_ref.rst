@@ -1,0 +1,6 @@
+What is a reference?
+====================
+
+Now that you've learned about lists and the many ways to use them through indexing, slicing, loops, and more, this lesson will aim to teach you what happens under the hood. Have you ever wondered what happens when you assign a variable to equal a list? Variables do not store list values directly; they store **references** to lists. A Python program accesses data values through references. A **reference** is a name that refers to a value's specific location in memory.
+
+To understand what this means, we will discuss what we mean by **memory**. When you create a list in Python, that list is created and lives somewhere inside your computer's memory. In order to be able to find this list again, there is an address associated with this memory. When you assign a variable to equal some list, the variable actually stores the memory address associated with the list. This concept of storing memory addresses is referred to as storing references. We will look at more concrete examples in the following steps.

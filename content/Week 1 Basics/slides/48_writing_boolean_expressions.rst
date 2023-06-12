@@ -40,8 +40,6 @@ At the end of your program, it should print ``is_enough_time``. (The code for pr
 
 ``False``
 
-**CHALLENGE 15 IS WORK IN PROGRESS**
-
 .. challenge::
     :tester: /_static/cs515_challenges/Week1/Challenge15/test_work.py
 

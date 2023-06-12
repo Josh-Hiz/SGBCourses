@@ -8,6 +8,7 @@ Run the server script `run_livereload.py` to spin up the server
 
 ## Before running:
 Please run `sphinx-build -M html ./ _build/ -W -a -j auto -n --keep-going` so Sphinx can build the HTML and render RST
+Then run the following: `make clean` followed by `make html` to make production build
 
 ## Current Goals
 
