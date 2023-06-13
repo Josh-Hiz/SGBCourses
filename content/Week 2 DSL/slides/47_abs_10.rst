@@ -1,0 +1,59 @@
+abs_more_than_10
+================
+
+Write a while loop that iterates through a list, ``nums``, and determines whether or not it contains a value whose absolute value is greater than 10. Write a function ``abs_more_than_10`` that takes a list of numbers as input and returns ``True`` when the list contains a value whose absolute value is greater than 10 and returns ``False`` otherwise.
+
+**Sample Input 1:**
+
+.. code-block::
+
+    8 -4 7 12
+
+**Sample Output 1:**
+
+.. code-block:: 
+
+    True
+
+**Sample Input 2:**
+
+.. code-block:: 
+
+    -17 3 4
+
+**Sample Output 2:**
+
+.. code-block:: 
+
+    True
+
+**Sample Input 3:**
+
+.. code-block:: 
+
+    13 0
+
+**Sample Output 3:**
+
+.. code-block:: 
+
+    True
+
+**Sample Input 4:**
+
+.. code-block:: 
+
+    -10 2 -5
+
+**Sample Output 4:**
+
+.. code-block:: 
+
+    False
+
+.. challenge:: 
+    :tester: /_static/cs515_challenges/Week2/Challenge17/test_task.py
+
+    # define abs_more_than_10
+    #
+    # use a while loop!

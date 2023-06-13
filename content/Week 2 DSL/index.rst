@@ -34,3 +34,21 @@ Week 2: Data structures and loops
     slides/27_counting_needles
     slides/28_library
     slides/29_dots_dashes
+    slides/30_list_methods
+    slides/31_list_methods!
+    slides/32_backwards_talking
+    slides/33_for_loops
+    slides/34_home_on_range
+    slides/35_for_range_output
+    slides/36_factorial
+    slides/37_loops_lists
+    slides/38_how_many_times
+    slides/39_finding_something
+    slides/40_hip_square
+    slides/41_counting_even_odd
+    slides/42_while_loops
+    slides/43_tracing_while_loop
+    slides/44_redux
+    slides/45_multiply_3
+    slides/46_searching_whiles
+    slides/47_abs_10

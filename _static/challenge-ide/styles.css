@@ -24,6 +24,25 @@
     height: 500px;
 }
 
+textarea {
+    margin: 0px; 
+    width: 750px; 
+    height: 500px; 
+    padding: 10px; /* Add padding inside the textarea */
+    font-family: Arial, sans-serif; /* Set the font-family */
+    font-size: 15px; /* Set the font-size */
+    background-color: #fff; /* Set the background color */
+    border: 1px solid #ccc; /* Set the border */
+    border-radius: 4px; /* Add some border-radius */
+    resize: vertical; /* Allow vertical resizing only */
+    outline: none; /* Remove the default focus outline */
+    transition: border-color 0.3s; /* Add transition effect to border color */
+}
+
+textarea:focus {
+    border-color: #007bff;
+}
+
 .buttonContainer {
     width: 100%;
     text-align: left;

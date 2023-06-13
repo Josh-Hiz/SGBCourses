@@ -37,7 +37,7 @@ function appendOutput(msg) {
 function configEditor(){
     // configure the ace editor to make it usable
     editor = ace.edit("editor");
-    editor.setTheme("ace/theme/xcode");
+    editor.setTheme("ace/theme/monokai");
     editor.session.setMode("ace/mode/python");
     editor.setShowPrintMargin(false);
     editor.setBehavioursEnabled(true);
