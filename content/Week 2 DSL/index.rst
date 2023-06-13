@@ -52,3 +52,4 @@ Week 2: Data structures and loops
     slides/45_multiply_3
     slides/46_searching_whiles
     slides/47_abs_10
+    slides/48_user_input_valid
