@@ -60,3 +60,9 @@ Week 2: Data structures and loops
     slides/53_multiples
     slides/54_break_for_loops
     slides/55_understanding_breaks
+    slides/56_find_python
+    slides/57_continue
+    slides/58_print_nums
+    slides/59_randomness
+    slides/60_fair_die
+    slides/61_what_why_dictionary
