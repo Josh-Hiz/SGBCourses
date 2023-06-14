@@ -53,3 +53,10 @@ Week 2: Data structures and loops
     slides/46_searching_whiles
     slides/47_abs_10
     slides/48_user_input_valid
+    slides/49_input_length_valid
+    slides/50_infinite_loops
+    slides/51_break_statements
+    slides/52_take_a_break
+    slides/53_multiples
+    slides/54_break_for_loops
+    slides/55_understanding_breaks

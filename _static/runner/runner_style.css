@@ -61,3 +61,9 @@ textarea:focus {
     margin-right: 5px;
     margin-bottom: 5px;
 }
+
+#runButton:hover, #clearButton:hover {
+    background-color: #16c95d;
+    color: black;
+    transition: background-color 0.2s, color 0.2s;
+}

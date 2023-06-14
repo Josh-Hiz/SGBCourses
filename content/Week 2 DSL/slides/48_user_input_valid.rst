@@ -25,7 +25,9 @@ Let's trace through with some specific cases below.
 
 **Case 1: User enters a valid number between 1 and 10 on the first try**
 First, let's imagine that when the first line is run, the user enters the number 4. What will happen? The while loop condition will be checked:
+
 ``num < 1 or num > 10 ---> 4 < 1 or 4 > 10 ---> False or False ---> False``.
+
 The expression evaluates to ``False``, so we never enter the loop body, and just move on with whatever code comes after the loop. This is the behavior we would expect since the user did indeed meet the criterion of providing a number between 1 and 10.
 
 **Case 2: User enters an invalid number a couple times before giving a valid number**
