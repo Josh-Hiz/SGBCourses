@@ -12,7 +12,6 @@ Then run the following: `make clean` followed by `make html` to make production 
 
 ## Current Goals
 
-- Get Free response on quizdown to work, however my free response plugin is pretty good as is, just have no idea how the parser works in quizdown, need to figure that out as I also need to understand how in the world the svelete works
-- Figure out challenges, looks like pyscript wont work completely as I need to have some sort of text editor thats good enough to replace jupyter, ill try making my own with pyodide and code mirror, the problem I am facing is that can code mirror open and edit live files? Research is needed, not only that but I need to make sure its compatible with an rst directive, lets say it has a 'file' argument that will open a file in a specific directory for you to edit, then how is the test script run?
+- I need to find an alternative solution for markdown quizzes, the literally only single issue is free response, how the hell does quizdown work??? If the issue continues I will have to prioritize it.
 
-**Slide 21 needs the answers updated**
+**Slide 21 needs the answers updated. Slide 81 week 2 needs to be fixed**

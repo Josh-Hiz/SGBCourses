@@ -66,3 +66,22 @@ Week 2: Data structures and loops
     slides/59_randomness
     slides/60_fair_die
     slides/61_what_why_dictionary
+    slides/62_creating_dicts
+    slides/63_lexicographers
+    slides/64_looking_up_dicts
+    slides/65_lookup
+    slides/66_working_dictionary
+    slides/67_add_del_keys
+    slides/68_add_del_prac
+    slides/69_constraints
+    slides/70_lookup_prac
+    slides/71_tuples_keys
+    slides/72_dict_tuple_prac
+    slides/73_insert_pair
+    slides/74_big_dictionary
+    slides/75_len_dictionary
+    slides/76_methods_lookup
+    slides/77_get_it
+    slides/78_adding_deleting_items
+    slides/79_news_update
+    slides/80_looping_dictionary
