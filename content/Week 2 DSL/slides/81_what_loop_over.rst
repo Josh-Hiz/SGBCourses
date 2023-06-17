@@ -34,5 +34,3 @@ Output:
     :correct_answer: recipients.values()
     :explanation: Correct answer is recipients.values()
     :question_num: 1
-
-

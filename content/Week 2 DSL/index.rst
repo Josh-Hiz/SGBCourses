@@ -94,3 +94,16 @@ Week 2: Data structures and loops
     slides/87_print_emails
     slides/88_storing_dictionaries_in_dictionaries
     slides/89_dictionary_within_dictionary
+    slides/90_data_processing
+    slides/91_accessing_updating
+    slides/92_getting_data_out
+    slides/93_processing_the_data
+    slides/94_lookup_state
+    slides/95_data_nested_dicts
+    slides/96_organizing_data
+    slides/97_working_nested_data
+    slides/98_lab_grades
+    slides/99_processing_nested_data
+    slides/100_is_above_85
+    slides/101_sets
+    slides/102_uniqueness

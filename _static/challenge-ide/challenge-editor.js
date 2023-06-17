@@ -16,7 +16,7 @@ function setParams() {
         testFilePath = decodedTest;
         console.log(testFilePath);
     } else {
-        testFilePath = null;
+        document.getElementById("run_code").style.visibility='hidden';
     }
 }
 
@@ -76,21 +76,6 @@ async function runCode(code_to_run) {
         let result = await promise;
         if (result) { 
             appendOutput(console.logs.join('\n')); 
-        }
-    } else if(code_to_run == null){
-        console.logs = [];
-
-        let promise = new Promise((resolve, reject) => {
-            window.pyodide.runPython(`print("No test file to run, good job anyway!")`)
-            resolve(true)
-        }).catch(err => {
-            console.log(err);
-            appendOutput(console.logs.join('\n')); 
-        });
-    
-        let result = await promise;
-        if (result) { 
-            appendOutput(console.logs.join('\n'));
         }
     } else {
         
@@ -169,19 +154,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Add event listeners for running the test script
     document.getElementById("run_code").addEventListener('click', function () {
-        if(testFilePath == null){
-            runCode(testFilePath)
-        } else {
-            //Run the getcode function to get the code from the editor
-            getCode(testFilePath)
-            .then(code => {
-                console.log(code)
-                runCode(code);
-            }) 
-            .catch(error => {
-                console.error('Error occurred while opening the code:', error);
-            });
-        }
+        
+        //Run the getcode function to get the code from the editor
+        getCode(testFilePath)
+        .then(code => {
+            console.log(code)
+            runCode(code);
+        }) 
+        .catch(error => {
+            console.error('Error occurred while opening the code:', error);
+        });
+        
     });
     // Capture the output from Pyodide and add it to an array
     console.stdlog = console.log.bind(console);
