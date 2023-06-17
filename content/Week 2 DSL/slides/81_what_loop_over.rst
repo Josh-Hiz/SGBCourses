@@ -3,7 +3,7 @@ What should we loop over?
 
 Recall the ``recipients`` dictionary:
 
-.. code-blocks::
+.. code-block::
 
     recipients = {'Physics': 409, 'Biology': 1473, 'Mechanical Engineering': 1343, 
     'Physical Sciences': 1131, 'Electrical Engineering': 153, 'Business': 131, 'Computer Science': 2870}

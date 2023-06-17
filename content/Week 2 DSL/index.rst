@@ -85,3 +85,12 @@ Week 2: Data structures and loops
     slides/78_adding_deleting_items
     slides/79_news_update
     slides/80_looping_dictionary
+    slides/81_what_loop_over
+    slides/82_combined_cases
+    slides/83_finding_mode
+    slides/84_find_mode
+    slides/85_count_total_words
+    slides/86_storing_lists
+    slides/87_print_emails
+    slides/88_storing_dictionaries_in_dictionaries
+    slides/89_dictionary_within_dictionary
