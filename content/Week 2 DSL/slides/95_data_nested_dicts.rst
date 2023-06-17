@@ -3,7 +3,7 @@ Data with nested dictionaries
 
 Let's consider the table below, representing a gradebook for a course.
 
-.. image:: /assets/images/cs515/Week2/image (1).png
+.. image:: /assets/images/cs515/Week2/image2.png
 
 The above table contains information about 8 students such as the student ID, first name, last name of the student followed by the student's grades for the programming assignment, reading quiz, lab, midterm exam, and final exam for the course.
 

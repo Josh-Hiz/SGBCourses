@@ -1,19 +1,22 @@
-.. GBCourses documentation master file, created by
-   sphinx-quickstart on Sat Mar 25 23:19:14 2023.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to CS515: Intro to Computer Science!
 ============================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: CS515:
-
-   content/index
-   
 Search Bar:
-===========
+-----------
 
 * :ref:`search`
-   
+
+Weeks:
+------
+
+.. toctree:: 
+    :maxdepth: 1
+
+    content/Week 1 Basics/index
+    content/Week 2 DSL/index
+    content/Week 3 ERNL/index
+    content/Week 4 OC/index
+    content/Week 5 Regex/index
+    content/Week 6 Algos/index
+    content/Week 7 PD/index
+
