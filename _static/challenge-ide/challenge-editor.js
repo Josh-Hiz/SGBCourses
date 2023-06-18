@@ -16,7 +16,8 @@ function setParams() {
         testFilePath = decodedTest;
         console.log(testFilePath);
     } else {
-        document.getElementById("run_code").style.visibility='hidden';
+        const element = document.getElementById("run_code");
+        element.remove();
     }
 }
 

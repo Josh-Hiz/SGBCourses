@@ -19,4 +19,3 @@ Weeks:
     content/Week 5 Regex/index
     content/Week 6 Algos/index
     content/Week 7 PD/index
-
