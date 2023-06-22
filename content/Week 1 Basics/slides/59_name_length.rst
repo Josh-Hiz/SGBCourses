@@ -5,30 +5,42 @@ In this code challenge, your task is to define a function ``get_name_length(firs
 
 **Sample Input 1:**
 
-``Winny``
-``Wilson``
+.. code-block::
+
+   Winny
+   Wilson
 
 **Sample Output 1:**
 
-``11``
+.. code-block::
+
+   11
 
 **Sample Input 2:**
 
-``Annie``
-``Wai``
+.. code-block::
+
+   Annie
+   Wai
 
 **Sample Output 2:**
 
-``8``
+.. code-block::
+
+   8
 
 **Sample Input 3:**
 
-``Adalbert Gerald``
-``Soosai Raj``
+.. code-block::
+   
+   Adalbert Gerald
+   Soosai Raj
 
 **Sample Output 3:**
 
-``25``
+.. code-block::
+   
+   25
 
 .. challenge::
    :tester: /_static/cs515_challenges/Week1/Challenge19/test_task.py

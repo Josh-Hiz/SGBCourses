@@ -7,11 +7,15 @@ Write a variable declaration for ``larger_magnitude`` that contains the absolute
 
 **Sample Input:**
 
-``-9 8``
+.. code-block::
+
+    -9 8
 
 **Sample Output:**
 
-``9``
+.. code-block::
+    
+    9
 
 .. challenge::
     :tester: /_static/cs515_challenges/Week1/Challenge6/magnitude_test.py

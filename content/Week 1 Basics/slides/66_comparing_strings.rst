@@ -5,21 +5,29 @@ Your task for this code challenge is to write a function called ``compare_string
 
 **Sample Input 1:**
 
-``red``
-``blue``
+.. code-block::
+
+   red
+   blue
 
 **Sample Output 1:**
 
-``False``
+.. code-block::
+
+   False
 
 **Sample Input 2:**
 
-``red``
-``red``
+.. code-block::
+
+   red
+   red
 
 **Sample Output 2:**
 
-``True``
+.. code-block::
+
+   True
 
 .. challenge::
    :tester: /_static/cs515_challenges/Week1/Challenge20/test_task.py

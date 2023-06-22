@@ -13,12 +13,16 @@ The first string is stored in the variable ``str1``, and the second in the varia
 
 **Sample Input:**
 
-``longer
-short``
+.. code-block::
+
+    longer
+    short
 
 **Sample Output:**
 
-``6``
+.. code-block::
+
+    6
 
 .. challenge::
     :tester: /_static/cs515_challenges/Week1/Challenge8/longest_test.py

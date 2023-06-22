@@ -9,35 +9,51 @@ The code challenge will call your cube function with many inputs and check that 
 
 **Sample Input 1:**
 
-``2``
+.. code-block::
+
+    2
 
 **Sample Output 1:**
 
-``8``
+.. code-block::
+
+    8
 
 **Sample Input 2:**
 
-``1``
+.. code-block::
+
+    1
 
 **Sample Output 2:**
 
-``1``
+.. code-block::
+
+    1
 
 **Sample Input 3:**
 
-``-2``
+.. code-block::
+
+    -2
 
 **Sample Output 3:**
 
-``-8``
+.. code-block::
+
+    -8
 
 **Sample Input 4:**
 
-``3``
+.. code-block::
+
+    3
 
 **Sample Output 4:**
 
-``27``
+.. code-block::
+
+    27
 
 .. challenge::
     :tester: /_static/cs515_challenges/Week1/Challenge12/test_cube.py

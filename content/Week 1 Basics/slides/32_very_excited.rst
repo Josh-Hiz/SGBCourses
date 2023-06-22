@@ -14,35 +14,51 @@ Hint: An interesting trick with Python strings is that you can *multiply* a stri
 
 **Sample Input 1:**
 
-``Hey 4``
+.. code-block::
+
+    Hey 4
 
 **Sample Output 1:**
 
-``Hey!!!!``
+.. code-block::
+    
+    Hey!!!!
 
 **Sample Input 2:**
 
-``Hey 0``
+.. code-block::
+
+    Hey 0
 
 **Sample Output 2:**
 
-``Hey``
+.. code-block::
+    
+    Hey
 
 **Sample Input 3:**
 
-``! 2``
+.. code-block::
+
+    ! 2
 
 **Sample Output 3:**
 
-``!!!``
+.. code-block::
+    
+    !!!
 
 **Sample Input 4:**
 
-``Ah 1``
+.. code-block::
+
+    Ah 1
 
 **Sample Output 4:**
 
-``Ah!``
+.. code-block::
+    
+    Ah!
 
 .. challenge::
     :tester: /_static/cs515_challenges/Week1/Challenge14/test_exclaim.py

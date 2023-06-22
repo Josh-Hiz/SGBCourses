@@ -15,30 +15,42 @@ At the end of your program, it should print ``is_enough_time``. (The code for pr
 
 **Sample Input 1:**
 
-``8
-10``
+.. code-block::
+
+    8
+    10
 
 **Sample Output 1:**
 
-``True``
+.. code-block::
+
+    True 
 
 **Sample Input 2:**
 
-``22
-22``
+.. code-block::
+
+    22
+    22
 
 **Sample Output 2:**
 
-``True``
+.. code-block::
+
+    True
 
 **Sample Input 3:**
 
-``10
-9``
+.. code-block::
+
+    10
+    9
 
 **Sample Output 3:**
 
-``False``
+.. code-block::
+
+    False  
 
 .. challenge::
     :tester: /_static/cs515_challenges/Week1/Challenge15/test_work.py

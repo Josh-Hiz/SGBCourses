@@ -7,35 +7,51 @@ The code challenge will call your ``is_less_than_10`` function with many inputs 
 
 **Sample Input 1:**
 
-``2``
+.. code-block::
+
+   2
 
 **Sample Output 1:**
 
-``True``
+.. code-block::
+
+   True
 
 **Sample Input 2:**
 
-``3``
+.. code-block::
+
+   3
 
 **Sample Output 2:**
 
-``True``
+.. code-block::
+
+   True
 
 **Sample Input 3:**
 
-``11``
+.. code-block::
+
+   11
 
 **Sample Output 3:**
 
-``False``
+.. code-block::
+
+   False
 
 **Sample Input 4:**
 
-``10``
+.. code-block::
+
+   10
 
 **Sample Output 4:**
 
-``False``
+.. code-block::
+
+   False
 
 .. challenge::
    :tester: /_static/cs515_challenges/Week1/Challenge16/test_fun.py

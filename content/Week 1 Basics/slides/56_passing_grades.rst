@@ -5,51 +5,76 @@ Write a function ``is_passing`` that takes in ``grade_percentage`` as an input p
 
 **Sample Input 1:**
 
-``85``
+.. code-block::
+
+   85
 
 **Sample Output 1:**
 
-``True``
+.. code-block::
+
+   True
 
 **Sample Input 2:**
 
-``25``
+.. code-block::
+
+   25
 
 **Sample Output 2:**
 
-``False``
+.. code-block::
+
+   False
 
 **Sample Input 3:**
 
-``1500``
+.. code-block::
+
+   1500
 
 **Sample Output 3:**
 
-``True``
+.. code-block::
+
+   True
 
 **Sample Input 4:**
 
-``-300``
+.. code-block::
+
+   -300
 
 **Sample Output 4:**
 
-``False``
+.. code-block::
+
+   False
 
 **Sample Input 5:**
 
-``60``
+.. code-block::
+   
+   60
 
 **Sample Output 5:**
 
-``True``
+.. code-block::
+
+   True
 
 **Sample Input 6:**
 
-``59.99``
+.. code-block::
+
+   59.99
 
 **Sample Output 6:**
 
-``False``
+.. code-block::
+
+   False
+
 
 .. challenge::
    :tester: /_static/cs515_challenges/Week1/Challenge17/test_grade.py

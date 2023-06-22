@@ -12,7 +12,9 @@ Write a function ``triangle_area`` that takes the ``base`` and ``height`` sizes 
 
 **Sample Output 1:**
 
-``15.0``
+.. code-block::
+
+    15.0
 
 **Sample Input 2:**
 
@@ -21,7 +23,9 @@ Write a function ``triangle_area`` that takes the ``base`` and ``height`` sizes 
 
 **Sample Output 2:**
 
-``6.0``
+.. code-block::
+
+    6.0
 
 **Sample Input 3:**
 
@@ -30,7 +34,9 @@ Write a function ``triangle_area`` that takes the ``base`` and ``height`` sizes 
 
 **Sample Output 3:**
 
-``1.0``
+.. code-block::
+
+    1.0
 
 .. challenge::
     :tester: /_static/cs515_challenges/Week1/Challenge13/test_triangle.py

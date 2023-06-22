@@ -5,21 +5,29 @@ Your task for this coding challenge is to write a function called ``char_in_stri
 
 **Sample Input 1:**
 
-``b``
-``book``
+.. code-block::
+   
+   b
+   book
 
 **Sample Output 1:**
 
-``True``
+.. code-block::
+
+   True
 
 **Sample Input 2:**
 
-``c``
-``book``
+.. code-block::
+
+    c
+    book
 
 **Sample Output 2:**
 
-``False``
+.. code-block::
+   
+      False
 
 .. challenge::
    :tester: /_static/cs515_challenges/Week1/Challenge21/test_task.py

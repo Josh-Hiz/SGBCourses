@@ -13,11 +13,15 @@ Write a function ``get_num_type(num)`` that returns the following output based o
 
 **Sample Input:**
 
-``11``
+.. code-block:: 
+
+   11
 
 **Sample Output:**
 
-``positive and odd``
+.. code-block:: 
+
+   positive and odd
 
 .. challenge::
    :tester: /_static/cs515_challenges/Week1/Challenge18/test_num.py
