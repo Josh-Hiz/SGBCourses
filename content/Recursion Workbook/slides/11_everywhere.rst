@@ -12,3 +12,6 @@ For example:
 
 Can you do this with no ``for`` or ``while`` loops at all?
 
+.. challenge:: 
+
+    

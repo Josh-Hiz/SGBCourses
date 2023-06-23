@@ -1,0 +1,10 @@
+A word of caution
+=================
+
+Regular expressions are very powerful---you've learned a bit about them, but there are many more tricks in store. Regular expressions are good: they're concrete, testable, and communicable. They're less risky than arbitrary code, and they're generally pretty performant (assuming you don't get too fancy).
+
+But, a word of caution: not everything can be parsed with regular expressions! Python cannot. The English language cannot. HTML and JSON cannot. Even balanced parentheses or brackets cannot. You can't use regular expressions to parse a string of the form ``a...b...`` where there is an equal number of ``a``'s and ``b``'s. (Intrigued? There's a deep wealth of knowledge that awaits in the form of "theory of computation", the relationship between regular expressions and `finite state machines <https://en.wikipedia.org/wiki/Finite-state_machine>`_, and the `Chomsky hierarchy of languages <https://en.wikipedia.org/wiki/Chomsky_hierarchy>`_. It's beautiful stuff, the beating heart of computer science.)
+
+And there are plenty of things that *can* be parsed by regular expression, but maybe shouldn't. We gave an example up front---validating emails. You can write `a regular expression that validates emails, it's true <https://stackoverflow.com/questions/201323/how-can-i-validate-an-email-address-using-a-regular-expression#>`_. But it is monstrously unreadable. And... what have you won? You've learned that something definitively looks like an email. But the domain may not exist, or the user may not exist... is that fancy regex actually better than just making sure there's an ``@`` in there somewhere, and then just sending the email?
+
+As a general principle, input validation must be 100% correct... if you get it wrong, you'll frustrate your users by `telling them that their name is "invalid" <https://twitter.com/yournameisvalid>`_. It's wisest to take in only the data you *need* and store it exactly as the user entered it.

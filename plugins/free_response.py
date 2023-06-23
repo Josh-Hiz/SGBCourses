@@ -24,6 +24,7 @@ class HtmlQuestionDirective(Directive):
 
         html = f"""
         <form onsubmit="return checkAnswer_{question_num}()">
+        <p>Question {question_num}</p>
         <p>{question}</p>
         <input type="text" id="userAnswer_{question_num}">
         <button type="submit">Submit Answer</button>
