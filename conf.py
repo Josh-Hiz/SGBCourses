@@ -30,13 +30,11 @@ html_theme_options = {
 
 
 extensions = [
-    'sphinx_exec_code',
     'plugins.add_css',
     'plugins.free_response',
     'sphinxcontrib.quizdown',
-    'sphinx_pyscript',
     'plugins.challenge',
-    'plugins.runner'
+    'plugins.runner',
 ]
 
 quizdown_config = {

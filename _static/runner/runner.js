@@ -35,6 +35,8 @@ function configEditor(){
     editor.setShowPrintMargin(false);
     editor.setBehavioursEnabled(true);
     editor.setFontSize(13);
+    editor.setAnimatedScroll(true);
+    editor.setAutoScrollEditorIntoView(true);
     setParams();
 }
 
