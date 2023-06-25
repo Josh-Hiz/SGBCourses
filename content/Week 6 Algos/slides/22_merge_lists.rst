@@ -6,5 +6,6 @@ The ``merge`` function we wrote was recursive. Write one that uses loops, instea
 As usual, 'Mark' just runs doctest. Write good tests!
 
 .. challenge:: 
+    :tester: /_static/cs515_challenges/Week6/Challenge6/doc.py
 
     # copy over mergesort, and write a looping merge function

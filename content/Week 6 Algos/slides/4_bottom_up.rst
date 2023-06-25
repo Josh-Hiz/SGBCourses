@@ -13,6 +13,6 @@ The Fisher-Yates implementation on the previous slide goes "top down", i.e., it 
 Write some tests to convince yourself you got it right; the 'Mark' button just runs doctest (and so will be green if you don't write any, whether or not your code works!).
 
 .. challenge:: 
-
+    :tester: /_static/cs515_challenges/Week6/Challenge1/doc.py
 
     # define fisher_yates as a bottom-up shuffle

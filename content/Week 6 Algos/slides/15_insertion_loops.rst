@@ -3,7 +3,8 @@ Insertion sort with loops
 
 We saw a recursive version of ``insertion_sort``. Write a version that uses a ``for`` loop; use doctest to test your results.
 
-.. challenge:: 
+.. challenge::
+    :tester: /_static/cs515_challenges/Week6/Challenge3/doc.py
 
     def insert_sorted(v, l):
         if len(l) == 0: return [v]

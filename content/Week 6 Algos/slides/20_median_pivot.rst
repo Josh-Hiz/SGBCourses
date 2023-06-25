@@ -6,6 +6,7 @@ The ideal choice for the pivot is the median value: it will generate balanced ha
 Copy over the quicksort code and alter it to use this pivot calculation scheme. The 'Mark" button just runs doctest.
 
 .. challenge:: 
+    :tester: /_static/cs515_challenges/Week6/Challenge5/doc.py
 
     # copy over quicksort
     # use the median of first/middle/last pivot scheme

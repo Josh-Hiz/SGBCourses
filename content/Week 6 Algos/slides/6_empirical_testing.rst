@@ -69,6 +69,6 @@ You don't need to do all of that, but it's good practice to write good, thorough
         # or: for i in range(len(l) - 1, 0, -1):
         i = len(l) - 1
         while i >= 1:
-            j = random.randint(0, len(l) - 1) # 🤪
+            j = random.randint(0, len(l) - 1)
             swap(l, i, j)
             i = i - 1

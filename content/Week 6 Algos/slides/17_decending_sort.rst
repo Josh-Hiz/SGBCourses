@@ -6,5 +6,6 @@ Write a selection sort that sorts the list descending; i.e., find the **maximum*
 The 'Mark' button runs doctest; write several tests to check your work.
 
 .. challenge:: 
+    :tester: /_static/cs515_challenges/Week6/Challenge4/doc.py
 
     # define selection_sort_desc (and any helpers you may need)
