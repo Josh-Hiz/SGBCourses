@@ -18,7 +18,7 @@ Free response that uses regex to specify answer
 -----------------------------------------------
 
 .. free-r::
-    :answer: ("hello\\n world\\n how are you\?"|'hello\\n world\\n how are you\?')
+    :answer: "hello\\n world\\n how are you\?"|'hello\\n world\\n how are you\?'
     :regex: true
 
     # Question 2

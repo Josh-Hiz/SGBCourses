@@ -11,18 +11,14 @@ function getParams() {
     // Get the markdown code
     const decodedCode = decodeURIComponent(initCode);
     questionCode = decodedCode;
-    console.log(questionCode);
 
     // Get the answer
     const decodedAnswer = decodeURIComponent(answer);
     questionAnswer = decodedAnswer;
-    console.log(questionAnswer);
     
     // Is the answer regex?
     const decodedRegex = decodeURIComponent(regex);
     isRegex = (decodedRegex === "true");
-    console.log(isRegex);
-    console.log(typeof(isRegex));
 
     parseMarkdown(questionCode);
 }
@@ -34,9 +30,11 @@ function checkAnswer(){
     let userAnswer = document.getElementById("userAnswer").value;
 
     if (isRegex){        
-        questionAnswer = new RegExp(questionAnswer);
+        // Turn questionAnswer into a regular expression
+        const re = new RegExp(questionAnswer);
         console.log(questionAnswer);
-        if (questionAnswer.test(userAnswer)){
+        console.log(re);
+        if (re.test(userAnswer)){
             console.log("Regular expression matches")
             return true;
         } else {
@@ -45,10 +43,8 @@ function checkAnswer(){
         }
     } else { 
         if (userAnswer == questionAnswer){
-            console.log("Answer matches")
             return true;
         } else {
-            console.log("Answer does not match")
             return false;
         }
     }
