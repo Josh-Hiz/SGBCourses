@@ -56,6 +56,26 @@ function parseMarkdown(markdown) {
     document.getElementById("Markdown").innerHTML = html;
 }
 
+var executed = false;
+function createExplainer() {
+    if(executed) {return;}
+    else {
+        executed = true;
+        const explainButton = document.createElement("button");
+        explainButton.setAttribute("type", "explain");
+        explainButton.innerText = "Explain";
+        explainButton.addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("result").innerHTML = `
+            <div class="alert alert-info">
+                <p>Explanation here</p>
+            </div>
+            `;
+        });
+        document.forms[0].appendChild(explainButton);
+    }
+}
+
 function setUpEventListener() {
     document.getElementById("submit").addEventListener("click", function(event) {
         event.preventDefault(); // Add this line to prevent default form submission behavior
@@ -71,6 +91,7 @@ function setUpEventListener() {
                 <strong>Sorry, incorrect answer.</strong>
             </div>
             `;
+            createExplainer();
         }
     });
 }

@@ -46,7 +46,17 @@ input[type=checkbox] {
 }
 
 button[type=submit] {
-    background-color: #4CAF50;
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type=explain] {
+    background-color: #2378cc;
     color: white;
     padding: 12px 20px;
     border: none;
