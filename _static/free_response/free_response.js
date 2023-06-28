@@ -1,6 +1,7 @@
 var questionAnswer;
 var questionCode;
 var isRegex;
+var explanation = '';
 
 function getParams() {
     const queryString = new URLSearchParams(location.search);
@@ -51,8 +52,14 @@ function checkAnswer(){
 }
 
 function parseMarkdown(markdown) {
+    if(markdown.includes(">>>")) {
+        newMarkdown = markdown.split(">>>")
+        explanation = newMarkdown[1];
+        markdown = newMarkdown[0];
+    }
     var converter = new window.showdown.Converter();
     var html = converter.makeHtml(markdown);
+    explanation = converter.makeHtml(explanation);
     document.getElementById("Markdown").innerHTML = html;
 }
 
@@ -68,7 +75,7 @@ function createExplainer() {
             event.preventDefault();
             document.getElementById("result").innerHTML = `
             <div class="alert alert-info">
-                <p>Explanation here</p>
+                ${explanation}
             </div>
             `;
         });
