@@ -1,34 +1,47 @@
 Converting with int to float
 ============================
 
-.. add-css::
+.. free-r:: 
+    :answer: 2
 
-.. free-response::
-    :question: What does <code>int(2.0)</code> return?
-    :correct_answer: 2
-    :explanation: <code>int</code> truncates.
-    :question_num: 1
+    # Question 1
 
-.. free-response::
-    :question: What does <code>int(3.5)</code> return?
-    :correct_answer: 3
-    :explanation: <code>int</code> truncates.
-    :question_num: 2
+    What does ```int(2.0)``` return?
 
-.. free-response::
-    :question: What does <code>int(4.75)</code> return?
-    :correct_answer: 4
-    :explanation: <code>int</code> truncates.
-    :question_num: 3
+    >>>```int``` truncates
 
-.. free-response::
-    :question: What does <code>float(4)</code> return?
-    :correct_answer: 4.0
-    :explanation: <code>float</code>s must have a decimal point in them.
-    :question_num: 4
+.. free-r:: 
+    :answer: 3
 
-.. free-response::
-    :question: What does <code>float(11)</code> return?
-    :correct_answer: 11.0
-    :explanation: <code>float</code>s must have a decimal point in them.
-    :question_num: 5
+    # Question 2
+
+    What does ```int(3.5)``` return?
+
+    >>>```int``` truncates
+
+.. free-r:: 
+    :answer: 4
+
+    # Question 3
+
+    What does ```int(4.75)``` return?
+
+    >>>```int``` truncates
+
+.. free-r:: 
+    :answer: 4.0
+
+    # Question 4
+
+    What does ```float(4.0)``` return?
+
+    >>>floats must have a decimal point in them.
+
+.. free-r:: 
+    :answer: 11.0
+
+    # Question 5
+
+    What does ```float(11)``` return?
+
+    >>>floats must have a decimal point in them.

@@ -12,7 +12,6 @@ Weeks:
 .. toctree:: 
     :maxdepth: 1
 
-    test
     content/Week 1 Basics/index
     content/Week 2 DSL/index
     content/Week 3 ERNL/index

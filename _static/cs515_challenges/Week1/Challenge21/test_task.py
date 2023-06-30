@@ -23,3 +23,5 @@ class TaskTest(unittest.TestCase):
         self.correct("c", "cccc")
     def test_late(self):
         self.correct("c", "bookccc")
+
+unittest.main(exit=False)

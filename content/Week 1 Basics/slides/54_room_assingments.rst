@@ -14,28 +14,31 @@ Given the following function assign_room(num_students), identify what each funct
             return "Pier A"
         return "no room"
 
-.. add-css:: 
+.. free-r::
+    :answer: "GS 216"
 
-.. free-response::
-    :question: What does <code>assign_room(100)</code> return?
-    :correct_answer: "GS 216"
-    :explanation: Correct answer is "GS 216"
-    :question_num: 1
+    # Question 1
 
-.. free-response::
-    :question: What does <code>assign_room(150)</code> return?
-    :correct_answer: "Babbio"
-    :explanation: Correct answer is "Babbio"
-    :question_num: 2
+    What will ```assign_room(100)``` return?
 
-.. free-response::
-    :question: What does <code>assign_room(200)</code> return?
-    :correct_answer: "Pier A"
-    :explanation: Correct answer is "Pier A"
-    :question_num: 3
+.. free-r::
+    :answer: "Babbio"
 
-.. free-response::
-    :question: What does <code>assign_room(300)</code> return?
-    :correct_answer: "no room"
-    :explanation: Correct answer is "no room"
-    :question_num: 4
+    # Question 2
+
+    What will ```assign_room(150)``` return?
+
+.. free-r::
+    :answer: "Pier A"
+
+    # Question 3
+
+    What will ```assign_room(200)``` return?
+
+
+.. free-r::
+    :answer: "no room"
+
+    # Question 4
+
+    What will ```assign_room(300)``` return?

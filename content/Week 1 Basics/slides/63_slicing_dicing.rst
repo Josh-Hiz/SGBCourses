@@ -5,34 +5,37 @@ Identify what each expression evaluates to, given that `
 
 Identify what each expression evaluates to, given that ``word = 'slicing'``. Please use **single quotes** in your answer.
 
-.. add-css::
+.. free-r::
+    :answer: 'g'
 
-.. free-response::
-    :question: <code>word[6:7]</code>
-    :correct_answer: 'g'
-    :explanation: Correct answer is 'g'
-    :question_num: 1
+    # Question 1
 
-.. free-response::
-    :question: <code>word[0:2]</code>
-    :correct_answer: 'sl'
-    :explanation: Correct answer is 'sl'
-    :question_num: 2
+    ```word[6:7]```
 
-.. free-response::
-    :question: <code>word[0:1]</code>
-    :correct_answer: 's'
-    :explanation: Correct answer is 's'
-    :question_num: 3
+.. free-r::
+    :answer: 'sl'
 
-.. free-response::
-    :question: <code>word[2:5]</code>
-    :correct_answer: 'ici'
-    :explanation: Correct answer is 'ici'
-    :question_num: 4
+    # Question 2
 
-.. free-response::
-    :question: <code>word[0:len(word)]</code>
-    :correct_answer: 'slicing'
-    :explanation: Correct answer is 'slicing'
-    :question_num: 5
+    ```word[0:2]```
+
+.. free-r::
+    :answer: 's'
+
+    # Question 3
+
+    ```word[0:1]```
+
+.. free-r::
+    :answer: 'ici'
+
+    # Question 4
+
+    ```word[2:5]```
+
+.. free-r::
+    :answer: 'slicing'
+
+    # Question 5
+
+    ```word[0:len(word)]```

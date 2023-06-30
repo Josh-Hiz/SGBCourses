@@ -31,16 +31,27 @@ Consider the following program (Please run it to see the output):
 
 Please answer the following two questions about the program. Note that the quiz checker wants *exact* answers! (Func1,Func2,Func3...etc, the last one should have no comma at the end).
 
-.. add-css:: 
+.. free-r:: 
+    :answer:
+        func_a
+        func_d
+        func_c
+        func_b
+        func_e
+        func_b
+    
+    # Question 1
 
-.. free-response::
-    :question: What order will the functions be called in? Write each function name once per line. If a function is called more than once, list it once for each time its called.
-    :correct_answer: func_a, func_d, func_c, func_b, func_e, func_b
-    :explanation: The functions will be called in this order: <code> <br> func_a <br> func_d <br> func_c <br> func_b <br> func_e <br> func_b </code>
-    :question_num: 1
+    What order will the functions be called in? Write each function name once per line. If a function is called more than once, list it once for each time its called.
 
-.. free-response::
-    :question: When <code>func_e</code> is called, it will print out <code>HERE!</code>. What is the call stack right before the <code>print</code> happens? Please list it in top down order: the current function, its caller, then its caller, and so on. Put one function name per line.
-    :correct_answer: func_e, func_c, func_d, func_a
-    :explanation: The functions will be called in this order: <code> <br> func_e <br> func_c <br> func_d <br> func_a
-    :question_num: 2
+.. free-r:: 
+    :answer:
+        func_e
+        func_c
+        func_d
+        func_a
+    
+    # Question 2
+
+    When ```func_e``` is called, it will print out ```HERE!```. What is the call stack right before the print happens? Please list it in top down order: the current function, its caller, then its caller, and so on. Put one function name per line.
+

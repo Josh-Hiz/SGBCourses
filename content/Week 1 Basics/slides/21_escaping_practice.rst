@@ -1,11 +1,6 @@
 Escaping Practice
 =================
 
-.. add-css::
-
-Question 1
-==========
-
 .. quizdown::
 
     ## Which definitions of s will Python accept?
@@ -16,20 +11,37 @@ Question 1
     - [x] ```s = 'don\'t'```
     - [ ] ```'don't'```
 
-Question 2
-==========
+.. free-r::
+    :answer: "hello\\n world\\n  how are you\?"|'hello\\n world\\n  how are you\?'
+    :regex: true
 
-.. free-response::
-    :question: How would you write the following as a string in Python?<br><br><code>hello<br> world<br>  how are you?</code><br><br>Just write the string literal, as in <code>"this\tis not  the answer"</code>.
-    :correct_answer: PUT YOUR ANSWER HERE
-    :explanation: Correct answer must match the regular expression ("hello\\n world\\n how are you\?"|'hello\\n world\\n how are you\?')
-    :question_num: 1
+    # Question 2
 
-Question 3
-==========
+    How would you write the following as a string in Python?
 
-.. free-response::
-    :question: How would you write the following as a string in Python?<br><br><code>"It's a backslash," he said, "you write it like '\'."</code><br><br>Just write the string literal, as in <code>"this\tis not  the answer"</code>.
-    :correct_answer: PUT YOUR ANSWER HERE
-    :explanation: Correct answer must match the regular expression ('"It\\'s a backslash," he said, "you write it like \\'\\\\\\'\."'|"\\"It\\?'s a backslash,\\" he said, \\"you write it like \\?'\\\\\\?'\.\\"")
-    :question_num: 2
+    ```python
+    hello
+     world
+      how are you?
+    ```
+
+    Just write the string literal, as in ```"this\tis not  the answer"```.
+
+    >>>Correct answer must match the regular expression ("hello\\n world\\n how are you\?"|'hello\\n world\\n how are you\?')
+
+.. free-r::
+    :answer: '"It\\'s a backslash," he said, "you write it like \\'\\\\\\'\."'|"\\"It\\?'s a backslash,\\" he said, \\"you write it like \\?'\\\\\\?'\.\\""
+    :regex: true
+
+    # Question 3
+
+    How would you write the following as a string in Python?
+
+    ```"It's a backslash," he said, "you write it like '\'."```
+
+    Just write the string literal, as in ```"this\tis not  the answer"```.
+
+    >>>
+    ```'"It\'s a backslash," he said, "you write it like \'\\\'."'```<br>
+    or<br>
+    ```"\"It's a backslash,\" he said, \"you write it like '\\'.\""```
