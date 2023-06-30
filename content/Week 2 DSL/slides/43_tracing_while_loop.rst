@@ -10,13 +10,12 @@ Consider the following snippet of code.
     while num < upper_bound:    # line A
         num *= 2                # line B
 
-.. add-css:: 
+.. free-r:: 
+    :answer: 16
 
-.. free-response::
-    :question: Trace through the loop step by step to see how the value of ``num`` changes. What is the value of ``num`` after we exit the loop?
-    :correct_answer: 16
-    :explanation: Correct answer is 16
-    :question_num: 1
+    # Question 1
+
+    Trace through the loop step by step to see how the value of ```num``` changes. What is the value of num after we exit the loop?
 
 .. quizdown:: 
 

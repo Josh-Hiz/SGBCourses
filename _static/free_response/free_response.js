@@ -70,7 +70,11 @@ function createExplainer() {
     if(executed) {return;}
     else {
         executed = true;
-        if(explanation == '') explanation = "The correct answer is " + questionAnswer;
+        if(explanation == '' && isRegex==false){
+            explanation = "The correct answer is " + questionAnswer
+        } else if(explanation == '' && isRegex==true){
+            explanation = "Correct answer must match the regular expression " + questionAnswer
+        }
         const explainButton = document.createElement("button");
         explainButton.setAttribute("type", "explain");
         explainButton.innerText = "Explain";

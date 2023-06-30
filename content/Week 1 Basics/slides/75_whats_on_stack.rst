@@ -43,6 +43,15 @@ Please answer the following two questions about the program. Note that the quiz 
     # Question 1
 
     What order will the functions be called in? Write each function name once per line. If a function is called more than once, list it once for each time its called.
+    
+    >>>
+    The functions will be called in this order:<br>
+    ```func_a<br>
+    func_d<br>
+    func_c<br>
+    func_b<br>
+    func_e<br>
+    func_b```
 
 .. free-r:: 
     :answer:
@@ -55,3 +64,10 @@ Please answer the following two questions about the program. Note that the quiz 
 
     When ```func_e``` is called, it will print out ```HERE!```. What is the call stack right before the print happens? Please list it in top down order: the current function, its caller, then its caller, and so on. Put one function name per line.
 
+    >>>
+    The stack will be, from the current caller on down:
+
+    ```func_e<br>
+    func_c<br>
+    func_d<br>
+    func_a```

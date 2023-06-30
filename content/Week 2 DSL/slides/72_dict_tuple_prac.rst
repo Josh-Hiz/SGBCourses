@@ -9,29 +9,33 @@ Dictionary and tuple practice
     coordinates = {'San Diego': (32.7157, 117.1611), 'San Francisco': (37.7749, 122.4194),
                    'New York': (40.7128, 74.006), 'Austin': (30.2672, 97.7431)}
 
-.. add-css::
+.. free-r:: 
+    :answer: \'San Francisco\'|\"San Francisco\"
+    :regex: true
 
+    # Question 1
 
-.. free-response::
-    :question: What is ``cities[(37.7749, 122.4194)]``?
-    :correct_answer: San Francisco
-    :explanation: Correct answer is San Francisco
-    :question_num: 1
+    What is ```cities[(37.7749, 122.4194)]```?
 
-.. free-response::
-    :question: What is ``coordinates['Austin']``?
-    :correct_answer: (30.2672, 97.7431)
-    :explanation: Correct answer is (30.2672, 97.7431)
-    :question_num: 2
+.. free-r:: 
+    :answer: \(\s*30.2672\s*,\s*97.7431\s*\)
+    :regex: true
+    
+    # Question 2
 
-.. free-response::
-    :question: What is ``cities[(40.7128, 74.006)]``?
-    :correct_answer: New York
-    :explanation: Correct answer is New York
-    :question_num: 3
+    What is ```coordinates['Austin']```?
 
-.. free-response::
-    :question: What is ``cities['San Diego']``?
-    :correct_answer: KeyError
-    :explanation: Correct answer is KeyError
-    :question_num: 4
+.. free-r:: 
+    :answer: \'New York\'|\"New York\"
+    :regex: true
+    
+    # Question 3
+
+    What is ```cities[(40.7128, 74.006)]```?
+
+.. free-r:: 
+    :answer: KeyError
+    
+    # Question 4
+
+    What is ```cities['San Diego']```?

@@ -18,23 +18,25 @@ You may find it helpful to take some little time to practice creating and access
 
 In the questions below, we ask what **value** is associated with given **keys** in the corresponding dictionaries.
 
-.. add-css::
+.. free-r:: 
+    :answer: \'two\'|\"two\"
+    :regex: true
 
+    # Question 1
 
-.. free-response::
-    :question: What is <code>int_dict[2]</code>
-    :correct_answer: "two"
-    :explanation: Correct answer is "two"
-    :question_num: 1
+    What is ```int_dict[2]```?
 
-.. free-response::
-    :question: What is <code>int_dict[7]</code>
-    :correct_answer: "seven"
-    :explanation: Correct answer is "seven"
-    :question_num: 2
+.. free-r:: 
+    :answer: \'seven\'|\"seven\"
+    :regex: true
 
-.. free-response::
-    :question: What is <code>str_dict["nine"]</code>
-    :correct_answer: 9
-    :explanation: Correct answer is 9
-    :question_num: 3
+    # Question 2
+
+    What is ```int_dict[7]```?
+
+.. free-r:: 
+    :answer: 9
+
+    # Question 3
+
+    What is ```str_dict["nine"]```?

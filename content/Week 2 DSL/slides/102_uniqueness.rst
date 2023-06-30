@@ -1,36 +1,38 @@
 Uniqueness
 ==========
 
-Suppose we run the following code:
+.. free-r:: 
+    :answer: {False}
 
-.. code-block:: python
+    # Question 1
+    
+    Suppose we run the following code:
 
+    ```
     s = set()
     s.add(False)
     s.add(0)
     print(s)
+    ```
 
-.. add-css::
+    What is the output?
 
-.. free-response::
-    :question: What is the output?
-    :correct_answer: {False}
-    :explanation: Correct answer is {False}
-    :question_num: 1
 
-Suppose we run the following code:
+.. free-r:: 
+    :answer: {False, 1}
+    
+    # Question 2
 
-.. code-block:: 
+    Suppose we run the following code:
 
+    ```
     s = set()
     s.add(False)
     s.add(1)
     s.add(0)
     s.add(True)
     print(s)
+    ```
 
-.. free-response::
-    :question: What is the output?
-    :correct_answer: {False, 1}
-    :explanation: Correct answer is {False, 1}
-    :question_num: 2
+    What is the output?
+

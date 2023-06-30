@@ -7,28 +7,31 @@ The following questions concern the following dictionary:
 
     grades = {'Gerald': 82, 'Sorin': 75, 'Yeohee': 91, 'Winny': 88}
 
-.. add-css::
+.. free-r:: 
+    :answer: 88
 
-.. free-response::
-    :question: What is <code>grades['Winny']</code>?
-    :correct_answer: 88
-    :explanation: The correct answer is 88
-    :question_num: 1
+    # Question 1
 
-.. free-response::
-    :question: What is <code>grades['Sorin']</code>?
-    :correct_answer: 75
-    :explanation: The correct answer is 75
-    :question_num: 2
+    What is ```grades['Winny']```?
 
-.. free-response::
-    :question: How would you get the value of Yeohee's grade? Write the lookup code, not the answer.
-    :correct_answer: grades['Yeohee']
-    :explanation: The correct answer is grades['Yeohee']
-    :question_num: 3
+.. free-r:: 
+    :answer: 75
 
-.. free-response::
-    :question: What is <code>grades['Michael']</code>?
-    :correct_answer: KeyError
-    :explanation: The correct answer is KeyError
-    :question_num: 4
+    # Question 2
+
+    What is ```grades['Sorin']```?
+
+.. free-r:: 
+    :answer: grades['Yeohee']
+
+    # Question 3
+
+    How would you get the value of Yeohee's grade? Write the lookup code, not the answer.
+
+.. free-r:: 
+    :answer: KeyError
+
+    # Question 4
+
+    What is ```grades['Michael']```?
+

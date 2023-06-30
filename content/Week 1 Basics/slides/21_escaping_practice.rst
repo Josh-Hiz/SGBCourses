@@ -27,8 +27,6 @@ Escaping Practice
 
     Just write the string literal, as in ```"this\tis not  the answer"```.
 
-    >>>Correct answer must match the regular expression ("hello\\n world\\n how are you\?"|'hello\\n world\\n how are you\?')
-
 .. free-r::
     :answer: '"It\\'s a backslash," he said, "you write it like \\'\\\\\\'\."'|"\\"It\\?'s a backslash,\\" he said, \\"you write it like \\?'\\\\\\?'\.\\""
     :regex: true
