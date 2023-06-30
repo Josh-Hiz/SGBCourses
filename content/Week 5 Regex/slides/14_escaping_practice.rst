@@ -10,13 +10,14 @@ Escaping practice
     - [ ] ```s = "do not"```
     - [x] ```s = "0on't"```
 
-.. add-css::
+.. free-r:: 
+    :answer: ['-', ']', '^']
 
-.. free-response::
-    :question: What is the result of <code>re.findall("[]^-]", "we're learning about hy-phens and [square brackets] and circumflex^caret")</code>
-    :correct_answer: ['-', ']', '^']
-    :explanation: The correct answer is ['-', ']', '^']
-    :question_num: 2
+    # Question 2
+
+    What is the result of ```re.findall("[]^-]", "we're learning about hy-phens and [square brackets] and circumflex^caret")```
+
+
 
 .. quizdown:: 
 

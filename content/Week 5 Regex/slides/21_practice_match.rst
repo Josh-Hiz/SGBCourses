@@ -8,16 +8,16 @@ Practice with Match objects
     email = r"((?:\w+\s*)*) <([^@]+@[^@]+)>"
     m = re.fullmatch(email, "Michael Greenberg <michael.greenberg@stevens.edu>")
 
-.. add-css:: 
+.. free-r:: 
+    :answer: Michael Greenberg
 
-.. free-response::
-    :question: What is <code>m.group(1)</code>? No need to write quotes.
-    :correct_answer: Michael Greenberg
-    :explanation: The correct answer is Michael Greenberg
-    :question_num: 1
+    # Question 1
 
-.. free-response::
-    :question: What is <code>m.group(2)</code>? No need to write quotes.
-    :correct_answer: michael.greenberg@stevens.edu
-    :explanation: The correct answer is michael.greenberg@stevens.edu
-    :question_num: 2
+    What is ```m.group(1)```? No need to write quotes.
+
+.. free-r:: 
+    :answer: michael.greenberg@stevens.edu
+
+    # Question 2
+
+    What is ```m.group(2)```? No need to write quotes.
