@@ -1,6 +1,6 @@
 var questionAnswer;
 var questionCode;
-var isRegex;
+var isRegex = false;
 var explanation = '';
 
 function getParams() {
@@ -8,18 +8,20 @@ function getParams() {
     const initCode = queryString.get('initCode');
     const answer = queryString.get('answer');
     const regex = queryString.get('isRegex');
-
+    console.log(initCode);
+    console.log(answer);
+    console.log(regex);
     // Get the markdown code
-    const decodedCode = decodeURIComponent(initCode);
-    questionCode = decodedCode;
+    // const decodedCode = decodeURIComponent(initCode);
+    questionCode = initCode;
 
     // Get the answer
-    const decodedAnswer = decodeURIComponent(answer);
-    questionAnswer = decodedAnswer;
+    // const decodedAnswer = decodeURIComponent(answer);
+    questionAnswer = answer;
     
     // Is the answer regex?
-    const decodedRegex = decodeURIComponent(regex);
-    isRegex = (decodedRegex === "true");
+    // const decodedRegex = decodeURIComponent(regex);
+    isRegex = (regex === "true");
 
     parseMarkdown(questionCode);
 }
@@ -52,14 +54,14 @@ function checkAnswer(){
 }
 
 function parseMarkdown(markdown) {
+    var converter = new window.showdown.Converter();
     if(markdown.includes(">>>")) {
         newMarkdown = markdown.split(">>>")
-        explanation = newMarkdown[1];
+        explanationMD = newMarkdown[1];
         markdown = newMarkdown[0];
+        explanation = converter.makeHtml(explanationMD);
     }
-    var converter = new window.showdown.Converter();
     var html = converter.makeHtml(markdown);
-    explanation = converter.makeHtml(explanation);
     document.getElementById("Markdown").innerHTML = html;
 }
 
@@ -68,6 +70,7 @@ function createExplainer() {
     if(executed) {return;}
     else {
         executed = true;
+        if(explanation == '') explanation = "The correct answer is " + questionAnswer;
         const explainButton = document.createElement("button");
         explainButton.setAttribute("type", "explain");
         explainButton.innerText = "Explain";
