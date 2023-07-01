@@ -30,8 +30,6 @@ html_theme_options = {
 
 
 extensions = [
-    'plugins.add_css',
-    'plugins.free_response',
     'sphinxcontrib.quizdown',
     'plugins.challenge',
     'plugins.runner',
