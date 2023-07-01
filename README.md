@@ -14,4 +14,4 @@ Then run the following: `make clean` followed by `make html` to make production 
 
 - I need to find an alternative solution for markdown quizzes, the literally only single issue is free response, how the hell does quizdown work??? If the issue continues I will have to prioritize it.
 
-**Slide 21 needs the answers updated. Slide 81 week 2 needs to be fixed**
+**Week 4 Testing Mean and Testing Median need to be worked on**
