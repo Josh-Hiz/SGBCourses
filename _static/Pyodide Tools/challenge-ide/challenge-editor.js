@@ -1,58 +1,94 @@
+// Variable to hold the literal path for test file
 var testFilePath;
+// Variable to hold the Ace Editor container
 var editor = ace.edit("editor");
+// Variable to hold the output pane
 var output_pane;
 
+/**
+ * Sets the initial variables above except output_pane and 
+ * will decode the URI components initCode and testFile, if
+ * no test file exists, the "Run" button will not display.
+ */
 function setParams() {
     const queryString = new URLSearchParams(location.search);
     const initCode = queryString.get('initCode');
     const testFile = queryString.get('testFile');
+    // Check if there is any code in the quert string
     if (initCode) {
         const decodedCode = decodeURIComponent(initCode);
         console.log(decodedCode)
         editor.setValue(decodedCode);
     }
+    // Check if there is a test file in the query string
     if(testFile != ''){
         const decodedTest = decodeURIComponent(testFile);
         testFilePath = decodedTest;
         console.log(testFilePath);
     } else {
+        // If there is no test file, remove the run button
         const element = document.getElementById("run_code");
         element.remove();
     }
 }
 
+// As per the documentation for Pyodide, this will load the Python interpreter
+// through WASM and create an Emscripten virtual file system
 loadPyodide().then((pyodide) => {
     // pyodide is now ready to use...
     globalThis.pyodide = pyodide;
     appendOutput('Python ready.\n');
 });
 
+// Override console.warn so that anything logged will go to textarea
 console.warn = function(message) {
     console.log(message);
 };
-  
+
+/**
+ * Push everything that is logged to the console to an array
+ * and then append it to the output pane
+ * @param {String} msg  Anything that is logged to console
+ */
 function appendOutput(msg) {
     // used to add program output to the textarea
     output_pane.value = output_pane.value + '\n' + msg;
     output_pane.scrollTop = output_pane.scrollHeight;
 }
 
+/**
+ * Standard configuration of the Ace editor as per the documentation
+ */
 function configEditor(){
-    // configure the ace editor to make it usable
+    // Place the editor to a container of ID "editor"
     editor = ace.edit("editor");
+    // Sets the theme to Xcode
     editor.setTheme("ace/theme/xcode");
+    // Sets the language mode to Python for syntax highlighting
     editor.session.setMode("ace/mode/python");
+    // Disable the print margin
     editor.setShowPrintMargin(false);
+    // Enable soft tabs
     editor.setBehavioursEnabled(true);
+    // Set the font size to 13px
     editor.setFontSize(13);
+    // Calls setParams so the editor can pick up the test file and set its initial code
     setParams();
 }
 
+/**
+ * Will open any .py file from the literal path provided and set the 
+ * ace editor value to all python code in the file
+ * @param {String} filePathToUse Literal path to the file to open
+ */
 function openCode(filePathToUse) {
+    // Call getCode to grab the literal code from the file
     getCode(filePathToUse)
       .then(code => {
         var modelist = ace.require("ace/ext/modelist");
+        // Detect if the file is a python file and set the mode to Python
         var modeName = modelist.getModeForPath(filePathToUse).mode;
+        // Set the new mode and value of the editor
         editor.session.setMode(modeName);
         editor.session.setValue(code);
     })
@@ -61,6 +97,10 @@ function openCode(filePathToUse) {
     });
 }
 
+/**
+ * Async function that will run the code that is in the ace editor
+ * @param {*} code_to_run This will be derived from the decoded URI component and come from whatever is in ace editor
+ */
 async function runCode(code_to_run) {
     // Run the code thats within the editor so students can test
     if(code_to_run == editor.getValue()){
@@ -83,9 +123,12 @@ async function runCode(code_to_run) {
         console.logs = [];
         var data = editor.getValue(); 
         var testData = code_to_run;
+        
+        // Write both the challenge and test code to the virtual file system
         window.pyodide.FS.writeFile("challenge.py", data);
         window.pyodide.FS.writeFile("test.py", testData);
         
+        // Run the test file and then delete from the file system
         let promise = new Promise((resolve, reject) => {
             window.pyodide.runPython(`
                 exec(open('test.py').read())
@@ -106,12 +149,20 @@ async function runCode(code_to_run) {
     }
 }
 
+/**
+ * Function to save a .py file from the editor so users can download their code
+ * @param {*} code The code that is in the editor
+ */
 function saveCode(code) {
     var blob = new Blob([code], { type: "text/plain;charset=utf-8" });
     window.saveAs(blob, 'challenge.py');
 }
 
-//make a function getCode that takes in a file path and returns the code in that file as a string to use in ace
+/**
+ * Grabs and returns the code from the file that is passed in as a string literal
+ * @param {*} codeToGet Literal file path to the file to open
+ * @returns Code from the file that is passed in
+ */
 async function getCode(codeToGet) {
     try {
       const response = await fetch(codeToGet);
@@ -122,7 +173,10 @@ async function getCode(codeToGet) {
     }
 }
 
-//codeToSwitch will be a file path
+/**
+ * Experimental function to test changing the file in the editor in live time
+ * @param {*} codeToSwitch Literal file path to the file to open
+ */
 function switchFile(codeToSwitch) {
     getCode(codeToSwitch)
     .then(code => {
@@ -137,6 +191,7 @@ function switchFile(codeToSwitch) {
     });
 }
 
+// All event listeners for the buttons
 document.addEventListener('DOMContentLoaded', (event) => {
     output_pane = document.getElementById("output");
     // Add event listeners for downloading code
@@ -167,6 +222,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
         
     });
+    
     // Capture the output from Pyodide and add it to an array
     console.stdlog = console.log.bind(console);
     console.logs = [];

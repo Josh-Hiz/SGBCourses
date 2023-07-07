@@ -63,7 +63,7 @@ textarea:focus {
 }
 
 #runButton:hover, #clearButton:hover, #run_code:hover, #downloadButton:hover, #switchButton:hover {
-    background-color: #1863d2;
+    background-color: #ddd;
     color: black;
     transition: background-color 0.2s, color 0.2s;
 }

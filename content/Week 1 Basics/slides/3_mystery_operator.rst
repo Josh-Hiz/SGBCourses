@@ -3,10 +3,6 @@ Mystery Operator
 
 There are more operators than just the standard four arithmetic operators of + for addition, - for subtraction, * for multiplication, and / for division.
 
-Question
-========
-
-
 .. quizdown:: 
 
     ## Consider this interation:
@@ -26,4 +22,3 @@ Question
     2. [ ] Power
     3. [ ] Exponent
     4. [ ] All of the above
-        

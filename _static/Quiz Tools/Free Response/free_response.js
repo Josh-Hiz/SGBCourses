@@ -90,6 +90,25 @@ function createExplainer() {
     }
 }
 
+var body = document.body;
+var observer = new MutationObserver(function(mutations) {
+     parent.postMessage({
+         height: document.documentElement.offsetHeight
+     }, "*");
+});
+
+observer.observe(body, {
+     childList: true,
+     subtree: true
+});
+
+window.addEventListener('message', function(event) {
+    var iframe = document.querySelector('iframe');
+    if (typeof event.data === 'object' && event.data.height) {
+        iframe.style.height = event.data.height + 'px';
+    }
+});
+
 function setUpEventListener() {
     document.getElementById("submit").addEventListener("click", function(event) {
         event.preventDefault(); // Add this line to prevent default form submission behavior

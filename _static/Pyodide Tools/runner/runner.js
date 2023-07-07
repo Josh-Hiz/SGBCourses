@@ -1,3 +1,5 @@
+// Every function here has the same functionality as in the challenge editor
+
 var editor = ace.edit("editor");
 var output_pane;
 
@@ -17,6 +19,7 @@ loadPyodide().then((pyodide) => {
     appendOutput('Python ready.\n');
 });
 
+// Override console.warn so that anything logged will go to textarea
 console.warn = function(message) {
     console.log(message);
 };
