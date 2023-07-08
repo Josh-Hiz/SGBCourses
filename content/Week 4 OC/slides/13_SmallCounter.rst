@@ -6,6 +6,6 @@ Define a class ``SmallCounter`` that has methods ``tick``, ``untick``, and ``val
 Your ``SmallCounter`` should only ever be between 0 and 10. If someone calls ``untick`` when the counter is 0, it should stay at 0; if someone calls ``tick`` when the counter is 10, it should stay at 10.
 
 .. challenge::
-    :tester: /_static/cs515_challenges/Week5/Challenge3/test_task.py
+    :tester: /_static/cs515_challenges/Week4/Challenge3/test_task.py
 
     # define SmallCounter

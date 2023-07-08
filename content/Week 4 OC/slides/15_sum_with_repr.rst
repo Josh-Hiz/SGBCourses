@@ -18,6 +18,6 @@ and a ``__str__`` method that shows the sum, i.e.,
     1 + 2 = 3
 
 .. challenge:: 
-    :tester: /_static/cs515_challenges/Week5/Challenge4/test_task.py
+    :tester: /_static/cs515_challenges/Week4/Challenge4/test_task.py
 
     # define the Sum class
