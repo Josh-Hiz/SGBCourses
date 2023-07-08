@@ -30,6 +30,12 @@ html_css_files = [
 
 html_theme_options = {
     "home_page_in_toc": True,
+    "repository_provider": "github",
+    "repository_url": "https://github.com/Josh-Hiz/SGBCourses",
+    "use_source_button": True,
+    "use_edit_page_button": True,
+    "use_repository_button": True,
+    "use_issues_button": True,
 }
 
 
