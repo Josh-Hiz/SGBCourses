@@ -1,7 +1,6 @@
-// Every function here has the same functionality as in the challenge editor
-
 var editor = ace.edit("editor");
 var output_pane;
+var wordData; 
 
 function setParams() {
     const queryString = new URLSearchParams(location.search);
@@ -11,6 +10,14 @@ function setParams() {
         const decodedCode = decodeURIComponent(initCode);
         editor.setValue(decodedCode);
     }
+
+    getCode('words')
+        .then(code => {
+            wordData = code;
+        }) 
+        .catch(error => {
+            console.error('Error occurred while opening the code:', error);
+    });    
 }
 
 loadPyodide().then((pyodide) => {
@@ -56,10 +63,22 @@ function openCode(filePathToUse) {
     });
 }
 
+// Function to write all directories I would want into the file system
+var executed = false;
+function createDirectories() {
+    if(!executed) {
+        executed=true
+    window.pyodide.FS.mkdir('/usr');
+    window.pyodide.FS.mkdir('/usr/share');
+    window.pyodide.FS.mkdir('/usr/share/dict');
+    window.pyodide.FS.writeFile("/usr/share/dict/words", wordData);
+    }
+}
+
 async function runCode(code_to_run) {
     // Run the code thats within the editor so students can test
     console.logs = [];
-
+    createDirectories();
     let promise = new Promise((resolve, reject) => {
         window.pyodide.runPython(code_to_run)
         resolve(true)
@@ -106,4 +125,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.stdlog.apply(console, arguments);
     }
     configEditor(); 
+
 });
