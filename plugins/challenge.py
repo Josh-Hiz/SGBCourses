@@ -12,7 +12,7 @@ class ChallengeDirective(Directive):
         code = "\n".join(self.content)
         encoded_code = urllib.parse.quote(code)
         html = f"""
-        <iframe src="/_static/Pyodide Tools/challenge-ide/ace_editor.html?testFile={tester}&initCode={encoded_code}" height="1200" width="950" title="Challenge"></iframe>
+        <iframe src="/_static/Pyodide Tools/challenge-ide/ace_editor.html?testFile={tester}&initCode={encoded_code}" height="1200" width="980" title="Challenge"></iframe>
         """
         
         return [raw("", html, format="html")]
