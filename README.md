@@ -25,10 +25,9 @@ make clean
 make html
 ```
 
-## Current Goals
+## Current Problems:
 
-- Fix any formatting issues, make sure everything is documented and clean
-- **Week 4 Testing Mean and Testing Median need to be worked on**
+- **Week 4 Testing Mean and Testing Median need to be worked on, Week 3 challenge 1 is missing a test script from Ed, code runners cannot handle infinite while loops and key interrupts as pyodide makes it near impossible to support**
 
 ## Custom Directives and how to use them
 
