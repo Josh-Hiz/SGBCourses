@@ -4,7 +4,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    width: 1225px;
+    width: 950px;
     height: 500px;
 }
 
@@ -27,7 +27,7 @@
 textarea {
     font-family: Arial, sans-serif; /* Set the font-family */
     margin: 0px; 
-    width: 750px; 
+    width: 950px; 
     height: 500px; 
     padding: 10px; /* Add padding inside the textarea */
     font-size: 15px; /* Set the font-size */
