@@ -3,7 +3,6 @@ Week 3: Exceptions, recursion, and nested loops
 
 .. toctree:: 
     :maxdepth: 1
-    :caption: Week 3: Exceptions, recursion, and nested loops
 
     slides/1_errors_and_early
     slides/2_syntax_errors
@@ -43,3 +42,31 @@ Week 3: Exceptions, recursion, and nested loops
     slides/36_2d_list
     slides/37_index_nested_lst
     slides/38_nested_lists
+    slides/39_for_2D_list
+    slides/40_increment_2D
+    slides/41_image
+    slides/42_images_lists
+    slides/43_pixel_number
+    slides/44_RGB
+    slides/45_color_quiz
+    slides/46_tuples
+    slides/47_create_pixel
+    slides/48_tuples_lists
+    slides/49_red_square
+    slides/50_recap
+    slides/51_accessing_rows
+    slides/52_getting_row
+    slides/53_accessing_columns
+    slides/54_getting_column
+    slides/55_nested_loops_images
+    slides/56_getting_column
+    slides/57_modifying_pixels
+    slides/58_modifying_loops
+    slides/59_more_loops
+    slides/60_blacking_checkers
+    slides/61_red_filter
+    slides/62_red_filter_pixel
+    slides/63_for_loops
+    slides/64_red_filter
+    slides/65_region_image
+    slides/66_red_shifted_region

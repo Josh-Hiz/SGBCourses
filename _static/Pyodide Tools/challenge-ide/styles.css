@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Source%20Code%20Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open%20Sans&display=swap');
+
 #editor { 
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    width: 950px;
+    width: 850px;
     height: 500px;
 }
 
@@ -25,10 +28,10 @@
 }
 
 textarea {
-    font-family: Arial, sans-serif; /* Set the font-family */
+    font-family: Open Sans, Source Code Pro; /* Set the font-family */
     margin: 0px; 
-    width: 950px; 
-    height: 500px; 
+    width: 850px; 
+    height: 400px; 
     padding: 10px; /* Add padding inside the textarea */
     font-size: 15px; /* Set the font-size */
     background-color: #fff; /* Set the background color */
@@ -51,6 +54,7 @@ textarea:focus {
 
 #run_code, #downloadButton, #switchButton, #runButton, #clearButton {
     border-radius: 4px; /* Adjust the value to change the roundness of the corners */
+    font-family: Open Sans, Source Code Pro; /* Set the font-family */
     padding: 10px 20px;
     background-color: #ffffff;
     color: black;
@@ -63,7 +67,7 @@ textarea:focus {
 }
 
 #runButton:hover, #clearButton:hover, #run_code:hover, #downloadButton:hover, #switchButton:hover {
-    background-color: #ddd;
+    background-color: #e7e5e5;
     color: black;
     transition: background-color 0.2s, color 0.2s;
 }

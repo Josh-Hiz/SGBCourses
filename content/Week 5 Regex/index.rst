@@ -3,7 +3,6 @@ Week 5: Regular expressions
 
 .. toctree:: 
     :maxdepth: 1
-    :caption: Week 5: Regular Expressions
 
     slides/1_strings_structured
     slides/2_DNA

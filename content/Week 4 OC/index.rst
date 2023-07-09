@@ -3,7 +3,6 @@ Week 4: Objects and classes
 
 .. toctree:: 
     :maxdepth: 1
-    :caption: Week 4: Objects and classes
 
     slides/1_what_is_object
     slides/2_surprise

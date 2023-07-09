@@ -3,7 +3,6 @@ Recursion Workbook
 
 .. toctree:: 
     :maxdepth: 1
-    :caption: Recursion Workbook
 
     slides/1_recursion_practice
     slides/2_list_sum

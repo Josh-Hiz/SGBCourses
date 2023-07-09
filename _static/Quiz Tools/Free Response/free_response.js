@@ -30,39 +30,34 @@ function getParams() {
 // parse it for regular expressions and then check if questionAnswer = userAnswer 
 // to return true or false
 function checkAnswer(){
-    let userAnswer = document.getElementById("userAnswer").value;
-
-    if (isRegex){        
-        // Turn questionAnswer into a regular expression
-        const re = new RegExp(questionAnswer);
-        console.log(questionAnswer);
-        console.log(re);
-        if (re.test(userAnswer)){
-            console.log("Regular expression matches")
-            return true;
-        } else {
-            console.log("Regular expression does not match")
-            return false;
-        }
-    } else { 
-        if (userAnswer == questionAnswer){
-            return true;
-        } else {
-            return false;
+    const radios = document.querySelectorAll('input[type=radio]');
+    for(let i = 0; i < radios.length; i++) {
+        if(radios[i].checked) {
+            if(choices[radios[i].id] == true) {
+                return true;
+            }
         }
     }
+    return false;
 }
 
 function parseMarkdown(markdown) {
     var converter = new window.showdown.Converter();
-    if(markdown.includes(">>>")) {
-        newMarkdown = markdown.split(">>>")
-        explanationMD = newMarkdown[1];
-        markdown = newMarkdown[0];
-        explanation = converter.makeHtml(explanationMD);
+    var lines = markdown.split("\n");
+    var justQuestions = lines.filter((line) => line.startsWith("- [ ]") || line.startsWith("- [x]") || line.startsWith("1. [ ]") || line.startsWith("1. [x]"));
+
+    if(justQuestions.length > 0){
+        for (let i = 0; i < justQuestions.length; i++) {
+            var id = "choice" + i;
+            var answer = justQuestions[i].slice(7);
+            var isAnswer = justQuestions[i].startsWith("- [x]") || justQuestions[i].startsWith("1. [x]");
+            choices[id] = isAnswer;
+            var html = `<br><input type="radio" id="${id}" name="question">
+                        <label for="${id}">${answer}</label></br>`;
+            document.getElementById("Markdown").innerHTML += html;
+        }
+        document.getElementById("Markdown").innerHTML += '<br><button type="submit" id="submit">Submit Answer</button><p id="result"></p>';
     }
-    var html = converter.makeHtml(markdown);
-    document.getElementById("Markdown").innerHTML = html;
 }
 
 var executed = false;

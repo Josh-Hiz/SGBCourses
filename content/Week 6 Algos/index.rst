@@ -3,7 +3,6 @@ Week 6: Algorithms
 
 .. toctree:: 
     :maxdepth: 1
-    :caption: Week 6: Algorithms
 
     slides/1_what_is_algo
     slides/2_shuffling
