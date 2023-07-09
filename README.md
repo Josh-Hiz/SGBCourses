@@ -131,5 +131,95 @@ Example that uses regex and explanation, **you need to specify "regex: true" so 
     or<br>
     ```"\"It's a backslash,\" he said, \"you write it like '\\'.\""```
 ```
+What if you want your answer to be multiple lines? You can do that too!
+
+```
+.. free-r:: 
+    :answer:
+        func_a
+        func_d
+        func_c
+        func_b
+        func_e
+        func_b
+    
+    # Question 1
+
+    What order will the functions be called in? Write each function name once per line. If a function is called more than once, list it once for each time its called.
+    
+    >>>
+    The functions will be called in this order:<br>
+    ```func_a<br>
+    func_d<br>
+    func_c<br>
+    func_b<br>
+    func_e<br>
+    func_b```
+```
+
+### Quizdown
+Quizdown is a custom directive that I did not make and simply use it for single choice and free response, its pretty good, here are some examples of usage:
+
+Take note that 1. [ ] indicates single choice and - [ ] indicates multiple choice, where things marked with 'x' are the correct answers
+
+Here is one where you want to put images AND have the question answers be multi line and have code blocks
+```
+.. quizdown::
+        
+    ### The following 3x4 image is given as a 2D list ```rgb_rows```.
+
+    ![](https://i.ibb.co/dMJ6J8R/rgbrows.png)
+
+    <br>
+
+    What code will print the RGB information in the following image:
+
+    ![](https://i.ibb.co/djbYVY1/bluerow.png)
+
+    1. [ ] ```
+        for column in range(4):
+            print(rgb_rows[1][column])
+        ```
+    2. [ ] ```
+        for column in range(4):
+            print(rgb_rows[3][column])
+        ```
+    3. [x] ```
+        for column in range(4):
+            print(rgb_rows[2][column])
+        ```
+    4. [ ] ```
+        for column in range(4):
+            print(rgb_rows[0][column])
+        ```
+```
+
+Here is a more standard quiz without explanations
+```
+.. quizdown::
+
+    ### What is this color?
+
+    R = 100, G = 100, B = 100
+
+    Hint: Test it out with the color picker tool if you are unsure.
+
+    1. [ ] white
+    2. [ ] brown
+    3. [ ] black
+    4. [ ] gray 
+
+
+    ### What is this color?
+
+    R = 255, G = 255, B = 0
+
+    Hint: Test it out with the color picker tool if you are unsure.
+
+    1. [x] yellow
+    2. [ ] red
+    3. [ ] purple
+    4. [ ] green 
+```
 
 More directives can be added over time, otherwise, that is all!
