@@ -70,3 +70,25 @@ Week 3: Exceptions, recursion, and nested loops
     slides/64_red_filter
     slides/65_region_image
     slides/66_red_shifted_region
+    slides/67_customizing_filter
+    slides/68_thinking
+    slides/69_custom_blue
+    slides/70_edge_cases
+    slides/71_bad_inputs
+    slides/72_custom_blue
+    slides/73_flipping_images
+    slides/74_flipping_cats
+    slides/75_flipping_loops
+    slides/76_flop_flip
+    slides/77_list_swap
+    slides/78_tired
+    slides/79_defining_flip
+    slides/80_red_filter_inplace
+    slides/81_returning_image
+    slides/82_obj_ref
+    slides/83_copy_image
+    slides/84_copying_flipping
+    slides/85_copies_refs
+    slides/86_overwriting_refs
+    slides/87_overwriting_refs
+    slides/88_ref_filter_copying
