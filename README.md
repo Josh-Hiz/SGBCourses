@@ -27,7 +27,7 @@ make html
 
 ## Current Problems:
 
-- **Week 4 Testing Mean and Testing Median need to be worked on, Week 3 challenge 1 is missing a test script from Ed, code runners cannot handle infinite while loops and key interrupts as pyodide makes it near impossible to support**
+- **Week 4 Testing Mean and Testing Median need to be worked on, code runners cannot handle infinite while loops and key interrupts as pyodide makes it near impossible to support**
 
 ## Custom Directives and how to use them
 
