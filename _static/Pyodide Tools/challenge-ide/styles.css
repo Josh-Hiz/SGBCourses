@@ -26,7 +26,7 @@ body, html {
     overflow: auto;
     font-family: Open Sans, Source Code Pro; /* Set the font-family */
     font-size: 15px; /* Set the font-size */
-    resize: vertical; /* Allow vertical resizing only */
+    resize: none; /* Allow vertical resizing only */
     margin: 0px;
     border-radius: 0px; /* 0 border-radius */
     outline: none; /* Remove the default focus outline */

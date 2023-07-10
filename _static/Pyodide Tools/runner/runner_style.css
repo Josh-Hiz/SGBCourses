@@ -26,7 +26,7 @@ body, html {
     overflow: auto;
     font-family: Open Sans, Source Code Pro; /* Set the font-family */
     font-size: 15px; /* Set the font-size */
-    resize: vertical; /* Allow vertical resizing only */
+    resize: none; /* Allow vertical resizing only */
     margin: 0px;
     border-radius: 0px; /* 0 border-radius */
     outline: none; /* Remove the default focus outline */
@@ -39,7 +39,7 @@ body, html {
 .buttonContainer {
     display: flex;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 0px;
 }
 
 textarea:focus {
@@ -47,7 +47,7 @@ textarea:focus {
 }
 
 #runButton, #clearButton {
-    border-radius: 4px; /* Adjust the value to change the roundness of the corners */
+    border-radius: 0px; /* Adjust the value to change the roundness of the corners */
     padding: 10px 20px;
     background-color: #ffffff;
     color: black;
