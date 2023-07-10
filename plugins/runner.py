@@ -9,7 +9,7 @@ class RunnerDirective(Directive):
         code = "\n".join(self.content)
         encoded_code = urllib.parse.quote(code)
         html = f"""
-        <iframe src="/_static/Pyodide Tools/runner/runner.html?initCode={encoded_code}" height="500" width="900" title="Runner"></iframe>
+        <iframe src="/_static/Pyodide Tools/runner/runner.html?initCode={encoded_code}" height="500" width="865" title="Runner"></iframe>
         """
         return [raw("", html, format="html")]
         

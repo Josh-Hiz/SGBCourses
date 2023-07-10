@@ -9,17 +9,15 @@
     <script src="https://unpkg.com/file-saver"></script>
     <script src="https://cdn.jsdelivr.net/pyodide/v0.23.2/full/pyodide.js"></script>
 </head>
-<body>
-    <div class="container">
-        <div class="one">
+    <body>
+        <div class="container">
             <div id="editor"></div>
+            <textarea readonly id=output>Loading and compiling...</textarea>
+            <div class="buttonContainer">
+                <button id="runButton">Run</button>
+                <button id="clearButton">Clear</button>
+            </div>
         </div>
-    </div>
-    <textarea readonly rows=10 cols=30 id=output>Loading and compiling...</textarea><br>
-    <div class="buttonContainer">
-        <button id="runButton">Run</button>
-        <button id="clearButton">Clear</button>
-    </div>
-    <script type="text/javascript" src="runner.js"></script>
-</body>
+        <script type="text/javascript" src="runner.js"></script>
+    </body>
 </html>

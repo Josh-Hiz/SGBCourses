@@ -1,69 +1,60 @@
 @import url('https://fonts.googleapis.com/css?family=Source%20Code%20Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open%20Sans&display=swap');
 
-#editor { 
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 850px;
-    height: 500px;
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    width: 80%;
-    height: 500px;
-    margin: auto;
-    padding: 10px;
-}
-.one {
-    width: 50%;
-    height: 500px;
-    float: left;
-}
-.two {
-    margin-left: 50%;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-textarea {
+#editor {
+    flex-grow: 1;
+    min-height: 0; /* This prevents overflow outside the container */
+    font-family: Source Code Pro; /* Set the font-family */
+}
+
+#output {
+    /* Adjust these values if you want to change the textarea height */
+    height: 30%;
+    resize: none; /* Textarea cannot be manually resized */
+    overflow: auto;
     font-family: Open Sans, Source Code Pro; /* Set the font-family */
-    margin: 0px; 
-    width: 850px; 
-    height: 400px; 
-    padding: 10px; /* Add padding inside the textarea */
     font-size: 15px; /* Set the font-size */
+    resize: vertical; /* Allow vertical resizing only */
+    margin: 0px;
+    border-radius: 0px; /* 0 border-radius */
+    outline: none; /* Remove the default focus outline */
     background-color: #fff; /* Set the background color */
     border: 1px solid #ccc; /* Set the border */
-    border-radius: 4px; /* Add some border-radius */
-    resize: vertical; /* Allow vertical resizing only */
-    outline: none; /* Remove the default focus outline */
     transition: border-color 0.3s; /* Add transition effect to border color */
+
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0px;
 }
 
 textarea:focus {
     border-color: #007bff;
 }
 
-.buttonContainer {
-    width: 100%;
-    text-align: left;
-    display: inline
-}
-
 #run_code, #downloadButton, #switchButton, #runButton, #clearButton {
-    border-radius: 4px; /* Adjust the value to change the roundness of the corners */
+    border-radius: 0px; /* Adjust the value to change the roundness of the corners */
     font-family: Open Sans, Source Code Pro; /* Set the font-family */
     padding: 10px 20px;
     background-color: #ffffff;
     color: black;
     font-size: 15px;
-    border: solid;
     cursor: pointer;
     display: inline-block;
-    margin-right: 5px;
-    margin-bottom: 5px;
 }
 
 #runButton:hover, #clearButton:hover, #run_code:hover, #downloadButton:hover, #switchButton:hover {

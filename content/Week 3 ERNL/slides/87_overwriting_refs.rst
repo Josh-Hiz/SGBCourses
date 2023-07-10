@@ -3,7 +3,7 @@ Overwriting references
 
 .. quizdown::
 
-    Consider the following code. Choose all that are correct after the code has been executed.
+    ### Consider the following code. Choose all that are correct after the code has been executed.
 
     Note: ```copy_img``` and ```img``` are local variables and cannot be accessed outside of the function. The question is asking whether the variables contained some reference to the same object at any point within the execution of the code.
 
