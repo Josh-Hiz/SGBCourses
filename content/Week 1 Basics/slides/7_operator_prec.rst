@@ -7,9 +7,9 @@ In Python, when multiple operators appear within the same expression, there is a
     :widths: 25 25 50
     :header-rows: 1
 
-    * - Order/Precedence
-      - Operator
-      - Description
+    * - **Order/Precedence**
+      - **Operator**
+      - **Description**
     * - 1
       - ()
       - Parenthesis

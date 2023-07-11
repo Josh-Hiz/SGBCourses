@@ -46,3 +46,8 @@ Sample Input 1:
 .. code-block:: 
 
     -1
+
+.. challenge::
+    :tester: /_static/cs515_challenges/Week2/Challenge19/test_task.py
+
+    # write is_positive_or_multiple_of_7

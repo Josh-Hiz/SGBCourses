@@ -35,6 +35,6 @@ Write a function called ``print_numbers`` that has a list of integers called ``m
     1
 
 .. challenge:: 
-    :tester: /_static/cs515_challenges/Week2/Challenge20/test_task.py
+    :tester: /_static/cs515_challenges/Week2/Challenge21/test_task.py
 
     # define print_numbers

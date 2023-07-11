@@ -30,7 +30,7 @@ Define a function ``find_python`` that takes a list of programming languages as 
     2
 
 .. challenge:: 
-    :tester: /_static/cs515_challenges/Week2/Challenge19/test_task.py
+    :tester: /_static/cs515_challenges/Week2/Challenge20/test_task.py
 
     # define find_python
 

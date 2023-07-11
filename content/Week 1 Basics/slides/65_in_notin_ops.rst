@@ -10,7 +10,7 @@ You can determine whether a character is or isn’t in a string with the ``in`` 
     >>> 'b' in 'apple'
     False
 
-Since the character ``"a"``is in ``"apple"``, it evaluated to ``True``. Likewise, since ``'b'`` is not in ``'apple'``, it evaluated to ``False``.
+Since the character ``"a"`` is in ``"apple"``, it evaluated to ``True``. Likewise, since ``'b'`` is not in ``'apple'``, it evaluated to ``False``.
 
 .. code-block:: python
 

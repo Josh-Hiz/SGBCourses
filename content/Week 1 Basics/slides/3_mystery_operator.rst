@@ -1,7 +1,7 @@
 Mystery Operator
 ================
 
-There are more operators than just the standard four arithmetic operators of + for addition, - for subtraction, * for multiplication, and / for division.
+There are more operators than just the standard four arithmetic operators of ``+`` for addition, ``-`` for subtraction, ``*`` for multiplication, and ``/`` for division.
 
 .. quizdown:: 
 
@@ -18,7 +18,7 @@ There are more operators than just the standard four arithmetic operators of + f
     What does the `**` operator do?
 
 
-    1. [x] Exponentiation
-    2. [ ] Power
-    3. [ ] Exponent
-    4. [ ] All of the above
+    1. [ ] Squaring
+    2. [ ] Cubing
+    3. [x] Exponentiation
+    4. [ ] I don't know

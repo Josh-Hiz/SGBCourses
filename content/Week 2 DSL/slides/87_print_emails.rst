@@ -36,6 +36,6 @@ Your function does not need to **return** anything, so you can leave the ``retur
     coda@aol.com
 
 .. challenge::
-    :tester: /_static/cs515_challenges/Week2/Challenge21/test_task.py
+    :tester: /_static/cs515_challenges/Week2/Challenge22/test_task.py
 
     # define print_emails(emails)

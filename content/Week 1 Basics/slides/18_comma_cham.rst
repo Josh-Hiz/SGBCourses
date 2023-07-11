@@ -8,7 +8,9 @@ Define a variable called ``joined_with_commas`` that holds a string with the con
 **Sample Input 1:**
 
 ``s1`` is 'apple'
+
 ``s2`` is 'banana'
+
 ``s3`` is 'orange'
 
 **Sample Output 1:**
@@ -18,7 +20,9 @@ Define a variable called ``joined_with_commas`` that holds a string with the con
 **Sample Input 2:**
 
 ``s1`` is '1'
+
 ``s2`` is '2'
+
 ``s3`` is '3'
 
 **Sample Output 2:**
@@ -28,7 +32,9 @@ joined_with_commas is 1,2,3
 **Sample Input 3:**
 
 ``s1`` is 'red'
+
 ``s2`` is 'green'
+
 ``s3`` is 'blue'
 
 **Sample Output 3:**

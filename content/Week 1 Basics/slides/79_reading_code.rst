@@ -3,7 +3,7 @@ Reading Code
 
 .. quizdown::
 
-    ## What will this code print out?
+    ## Remember a local variable that is created in a local scope cannot be accessed by the global scope or the other local scopes. 
 
     ```python
     def assign_x():
@@ -17,6 +17,8 @@ Reading Code
     x = 0
     assign_x()
     ```
+
+    What will this code print out?
 
     1. [ ] 0
     2. [x] 1

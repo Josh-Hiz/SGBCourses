@@ -5,7 +5,7 @@ There's quite a bit more to say about numbers in programming, but we'll work wit
 
 It was useful to use our intuition about math to connect numeric calculation in Python to things we're likely familiar with.
 
-There's another concept that's related to an idea from math in programming: **variables**. (Though we'll see soon an important way in which variables are different in programming).
+There's another concept that's related to an idea from math in programming: **variables** . (Though we'll see soon an important way in which variables are different in programming).
 
 We can perform a calculation and store the result in a variable, and then when we use that variable's name later, Python will use the value we stored. For example:
 

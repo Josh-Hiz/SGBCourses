@@ -19,6 +19,7 @@ Your task is to define a variable called ``sum_of_ints`` that has the sum of the
 **Sample Input 2:**
 
 ``numstr1`` is '1'
+
 ``numstr2`` is '2'
 
 **Sample Output 2:**
@@ -28,6 +29,7 @@ Your task is to define a variable called ``sum_of_ints`` that has the sum of the
 **Sample Input 3:**
 
 ``numstr1`` is '100000'
+
 ``numstr2`` is '9'
 
 **Sample Output 3:**

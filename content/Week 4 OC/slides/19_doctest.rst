@@ -6,20 +6,20 @@ Python has a popular and wonderful approach to testing: put tests into your docu
 .. runner:: 
 
     def fact(n):
-    """Returns factorial of n
+        """Returns factorial of n
 
-    >>> fact(5)
-    120
-    >>> fact(0)
-    1
-    >>> fact(-1)
-    1
-    """
-    res = 1
-    while n > 1:
-        res *= n
-        n = n - 1
-    return res
+        >>> fact(5)
+        120
+        >>> fact(0)
+        1
+        >>> fact(-1)
+        1
+        """
+        res = 1
+        while n > 1:
+            res *= n
+            n = n - 1
+        return res
 
 The docstring here just has a sample interaction at the Python REPL pasted into it. The ``doctest`` library will find these pasted in interactions, try the code, and warn you if the answer the REPL gives is different from the one you suggest. Here's a log:
 

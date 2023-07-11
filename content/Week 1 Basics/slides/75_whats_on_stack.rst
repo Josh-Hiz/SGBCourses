@@ -46,12 +46,14 @@ Please answer the following two questions about the program. Note that the quiz 
     
     >>>
     The functions will be called in this order:<br>
-    ```func_a<br>
-    func_d<br>
-    func_c<br>
-    func_b<br>
-    func_e<br>
-    func_b```
+    ```
+    func_a
+    func_d
+    func_c
+    func_b
+    func_e
+    func_b
+    ```
 
 .. free-r:: 
     :answer:
@@ -67,7 +69,9 @@ Please answer the following two questions about the program. Note that the quiz 
     >>>
     The stack will be, from the current caller on down:
 
-    ```func_e<br>
-    func_c<br>
-    func_d<br>
-    func_a```
+    ```
+    func_e
+    func_c
+    func_d
+    func_a
+    ```

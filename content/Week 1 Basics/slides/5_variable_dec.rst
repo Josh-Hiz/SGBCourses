@@ -15,6 +15,8 @@ A few tips about using Ed to run your program:
 
 - You can run the program before submitting, and it will show you the output. In many cases, we (the course staff) have controlled how the output appears. In this case, there's no output at all---we'll just test that your values are correct.
 
+**Above all else, please DOWNLOAD THE CODE so you can refer back to it later, as well as testing it on your own machines using IDLE!**
+
 .. challenge::
     :tester: /_static/cs515_challenges/Week1/Challenge1/variable_test.py
 
