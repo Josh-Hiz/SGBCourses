@@ -9,7 +9,7 @@ class TaskTest(unittest.TestCase):
         # Save the original stdout and replace it with StringIO
         original_stdout = sys.stdout
         sys.stdout = StringIO()
-        task.print_numbers(input_list)
+        task.print_emails(input_list)
         # Retrieve the captured output and restore the original stdout
         captured_output = sys.stdout.getvalue()
         sys.stdout = original_stdout
@@ -19,9 +19,8 @@ class TaskTest(unittest.TestCase):
         self.assertEqual(str(test_output).strip(), str(expected_output).strip())
     
     def test_sample1(self):
-        self.correct(self.get_stdout([2,5,36,53,31]), "2\n5\n53\n31\n")
-    def test_sample2(self):
-        self.correct(self.get_stdout([3,6,9,12,5,2,1]), "5\n2\n1\n")
-    
+        self.correct(self.get_stdout({"ucsd.edu" : ["annie","joseph","savitha"], "gmail.com" : ["ben10","annie","dio"], "aol.com" : ["joseph", "hotmail", "coda"]}), 
+                     'annie@ucsd.edu\njoseph@ucsd.edu\nsavitha@ucsd.edu\nben10@gmail.com\nannie@gmail.com\ndio@gmail.com\njoseph@aol.com\nhotmail@aol.com\ncoda@aol.com\n')
+
 
 unittest.main(exit=False)
