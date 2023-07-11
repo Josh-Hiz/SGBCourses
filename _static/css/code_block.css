@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Source%20Code%20Pro&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open%20Sans&display=swap');
+@import url('//fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('//fonts.googleapis.com/css?family=Open+Sans:400,300,700,500,800,600');
 /* Update the text color and padding */
 code {
     color: #333;
@@ -16,4 +16,12 @@ pre {
 
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, th, td {
    font-family: 'Open Sans';
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+#color-mode-switcher {
+    display: none !important;
 }

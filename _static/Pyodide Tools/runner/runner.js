@@ -6,10 +6,7 @@ function setParams() {
     const queryString = new URLSearchParams(location.search);
     const initCode = queryString.get('initCode');
 
-    if (initCode) {
-        const decodedCode = decodeURIComponent(initCode);
-        editor.setValue(decodedCode);
-    }
+    editor.setValue(initCode);
 
     getCode('words')
         .then(code => {
