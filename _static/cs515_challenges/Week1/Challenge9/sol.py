@@ -1,0 +1,1 @@
+sum_of_ints = int(numstr1) + int(numstr2)

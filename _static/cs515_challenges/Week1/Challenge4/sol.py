@@ -1,0 +1,1 @@
+smaller = min(x, y)

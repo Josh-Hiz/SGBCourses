@@ -89,3 +89,48 @@ We've defined ``g`` with both an explicit keyword argument as well as ``**kw``. 
 
 Dangerous defaults
 ------------------
+
+The default value you provide for a keyword is computed once. Here's an example of how it can go wrong:
+
+.. runner::
+
+    def rev(l, acc=[]):
+        for x in l:
+            acc.insert(0, x)
+            
+        return acc
+
+    print(rev([1,2,3]))
+    print(rev(list("abc")))
+
+What?! Why is are the ``3``, ``2``, and ``1`` there in the second call? There's only *one* list for ``acc``'s default value. Each time we call ``insert``, we update that list---and *all* future calls will see it.
+
+There are two solutions:
+
+1. Never mutate a keyword argument. Rather than calling ``acc.insert``, we could write ``acc = [x] + acc`` to create a new list.
+2. Use ``None`` as the default, and test at the front to initialize with the mutable value.
+
+Here's an example of both:
+
+.. runner::
+
+    def rev_nomutate(l, acc=[]):
+        for x in l:
+            acc = [x] + acc
+            
+        return acc
+
+    print(rev_nomutate([1,2,3]))
+    print(rev_nomutate(list("abc")))
+
+    def rev_none(l, acc=None):
+        if acc is None:
+            acc = []
+        
+        for x in l:
+            acc.insert(0, x)
+
+        return acc
+
+    print(rev_none([1,2,3]))
+    print(rev_none(list("abc")))
