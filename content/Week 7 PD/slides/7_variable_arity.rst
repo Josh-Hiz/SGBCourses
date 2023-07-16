@@ -21,7 +21,7 @@ Notice a few things:
 
 * Every declared **positional argument** must be present (note the final exception).
 * The ``*args`` parameter receives any "excess" paramters.
-* The ``*args ``parameter is a tuple.
+* The ``*args`` parameter is a tuple.
 
 In principle, you could *just* use ``*args``, never declaring positional parameters. That would be a terrible idea: positional argument document clearly what a function *needs*, making it an error to leave them out. Parsing out coherent arguments from ``*args`` is tedious and error-prone, too.
 
