@@ -27,7 +27,7 @@ make html
 
 ## Current Problems:
 
-- **Week 4 Testing Mean and Testing Median need to be worked on, rewrite first 4 week 3 slides, first 3 week 7 challenges require multiple files**
+- **Week 4 Testing Mean and Testing Median need to be worked on**
 
 ## Custom Directives and how to use them
 
