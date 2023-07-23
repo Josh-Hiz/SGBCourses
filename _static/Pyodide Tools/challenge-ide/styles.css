@@ -46,7 +46,7 @@ textarea:focus {
     border-color: #007bff;
 }
 
-#run_code, #downloadButton, #switchButton, #runButton, #clearButton {
+#run_code, #downloadButton, #switchButton, #runButton, #clearButton, #savecode {
     border-radius: 0px; /* Adjust the value to change the roundness of the corners */
     font-family: Open Sans, Source Code Pro; /* Set the font-family */
     padding: 10px 20px;
@@ -57,7 +57,7 @@ textarea:focus {
     display: inline-block;
 }
 
-#runButton:hover, #clearButton:hover, #run_code:hover, #downloadButton:hover, #switchButton:hover {
+#runButton:hover, #clearButton:hover, #run_code:hover, #downloadButton:hover, #switchButton:hover, #savecode:hover{
     background-color: #e7e5e5;
     color: black;
     transition: background-color 0.2s, color 0.2s;

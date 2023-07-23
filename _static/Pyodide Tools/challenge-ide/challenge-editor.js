@@ -4,7 +4,11 @@ var testFilePath;
 var editor = ace.edit("editor");
 // Variable to hold the output pane
 var output_pane;
-
+// Variable to hold a list of file paths for any extra modules if any to load
+var modules;
+// Variable to hold the dropdown menu
+var dropdown = document.getElementById("module-select");
+var fileNames = [];
 /**
  * Sets the initial variables above except output_pane and 
  * will decode the URI components initCode and testFile, if
@@ -14,21 +18,46 @@ function setParams() {
     const queryString = new URLSearchParams(location.search);
     const initCode = queryString.get('initCode');
     const testFile = queryString.get('testFile');
-    // Check if there is any code in the quert string
-    if (initCode) {
-        const decodedCode = decodeURIComponent(initCode);
-        console.log(decodedCode)
-        editor.setValue(decodedCode);
-    }
-    // Check if there is a test file in the query string
-    if(testFile != ''){
-        const decodedTest = decodeURIComponent(testFile);
-        testFilePath = decodedTest;
-        console.log(testFilePath);
+    const files = queryString.get('files');
+
+    if(localStorage.getItem("code") == null){
+        // Check if there is any code in the quert string
+        if (initCode) {
+            const decodedCode = decodeURIComponent(initCode);
+            // console.log(decodedCode)
+            editor.setValue(decodedCode);
+        }
+        // Check if there is a test file in the query string
+        if(testFile != ''){
+            const decodedTest = decodeURIComponent(testFile);
+            testFilePath = decodedTest;
+            // console.log(testFilePath);
+        } else {
+            // If there is no test file, remove the run button
+            const element = document.getElementById("run_code");
+            element.remove();
+        }
+
+        if(files){
+            createModuleList(files);
+        }
     } else {
-        // If there is no test file, remove the run button
-        const element = document.getElementById("run_code");
-        element.remove();
+        editor.setValue(localStorage.getItem("code"));
+
+        // Check if there is a test file in the query string
+        if(testFile != ''){
+            const decodedTest = decodeURIComponent(testFile);
+            testFilePath = decodedTest;
+            // console.log(testFilePath);
+        } else {
+            // If there is no test file, remove the run button
+            const element = document.getElementById("run_code");
+            element.remove();
+        }
+
+        if(files){
+            createModuleList(files);
+        }
     }
 }
 
@@ -54,6 +83,30 @@ function appendOutput(msg) {
     // used to add program output to the textarea
     output_pane.value = output_pane.value + '\n' + msg;
     output_pane.scrollTop = output_pane.scrollHeight;
+}
+
+function createModuleList(modules) {
+    modules = modules.split('\n');
+    //Get the file name from path, it is everything from the last letter to the first backslash next to it
+    for(let i = 0; i < modules.length; i++){
+        var fileName = modules[i].substring(modules[i].lastIndexOf('/') + 1);
+        fileNames[i] = fileName;
+    }
+
+    //Initialize event listener for dropdown
+    dropdown.addEventListener('change', function () {
+        saveSession(dropdown.value,editor.getValue());
+    });
+    dropdown.style.visibility = "visible";
+    for(let i = 0; i < modules.length; i++){
+        var fileName = fileNames[i];
+        var element = document.createElement("option");
+        element.textContent = fileName;
+        dropdown.appendChild(element);
+        element.value = fileNames[i];
+    }
+    //Init first session
+    saveSession(fileNames[0],editor.getValue());
 }
 
 /**
@@ -103,7 +156,26 @@ function openCode(filePathToUse) {
  */
 async function runCode(code_to_run) {
     // Run the code thats within the editor so students can test
-    if(code_to_run == editor.getValue()){
+    if(fileNames && testFilePath == '') {
+        console.logs = [];
+        let currentFile = dropdown.value;
+        let promise = new Promise((resolve, reject) => {
+            window.pyodide.runPython(`
+                exec(open('${currentFile}').read())
+                import sys
+                sys.modules.pop("${currentFile}", None)
+            `)
+            resolve(true)
+        }).catch(err => {
+            console.log(err);
+            appendOutput(console.logs.join('\n')); 
+        });
+    
+        let result = await promise;
+        if (result) { 
+            appendOutput(console.logs.join('\n')); 
+        }
+    } else if(code_to_run == editor.getValue()){
         console.logs = [];
 
         let promise = new Promise((resolve, reject) => {
@@ -119,7 +191,6 @@ async function runCode(code_to_run) {
             appendOutput(console.logs.join('\n')); 
         }
     } else {
-        
         console.logs = [];
         var data = editor.getValue(); 
         var testData = code_to_run;
@@ -177,18 +248,35 @@ async function getCode(codeToGet) {
  * Experimental function to test changing the file in the editor in live time
  * @param {*} codeToSwitch Literal file path to the file to open
  */
-function switchFile(codeToSwitch) {
-    getCode(codeToSwitch)
-    .then(code => {
+// Object to store sessions
+var sessions = {};
+
+function saveSession(fileName, codeToSwitch) {
+    // Save the current session to the file system
+    var currentSessionPath = editor.session.$orig;
+    if(currentSessionPath){
+        window.pyodide.FS.writeFile(currentSessionPath, editor.getValue());
+    } 
+    // Check if session already exists for this file, if so, switch to it
+    if(sessions[fileName]){
+        editor.setSession(sessions[fileName]);
+    }else{
+        // If session doesn't exist, create a new one
         var EditSession = ace.require("ace/edit_session").EditSession;
-        var oldSession = editor.getSession();
-        //change to new file
-        var newSession = new EditSession(code, "ace/mode/python");
+        //create new session, set the returned code to new session
+        var newSession = new EditSession(codeToSwitch, "ace/mode/python");
+        newSession.$orig = fileName;
+        // Cache the session
+        sessions[fileName] = newSession;
+        // Set new session to editor
         editor.setSession(newSession);
-    })
-    .catch(error => {
-      console.error('Error occurred while opening the code:', error);
-    });
+    }
+}
+
+function saveToLocalDB() {
+    // Get the code from the editor and put it in local storage
+    var code = editor.getValue();
+    localStorage.setItem("code", code);
 }
 
 // All event listeners for the buttons
@@ -206,6 +294,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Add event listeners for the clear button
     document.getElementById("clearButton").addEventListener('click', function () {
         output_pane.value = '';
+    });
+
+    // Add event listeners for saving to local storage
+    document.getElementById("savecode").addEventListener('click', function () {
+        saveToLocalDB();
     });
 
     // Add event listeners for running the test script
