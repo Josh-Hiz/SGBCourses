@@ -3,9 +3,9 @@ Interruptions from the user and the environment
 
 The first four sources of errors---syntax errors, name/binding errors, type errors, and partial operations---are all intrinsic to your program. While type errors and partial operation errors might only be triggered by certain inputs, the program itself is in some sense responsible for these failures. The last two things we listed that could disrupt your program are extrinsic sources of error. The user could interrupt your program by typing ``^C`` (i.e., *control-c*) or using the Task Manager or ``kill`` to stop the Python process; the computer's battery could die or water could spill over your computer and short the connections.
 
-It's tricky to demonstrate a user interrupt, and it's a downright bad idea to spill water on your computer just to see what would happen! But here's an infinite loop; click 'Run' and push ``^C`` after a second.
+It's tricky to demonstrate a user interrupt, and it's a downright bad idea to spill water on your computer just to see what would happen! But here's an infinite loop; on **IDLE**, run the following code block and press ``^C`` after a second.
 
-.. runner:: 
+.. code-block:: 
 
     while True:
         pass
@@ -23,12 +23,12 @@ Here, ``KeyboardInterrupt`` is how Python models the ``^C`` interrupt. There sho
 
 Another possibility is an early end of input. Consider the following program:
 
-.. runner:: 
+.. code-block:: 
 
     name = input("What's your name? ")
     print('Hi, ' + name + '!')
 
-If you type ``^D`` (i.e., *control-d*) at the prompt, you'll get something like:
+If you type ``^D`` while running in **IDLE** (i.e., *control-d*) at the prompt, you'll get something like:
 
 .. code-block:: 
 
@@ -37,6 +37,6 @@ If you type ``^D`` (i.e., *control-d*) at the prompt, you'll get something like:
         name = input("What's your name? ")
     EOFError
 
-Along with a red banner from Ed saying "Program exited with code 1". The ``EOF`` in ``EOFError`` stands for "end of file"---the Python program wanted to read some input but ``^D`` in a command-line environment means "there's no more input here". Since the program needs input to continue, we get the ``EOFError``.
+**IDLE** will say "Program exited with code 1". The ``EOF`` in ``EOFError`` stands for "end of file"---the Python program wanted to read some input but ``^D`` in a command-line environment means "there's no more input here". Since the program needs input to continue, we get the ``EOFError``.
 
 In the case of a catastrophe where the computer just stops working, there's really nothing to be done. Your program may not even get a message, but things may simply suddenly stop. It happens! 🤷‍♀️

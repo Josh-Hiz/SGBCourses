@@ -5,3 +5,7 @@ Define a module ``sort`` in a file ``sort.py``; copy in one of the sorts we wrot
 
 Define a module ``main`` in a file ``main.py``; have it call a sort on a list and print out the sorted list.
 
+.. challenge::
+    :files: 
+        sort.py
+        main.py

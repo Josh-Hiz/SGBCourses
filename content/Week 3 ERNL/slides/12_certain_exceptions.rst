@@ -12,7 +12,7 @@ Let's go back to our input validation example.
     except:
         print("Uh oh: '" + s + "' isn't a valid number.")
     
-What happens if you push ``^C`` (i.e., *control-c*) at the prompt? Here's what we get:
+What happens if you push ``^C`` (i.e., *control-c*) at the prompt in IDLE? Here's what we get:
 
 .. code-block:: 
 
@@ -43,7 +43,7 @@ In general, you don't want to catch *every* exception, just those that you could
     except ValueError:
         print("Uh oh: '" + s + "' isn't a valid number.")
 
-Notice how ``^C`` works fine, but giving a non-number gives the nice output.
+Notice that when using ``^C`` in **IDLE** it works fine, but giving a non-number gives the nice output.
 
 If you care about multiple exceptions, you can write more than one ``except`` clause. Here's an example:
 

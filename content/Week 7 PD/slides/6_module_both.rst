@@ -19,3 +19,8 @@ The ``sort`` code should do nothing when it's just imported. To test this out, d
     ['a', 'a', 'a', 'a', 'b', 'd', 'e', 'e', 'h', 'i', 'i', 'i', 'i
     ', 'i', 'l', 'm', 'm', 'n', 'n', 'n', 'r', 's', 's', 's', 's', 
     't', 't', 't']
+
+.. challenge::
+    :files:
+        client.py
+        sort.py
