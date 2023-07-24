@@ -6,3 +6,4 @@ sphinxcontrib-mermaid==0.8.1
 sphinxcontrib-packages==1.1.0
 sphinxcontrib-serializinghtml==1.1.5
 sphinx==6.2.1
+git+https://github.com/bonartm/sphinxcontrib-quizdown
