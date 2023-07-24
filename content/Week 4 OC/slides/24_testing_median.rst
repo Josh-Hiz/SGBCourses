@@ -16,11 +16,13 @@ We'll run your code on the following definition of ``median`` as well as a corre
 .. challenge:: 
 
     import unittest
-    from task import median # don't change this line
+    from test import median # don't change this line
+    
     def median(l):
         l = list(l) # copy the list
         l.sort() # sort it
         return l[len(l) // 2]
+
     class MedianCase(unittest.TestCase):
         def test_singleton(self):
             self.assertEqual(median([1]), 1)

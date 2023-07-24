@@ -99,11 +99,11 @@ function createModuleList(modules) {
     });
     dropdown.style.visibility = "visible";
     for(let i = 0; i < modules.length; i++){
-        var fileName = fileNames[i];
+        var fileName = modules[i];
         var element = document.createElement("option");
         element.textContent = fileName;
         dropdown.appendChild(element);
-        element.value = fileNames[i];
+        element.value = modules[i];
     }
     //Init first session
     saveSession(fileNames[0],editor.getValue());
@@ -273,12 +273,6 @@ function saveSession(fileName, codeToSwitch) {
     }
 }
 
-function saveToLocalDB() {
-    // Get the code from the editor and put it in local storage
-    var code = editor.getValue();
-    localStorage.setItem("code", code);
-}
-
 // All event listeners for the buttons
 document.addEventListener('DOMContentLoaded', (event) => {
     output_pane = document.getElementById("output");
@@ -294,11 +288,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Add event listeners for the clear button
     document.getElementById("clearButton").addEventListener('click', function () {
         output_pane.value = '';
-    });
-
-    // Add event listeners for saving to local storage
-    document.getElementById("savecode").addEventListener('click', function () {
-        saveToLocalDB();
     });
 
     // Add event listeners for running the test script

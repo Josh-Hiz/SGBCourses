@@ -7,3 +7,9 @@ To make sure that Python treats such directories correctly, you should create a 
 
 In the example below, we've started out building the directory ``algorithms`` and the ``search.py`` module, along with a ``main.py`` that imports from both the ``algorithms.search`` and ``algorithms.sort`` modules. Create the ``sort.py`` file with the definition ``mergesort``; change ``main.py`` to import that definition.
 
+.. challenge::
+    :files:
+        algorithms/__init__.py
+        algorithms/search.py
+        algorithms/sort.py
+        main.py
