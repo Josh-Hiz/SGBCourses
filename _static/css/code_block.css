@@ -1,8 +1,8 @@
 @import url('//fonts.googleapis.com/css?family=Source+Code+Pro');
 @import url('//fonts.googleapis.com/css?family=Open+Sans:400,300,700,500,800,600');
 /* Update the text color and padding */
+
 code {
-    color: #333;
     padding: 2px;
     background-color: #f0f0f0;
     border-radius: 0px;
