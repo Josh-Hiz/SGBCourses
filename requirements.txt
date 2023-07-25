@@ -1,4 +1,4 @@
-python3-sphinx
+sphinx-doc
 sphinx-book-theme
 sphinxcontrib-applehelp
 sphinxcontrib-details-directive
