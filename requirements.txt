@@ -1,4 +1,3 @@
-sphinx-doc
 sphinx-book-theme
 sphinxcontrib-applehelp
 sphinxcontrib-details-directive
