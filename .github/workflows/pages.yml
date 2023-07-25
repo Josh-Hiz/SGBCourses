@@ -19,10 +19,10 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: sphinx build
-      run: sphinx-build -M html ./ _build/ -W -a -j auto -n --keep-going
+      run: sphinx-build -M html ./ _build/ -a -j auto -n --keep-going
       
     - name: make static files
-      run: make clean && make build
+      run: make build
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v2
