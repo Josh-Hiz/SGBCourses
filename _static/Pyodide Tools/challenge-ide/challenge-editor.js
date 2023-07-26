@@ -99,11 +99,11 @@ function createModuleList(modules) {
     });
     dropdown.style.visibility = "visible";
     for(let i = 0; i < modules.length; i++){
-        var fileName = modules[i];
+        var fileName = fileNames[i];
         var element = document.createElement("option");
         element.textContent = fileName;
         dropdown.appendChild(element);
-        element.value = modules[i];
+        element.value = fileNames[i];
     }
     //Init first session
     saveSession(fileNames[0],editor.getValue());
@@ -225,8 +225,15 @@ async function runCode(code_to_run) {
  * @param {*} code The code that is in the editor
  */
 function saveCode(code) {
-    var blob = new Blob([code], { type: "text/plain;charset=utf-8" });
-    window.saveAs(blob, 'challenge.py');
+    if(fileNames) {
+        // Save as the current file name
+        var currentFile = dropdown.value;
+        var blob = new Blob([code], { type: "text/plain;charset=utf-8" });
+        window.saveAs(blob, currentFile);
+    } else {
+        var blob = new Blob([code], { type: "text/plain;charset=utf-8" });
+        window.saveAs(blob, 'challenge.py');
+    }
 }
 
 /**
