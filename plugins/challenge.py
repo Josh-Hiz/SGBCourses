@@ -14,7 +14,9 @@ class ChallengeDirective(Directive):
         files = self.options.get('files', '')
         files = urllib.parse.quote_plus(files)
         html = f"""
-        <iframe src="/_static/Pyodide Tools/challenge-ide/ace_editor.html?testFile={tester}&initCode={encoded_code}&files={files}" height="1200" width="875" title="Challenge"></iframe>
+        <div class="challenge-wrapper">
+            <iframe class="challengeIDE" src="/_static/Pyodide Tools/challenge-ide/ace_editor.html?testFile={tester}&initCode={encoded_code}&files={files}" height="1200" width="875" title="Challenge"></iframe>
+        </div>
         """
         
         return [raw("", html, format="html")]

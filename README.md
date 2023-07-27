@@ -25,10 +25,6 @@ make clean
 make html
 ```
 
-## Current Problems:
-
-- **Week 4 Testing Mean and Testing Median need to be worked on, Week 7 nested modules simply cant have nested directories due to how Pyodide handles directories in the file system**
-
 ## Custom Directives and how to use them
 
 Sphinx and RestructredText in general rely on directives to do a lot of the heavy lifting. Here are some of the most common directives that you can use and how to use them:
