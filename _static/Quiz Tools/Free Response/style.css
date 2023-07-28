@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Source%20Code%20Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open%20Sans&display=swap');
 form {
-    margin: 20px;
+    margin-left: 0px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 0px;

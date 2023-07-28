@@ -14,7 +14,9 @@ class ChallengeDirective(Directive):
         encoded_code = urllib.parse.quote(code)
         encoded_answer = urllib.parse.quote_plus(answer)
         html = f"""
-        <iframe width=900px height=400px src="/_static/Quiz Tools/Free Response/index.html?answer={encoded_answer}&initCode={encoded_code}&isRegex={isRegex}" allowfullscreen="true"></iframe>
+        <div class="free-response-wrapper">
+            <iframe class="free-response" src="/_static/Quiz Tools/Free Response/index.html?answer={encoded_answer}&initCode={encoded_code}&isRegex={isRegex}" allowfullscreen="true"></iframe>
+        </div>
         """
         
         return [raw("", html, format="html")]
