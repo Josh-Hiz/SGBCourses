@@ -22,7 +22,6 @@ body, html {
 #output {
     /* Adjust these values if you want to change the textarea height */
     height: 30%;
-    resize: none; /* Textarea cannot be manually resized */
     overflow: auto;
     font-family: Open Sans, Source Code Pro; /* Set the font-family */
     font-size: 15px; /* Set the font-size */

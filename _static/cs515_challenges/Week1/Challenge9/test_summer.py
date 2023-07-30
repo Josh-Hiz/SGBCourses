@@ -30,3 +30,5 @@ class SimpleTestCase(unittest.TestCase):
 
     def test_neg(self):
         self.correct('-1', '-1')
+        
+unittest.main(exit=False)
