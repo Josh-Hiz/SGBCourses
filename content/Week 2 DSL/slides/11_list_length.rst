@@ -21,6 +21,6 @@ The code challenge will call your ``combined_list_len`` function with many input
     7
 
 .. challenge::
-    :tester:
+    :tester: /_static/cs515_challenges/Week2/Challenge3/test_task.py
 
     # define combined_list_len

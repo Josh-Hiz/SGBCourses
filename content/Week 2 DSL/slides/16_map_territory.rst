@@ -11,6 +11,18 @@ Hint: You can refer to previous challenges in this section for help.
 
 Hint: input() reads a whole line of text, not one number or word at a time.
 
+**Sample Input:**
+
+.. code-block:: 
+    
+    8 11
+
+**Sample Output:**
+
+.. code-block:: 
+    
+    19
+
 .. challenge:: 
     :tester: /_static/cs515_challenges/Week2/Challenge5/test_task.py
 

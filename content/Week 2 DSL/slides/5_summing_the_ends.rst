@@ -15,27 +15,39 @@ The code challenge will call your ``sum_of_ends`` function with different lists 
 
 **Sample Input 1:**
 
-``8 11 12``
+.. code-block::
+
+    8 11 12
 
 **Sample Output 1:**
 
-``20``
+.. code-block::
+
+    20
 
 **Sample Input 2:**
 
-``5``
+.. code-block::
+
+    5
 
 **Sample Output 2:**
 
-``10``
+.. code-block::
+
+    10
 
 **Sample Input 3:**
 
-``7 8 9 10 11``
+.. code-block::
+
+    7 8 9 10 11
 
 **Sample Output 3:**
 
-``18``
+.. code-block::
+
+    18
 
 .. challenge::
     :tester: /_static/cs515_challenges/Week2/Challenge1/test_task.py
