@@ -24,6 +24,7 @@ Here is what that might look like (for this example, we will assume that the use
 Let's trace through with some specific cases below.
 
 **Case 1: User enters a valid number between 1 and 10 on the first try**
+
 First, let's imagine that when the first line is run, the user enters the number 4. What will happen? The while loop condition will be checked:
 
 ``num < 1 or num > 10 ---> 4 < 1 or 4 > 10 ---> False or False ---> False``.

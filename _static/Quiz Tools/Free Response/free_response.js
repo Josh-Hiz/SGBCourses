@@ -3,6 +3,10 @@ var questionCode;
 var isRegex = false;
 var explanation = '';
 
+window.onload = function(){
+    parent.postMessage(document.body.scrollHeight, "*");  // send the height of the body to the parent
+};
+
 function getParams() {
     const queryString = new URLSearchParams(location.search);
     const initCode = queryString.get('initCode');

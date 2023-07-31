@@ -5,9 +5,9 @@ Your task for this code challenge is to define 3 variables, ``list1`` , ``list2`
 
 Define these 3 lists such that:
 
-    * list2 and list3 contain references that point to the same object
+* list2 and list3 contain references that point to the same object
 
-    * list1 contains a reference that points to a separate (different) object
+* list1 contains a reference that points to a separate (different) object
 
 Hint: take a look at the third reading.
 

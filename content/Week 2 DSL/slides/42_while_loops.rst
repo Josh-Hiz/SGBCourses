@@ -11,8 +11,11 @@ With ``for`` loops added to our programming tool set, we now have a way to run b
 Here, ``some_condition`` can refer to any boolean expression (an expression that evaluates to ``True`` or ``False``). A ``while`` loop will first check that ``some_condition`` is ``True`` and if so, then execute the loop body. Once the loop body completes, ``some_condition`` is checked again, and if it's ``True``, it will enter the body again. This process repeats until the evaluation of ``some_condition`` is ``False``. Here is a more concrete representation of the progression of executing a ``while`` loop:
 
 *Step 1*. Check if the condition is ``True``. If yes, continue to Step 2. If not, skip to Step 4.
+
 *Step 2*. Execute the statements in the loop body.
+
 *Step 3*. Repeat Step 1.
+
 *Step 4*. Exit the loop. Don’t execute the loop body, and instead proceed with executing the code after the loop.
 
 The most important thing to note is that the condition is only checked once at the beginning of each potential iteration. This means that if the condition is ``True`` and we entered the loop body, the condition isn't checked again until after the whole loop body is executed. You can think of a ``while`` loop like a repeating ``if`` statement.

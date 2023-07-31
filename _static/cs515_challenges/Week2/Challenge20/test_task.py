@@ -14,7 +14,7 @@ class TaskTest(unittest.TestCase):
     def test_sample1(self):
         self.assertEqual(task.find_python(['Python','Java','C++']),0)
     def test_sample2(self):
-        self.assertEqual(task.find_python('R','Fortran','Python','SQL'),2)
+        self.assertEqual(task.find_python(['R','Fortran','Python','SQL']),2)
     def test_sample3(self):
         self.assertEqual(task.find_python([]),-1)
     def test_sample4(self):
