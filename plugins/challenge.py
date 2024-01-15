@@ -23,3 +23,4 @@ class ChallengeDirective(Directive):
         
 def setup(app):
     app.add_directive("challenge", ChallengeDirective)
+    return { 'parallel_read_safe': True }

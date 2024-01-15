@@ -1,4 +1,4 @@
-Welcome to CS515: Intro to Computer Science!
+CS 515-A Fundamentals of Computing 
 ============================================
 
 Search Bar:

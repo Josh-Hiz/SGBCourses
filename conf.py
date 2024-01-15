@@ -8,15 +8,15 @@
 import sys
 sys.path.append('./')
 
-project = 'Course'
-copyright = '2023, Michael Greenberg'
-author = 'Joshua Hizgiaev & Michael Greenberg'
+project = 'CS 515-A'
+copyright = '2023 (c) Michael Greenberg'
+author = 'Michael Greenberg with Joe Gibbs Politz, Joshua Hizgiaev, and others from UCSD'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'venv']
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -37,6 +37,7 @@ html_theme_options = {
     "use_repository_button": True,
     "use_issues_button": True,
     "navbar_end": ["navbar-icon-links"],
+    "navigation_with_keys": False,
 }
 
 
@@ -63,3 +64,4 @@ html_favicon = 'favicon.ico'
 html_sidebars = {
     "**": ["sbt-sidebar-nav.html"] 
 }
+
