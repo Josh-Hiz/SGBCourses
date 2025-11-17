@@ -4,15 +4,15 @@ Week 5: Regular expressions
 .. toctree:: 
     :maxdepth: 1
 
-    slides/1_strings_structured
-    slides/2_DNA
-    slides/3_DNA_encoding
-    slides/4_translating_DNA
-    slides/5_translating_DNA
-    slides/6_motifs
-    slides/7_finding_motifs
-    slides/8_regular_expressions
-    slides/9_character_classes
+    slides/01_strings_structured
+    slides/02_DNA
+    slides/03_DNA_encoding
+    slides/04_translating_DNA
+    slides/05_translating_DNA
+    slides/06_motifs
+    slides/07_finding_motifs
+    slides/08_regular_expressions
+    slides/09_character_classes
     slides/10_matching_practice
     slides/11_re_module
     slides/12_findall_practice

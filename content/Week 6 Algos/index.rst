@@ -4,15 +4,15 @@ Week 6: Algorithms
 .. toctree:: 
     :maxdepth: 1
 
-    slides/1_what_is_algo
-    slides/2_shuffling
-    slides/3_fisher_yates
-    slides/4_bottom_up
-    slides/5_shuffling_wrong
-    slides/6_empirical_testing
-    slides/7_searching
-    slides/8_linear_search
-    slides/9_sortedness
+    slides/01_what_is_algo
+    slides/02_shuffling
+    slides/03_fisher_yates
+    slides/04_bottom_up
+    slides/05_shuffling_wrong
+    slides/06_empirical_testing
+    slides/07_searching
+    slides/08_linear_search
+    slides/09_sortedness
     slides/10_test_sort
     slides/11_binary_search
     slides/12_understanding_search

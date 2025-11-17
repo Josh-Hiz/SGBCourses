@@ -5,7 +5,7 @@ There are more operators than just the standard four arithmetic operators of ``+
 
 .. quizdown:: 
 
-    ## Consider this interation:
+    ## Consider this interaction:
 
     ```python
     >>> 4 ** 2                                       

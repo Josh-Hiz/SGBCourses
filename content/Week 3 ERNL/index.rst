@@ -4,15 +4,15 @@ Week 3: Exceptions, recursion, and nested loops
 .. toctree:: 
     :maxdepth: 1
 
-    slides/1_errors_and_early
-    slides/2_syntax_errors
-    slides/3_binding_errors
-    slides/4_type_errors
-    slides/5_errors_partial_ops
-    slides/6_interruptions_from_userenv
-    slides/7_what_kind
-    slides/8_try_except
-    slides/9_control_flow
+    slides/01_errors_and_early
+    slides/02_syntax_errors
+    slides/03_binding_errors
+    slides/04_type_errors
+    slides/05_errors_partial_ops
+    slides/06_interruptions_from_userenv
+    slides/07_what_kind
+    slides/08_try_except
+    slides/09_control_flow
     slides/10_breakfast
     slides/11_stack_traces
     slides/12_certain_exceptions

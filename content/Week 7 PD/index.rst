@@ -4,15 +4,15 @@ Week 7: Python Details
 .. toctree:: 
     :maxdepth: 1
 
-    slides/1_real_world_python
-    slides/2_defining_modules
-    slides/3_defining_mods
-    slides/4_nested_mods
-    slides/5_name_main
-    slides/6_module_both
-    slides/7_variable_arity
-    slides/8_min_max_arity
-    slides/9_named_args
+    slides/01_real_world_python
+    slides/02_defining_modules
+    slides/03_defining_mods
+    slides/04_nested_mods
+    slides/05_name_main
+    slides/06_module_both
+    slides/07_variable_arity
+    slides/08_min_max_arity
+    slides/09_named_args
     slides/10_sort_key
     slides/11_lambda
     slides/12_anon_func

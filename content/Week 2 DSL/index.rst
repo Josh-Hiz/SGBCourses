@@ -4,15 +4,15 @@ Week 2: Data structures and loops
 .. toctree:: 
     :maxdepth: 1
 
-    slides/1_checking_data_types
-    slides/2_defining_lists
-    slides/3_list_indexing_lookup
-    slides/4_last_in_line
-    slides/5_summing_the_ends
-    slides/6_slicing_lists
-    slides/7_slicing_lists_your_turn
-    slides/8_operations_on_lists
-    slides/9_testing_membership_lists
+    slides/01_checking_data_types
+    slides/02_defining_lists
+    slides/03_list_indexing_lookup
+    slides/04_last_in_line
+    slides/05_summing_the_ends
+    slides/06_slicing_lists
+    slides/07_slicing_lists_your_turn
+    slides/08_operations_on_lists
+    slides/09_testing_membership_lists
     slides/10_list_membership
     slides/11_list_length
     slides/12_strings_lists_python

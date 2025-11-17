@@ -1,0 +1,7 @@
+- [ ] remove right sidebar
+- [ ] clean up test output
+- [ ] reduce box size
+- [ ] no absolute _static
+- [ ] colocate tests
+- [ ] fix favicon
+- [x] fix slide numbering

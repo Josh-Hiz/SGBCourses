@@ -4,15 +4,15 @@ Week 4: Objects and classes
 .. toctree:: 
     :maxdepth: 1
 
-    slides/1_what_is_object
-    slides/2_surprise
-    slides/3_method_calls
-    slides/4_creating_objects
-    slides/5_using_constructs
-    slides/6_defining_objects_class
-    slides/7_constructors
-    slides/8_working_fields
-    slides/9_sum
+    slides/01_what_is_object
+    slides/02_surprise
+    slides/03_method_calls
+    slides/04_creating_objects
+    slides/05_using_constructs
+    slides/06_defining_objects_class
+    slides/07_constructors
+    slides/08_working_fields
+    slides/09_sum
     slides/10_defining_methods
     slides/11_adder
     slides/12_private_fields
